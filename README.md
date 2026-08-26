@@ -13,7 +13,7 @@
 * 📁 **[Security Core (Módulo de Seguridad)](./README_Eva_Security_Core.md)**  
   Arquitectura de estanqueidad, políticas de aislamiento y control operativo de sucursales.
 
-* 📁 **[Sucursal 1: Blockseer & Inteligencia On-Chain (Ballenas)](./README_ballenas.md)**  
+* 📁 **[Sucursal 1: Blockseer & Inteligencia On-Chain (Ballenas)](./README_Ballenas.md)**  
   Central de inteligencia forense, análisis de grandes flujos, arquitectura de doble cerebro y estanqueidad operativa.
 
 ---
