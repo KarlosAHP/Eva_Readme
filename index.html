@@ -199,6 +199,30 @@
             margin-bottom: 10px;
         }
 
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .doc-card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            text-align: center;
+        }
+
+        .doc-card a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .doc-card a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -225,8 +249,6 @@
 
 <body>
     <div class="container">
-        <a href="index.html" class="back-btn">← Volver al Inicio</a>
-
         <div class="header">
             <h1>🔱 EVA BLOCKSEER — Ecosistema Digital</h1>
             <div class="version">
@@ -291,6 +313,43 @@
                         <li>Generación de actas y trazabilidad</li>
                         <li>Portal de visualización seguro</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOCUMENTACIÓN -->
+        <div class="section">
+            <h2>📚 Documentación del Ecosistema</h2>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>📄 README Principal</h3>
+                    <p style="color:#ccc;">Visión general, stack transversal, índices y mensaje para clientes y reclutadores.</p>
+                    <a href="README.md">Abrir README.md</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🐠 EVA Connect</h3>
+                    <p style="color:#ccc;">Documentación pública de la Sucursal 2: operativa minorista, macro y endpoints.</p>
+                    <a href="README_Eva_Minoristas.md">Abrir README_Eva_Minoristas.md</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🧠 Blockseer</h3>
+                    <p style="color:#ccc;">Documentación pública de la Sucursal 1: inteligencia on-chain, ballenas y arquitectura de doble cerebro.</p>
+                    <a href="README_Ballenas.md">Abrir README_Ballenas.md</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🛡️ Security Core</h3>
+                    <p style="color:#ccc;">Documentación pública del núcleo de seguridad: cifrado, identidad, notaría digital y estanqueidad.</p>
+                    <a href="README_Eva_Security_Core.md">Abrir README_Eva_Security_Core.md</a>
+                </div>
+                <div class="doc-card">
+                    <h3>🔐 Accesos Directos</h3>
+                    <p style="color:#ccc;">Documentación pública de la extensión de accesos directos con cifrado Zero-Knowledge.</p>
+                    <a href="README_Eva_Accesos_directos.md">Abrir README_Eva_Accesos_directos.md</a>
+                </div>
+                <div class="doc-card">
+                    <h3>📊 Diagrama de Arquitectura</h3>
+                    <p style="color:#ccc;">Vitrina gráfica del ecosistema, módulos, flujo de datos e integraciones visibles.</p>
+                    <a href="diagrama.html">Abrir diagrama.html</a>
                 </div>
             </div>
         </div>
