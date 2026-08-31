@@ -194,7 +194,7 @@ Reglas estrictas que preservan la integridad del desarrollo:
 
 ## 🚀 8. Integración con el Ecosistema EVA
 
-| Sucursal | Rol | Stack |
+| Módulo / Proyecto | Rol | Stack |
 |---|---|---|
 | **S1 Blockseer** | Inteligencia on-chain (whales) | Python, FastAPI, MongoDB Atlas, Docker |
 | **S2 Eva Connect** | Datos macro/retail | Python, FastAPI, Supabase, SSE/WebSocket |

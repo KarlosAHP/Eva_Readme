@@ -1,4 +1,4 @@
-# 🔋 Eva Green Battery — Sucursal 3: Notaría Digital Industrial
+# 🔋 Eva Green Battery — Notaría Digital Industrial
 
 > **Gestión Industrial de Flotas, Portal de Clientes y Agenda Inteligente tipo CRM.**
 > Sistema productivo de trazabilidad forense para activos industriales (baterías, cargadores y sistemas de alimentación) con portal transaccional para clientes finales y agenda corporativa para despacho de técnicos.
@@ -7,7 +7,7 @@
 
 ## 🏗️ 1. Arquitectura y Principios Operativos
 
-La Sucursal 3 es el **Cerebro Industrial** del ecosistema Eva. Está construida sobre tres módulos sincronizados que conviven en una misma plataforma pero con responsabilidades y superficies de seguridad claramente separadas:
+Eva Green Battery es el **Cerebro Industrial** del ecosistema Eva. Está construida sobre tres módulos sincronizados que conviven en una misma plataforma pero con responsabilidades y superficies de seguridad claramente separadas:
 
 * **Núcleo Forense Industrial:** Notarización blockchain del ciclo de vida de cada activo (nacimiento, mantenimientos preventivos/correctivos, visitas de diagnóstico, pruebas de autonomía, retiros). Auditoría humana del administrador sobre cada informe antes de publicación al cliente.
 * **Portal de Clientes:** Aplicación transaccional para que el cliente final gestione su cuenta, consulte sus sedes y activos, descargue reportes autorizados por Green Battery y solicite visitas técnicas desde un panel propio.
@@ -121,7 +121,7 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 ## 🧠 4. Protocolo de Notarización y Auditoría
 
-La Sucursal 3 implementa un protocolo de **revisión por auditor humano** antes de cualquier publicación:
+Eva Green Battery implementa un protocolo de **revisión por auditor humano** antes de cualquier publicación:
 
 1. El técnico registra la intervención en el **historial de intervenciones** del activo con estado de *en revisión*.
 2. El sistema dispara automáticamente la **notarización criptográfica** del evento.

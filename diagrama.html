@@ -628,9 +628,9 @@
                     </ul>
                 </div>
 
-                <!-- S3 -->
+                <!-- Green Battery -->
                 <div class="card" style="border: 2px solid #00ff64;">
-                    <h3><span class="icon">🔋</span> S3: Green Battery (Notaría Digital)</h3>
+                    <h3><span class="icon">🔋</span> Green Battery (Notaría Digital)</h3>
                     <p style="color: #00ff64; font-size: 0.75em; font-weight: bold;">[SECURE_INDUSTRIAL_NODE]</p>
                     <div style="margin-top: 8px;">
                         <ul style="font-size: 0.82em;">
@@ -1279,11 +1279,11 @@
             </div>
         </div>
 
-        <!-- ===== S3 GREEN BATTERY: MÓDULO INTERACTIVO ===== -->
+        <!-- ===== GREEN BATTERY: MÓDULO INTERACTIVO ===== -->
         <div class="section" id="section-s3" style="border: 2px solid #44ff44;">
             <div class="ballenas-hero"
                 style="border-color: #44ff44; background: linear-gradient(135deg, #0a0a1a 0%, #0f2a0f 50%, #101c2e 100%);">
-                <h2 style="color: #44ff44;">🔋 S3: Green Battery — Notaría Digital Industrial</h2>
+                <h2 style="color: #44ff44;">🔋 Green Battery — Notaría Digital Industrial</h2>
                 <p style="color: #aaff44;">Gestión Industrial de Flotas, Portal de Clientes y Agenda CRM. Trazabilidad
                     forense de activos industriales con notarización blockchain y auditoría humana del administrador.
                 </p>
@@ -1451,8 +1451,8 @@
             </div>
 
             <!-- TAB 4: PROTOCOLO NOTARIAL GreenBattery  -->
-            <div id="s3-notary" class="tab-panel" <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+            <div id="s3-notary" class="tab-panel">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
                 <div class="brain-card" style="border-color: #44ff44;">
                     <h3 style="color:#44ff44;">1. Registro del Técnico</h3>
                     <ul>
@@ -1612,9 +1612,8 @@
                     mantenimiento, notarizado."</p>
             </div>
         </div>
-    </div>
 
-    <!-- ===== S5 GT TRAX POWER: MÓDULO INTERACTIVO ===== -->
+    <!-- ===== GT TRAX POWER: MÓDULO INTERACTIVO ===== -->
     <div class="section" id="section-s5" style="border: 2px solid #FFD700;">
         <div class="ballenas-hero"
             style="border-color: #FFD700; background: linear-gradient(135deg, #0a0a1a 0%, #1a140a 50%, #101c2e 100%);">
@@ -2088,7 +2087,7 @@
     </footer>
     <script>
         function showTab(tabId, btn) {
-            const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : document.getElementById(tabId.startsWith('s3') ? 'section-s3' : 'section-s1'));
+            const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : (tabId.startsWith('s3') ? 'section-s3' : (tabId.startsWith('s5') ? 'section-s5' : 'section-s1')));
             if (!container) return;
 
             // Hide only panels inside this specific section
@@ -2104,6 +2103,11 @@
                     b.style.background = 'rgba(68,255,68,0.1)';
                     b.style.color = '#aaff44';
                     b.style.borderColor = 'rgba(68,255,68,0.3)';
+                }
+                if (container.id === 'section-s5') {
+                    b.style.background = 'rgba(255,215,0,0.1)';
+                    b.style.color = '#FFE082';
+                    b.style.borderColor = 'rgba(255,215,0,0.3)';
                 }
             });
 
@@ -2122,6 +2126,11 @@
                     btn.style.background = '#44ff44';
                     btn.style.color = '#0f1a3d';
                     btn.style.borderColor = '#44ff44';
+                }
+                if (container.id === 'section-s5') {
+                    btn.style.background = '#FFD700';
+                    btn.style.color = '#0a0a1a';
+                    btn.style.borderColor = '#FFD700';
                 }
             }
 
