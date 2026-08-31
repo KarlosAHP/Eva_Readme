@@ -5,41 +5,39 @@
 
 ---
 
-## 🚀 Acceso Rápido
+## 📋 Índice de Módulos del Sistema
 
-* 📄 **[README Principal](./README.md)** — Índice global, stack por módulo, habilidades transversales y mensaje para clientes/reclutadores.
-* 📊 **[Diagrama de Arquitectura](./diagrama.html)** — Vitrina gráfica del ecosistema, módulos, flujo de datos e integraciones visibles.
-
----
-
-## 📚 Documentación del Ecosistema
-
-* 📄 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
+* 📁 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
   Panel de control nativo con cifrado Zero-Knowledge (AES-GCM) para gestión segura de credenciales locales.
   
-* 📄 **[Security Core (Módulo de Seguridad)](./README_Eva_Security_Core.md)**  
+* 📁 **[Security Core (Módulo de Seguridad)](./README_Eva_Security_Core.md)**  
   Arquitectura de estanqueidad, políticas de aislamiento y control operativo de sucursales.
 
-* 📄 **[Sucursal 1: Blockseer & Inteligencia On-Chain (Ballenas)](./README_Ballenas.md)**  
+* 📁 **[Sucursal 1: Blockseer & Inteligencia On-Chain (Ballenas)](./README_Ballenas.md)**  
   Central de inteligencia forense, análisis de grandes flujos, arquitectura de doble cerebro y estanqueidad operativa.
 
-* 📄 **[Sucursal 2: EVA Connect — Minoristas & Inteligencia Macro](./README_Eva_Minoristas.md)**  
+* 📁 **[Sucursal 2: EVA Connect — Minoristas & Inteligencia Macro](./README_Eva_Minoristas.md)**  
   Capa operativa de recolección, clasificación de fauna minorista (Pez / Delfín / Tiburón), métricas retail, alertas on-chain, monitoreo macroeconómico y endpoints públicos normalizados para consumo de otras capas sin acceso directo a base de datos.
 
 ---
 
-## 🛠️ Stack Tecnológico y Conocimientos Aplicados por Módulo
+## 🛠️ Stack Tecnológico y Conocimientos Aplicados
 
-Cada módulo del ecosistema incluye su propio stack, herramientas, destrezas y sección orientada a reclutadores y clientes en su documento individual.
+Este ecosistema está construido con herramientas de vanguardia, seleccionadas para garantizar rendimiento, soberanía y escalabilidad sin importar la complejidad o magnitud del proyecto:
 
-* **Accesos Directos (Extensión):** stack enfocado en cifrado Zero-Knowledge, extensiones nativas, protección local y soberanía del operador.
-* **Security Core:** arquitectura modular aditiva, cifrado AES-GCM/PBKDF2, hashing criptográfico, aislamiento estricto y control de identidad.
-* **Sucursal 1 - Blockseer:** backends de alta precisión, procesamiento on-chain masivo, motores analíticos, arquitectura de doble cerebro y PWA segura.
-* **Sucursal 2 - EVA Connect:** FastAPI + React, colas asíncronas, circuit breaker, SSE/WebSocket, Docker multi-stage, Render.com, Blockfrost, Binance, IA generativa y pipelines de métricas retail/macro.
+* **Lenguajes y Runtime:** Python 3.12+, TypeScript, JavaScript.
+* **Backend y APIs:** FastAPI, Uvicorn, ASGI, arquitectura REST/SSE/WebSocket.
+* **Frontend:** React, Vite, Tailwind CSS, PWA, Context API, hooks personalizados.
+* **Bases de Datos:** PostgreSQL, Supabase, SQLite, Python `psycopg2`, ORM/query builders, migraciones versionadas.
+* **Colas y Eventos:** `asyncio`, bus de eventos propio, colas asíncronas desacopladas, WebSocket, Server-Sent Events (SSE).
+* **Infraestructura y Contenedores:** Docker multi-stage, Dockerfile, scripts de build, despliegue continuo.
+* **Plataformas de Despliegue:** Render.com (Web Services, Workers, Cron Jobs), secret managers, health checks.
+* **Integraciones Externas:** Blockfrost (Cardano Mainnet), APIs de mercado, Binance, feeds de noticias, motores de IA generativa para análisis de documentos.
+* **Seguridad y Cifrado:** AES-GCM, PBKDF2, hashing criptográfico, Zero-Knowledge, tokens Bearer, estanqueidad por módulos.
+* **Control de Versiones:** Git, GitHub.
+* **Calidad y Resiliencia:** Circuit breaker, fail-safe, backoff exponencial, retry policies, cache TTL, monitoreo y auditorías locales.
 
-A continuación, los bloques globales del ecosistema completo:
-
-### 🧠 Destrezas y conocimientos transversales
+### 🧠 Destrezas y conocimientos que hacen posible este ecosistema
 
 * Diseño de arquitecturas distribuidas y por capas, con separación estricta de responsabilidades.
 * Desarrollo de backends de alto rendimiento en Python con FastAPI y procesamiento asíncrono real.
