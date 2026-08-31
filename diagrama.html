@@ -1358,6 +1358,225 @@
             </div>
         </div>
 
+        <!-- ===== S5 GT TRAX POWER: MÓDULO INTERACTIVO ===== -->
+        <div class="section" id="section-s5" style="border: 2px solid #FFD700;">
+            <div class="ballenas-hero" style="border-color: #FFD700; background: linear-gradient(135deg, #0a0a1a 0%, #1a140a 50%, #101c2e 100%);">
+                <h2 style="color: #FFD700;">⚙️ S5: GT_Trax_Power — Presencia Digital Industrial</h2>
+                <p style="color: #FFE082;">Sitio web institucional y generador de leads para TRAX POWER — Motive Energy, empresa colombiana (Medellín, 2017) especializada en baterías industriales LiFePO4, cargadores y sistemas BMS. Arquitectura Dual-Workflow: Google AI Studio (diseño) ↔ VS Code (backend/API).</p>
+            </div>
+
+            <!-- TABS DE NAVEGACIÓN S5 -->
+            <div class="tabs" style="border-bottom-color: rgba(255,215,0,0.25);">
+                <button class="tab-btn active" style="border-color: #FFD700; background: #FFD700; color: #0a0a1a;" onclick="showTab('s5-arch', this)">🏗️ Arquitectura Dual</button>
+                <button class="tab-btn" onclick="showTab('s5-stack', this)">🛠️ Stack Tecnológico</button>
+                <button class="tab-btn" onclick="showTab('s5-components', this)">⚛️ Componentes</button>
+                <button class="tab-btn" onclick="showTab('s5-api', this)">🔌 Endpoints API</button>
+                <button class="tab-btn" onclick="showTab('s5-skills', this)">🧠 Destrezas & Conocimientos</button>
+                <button class="tab-btn" onclick="showTab('s5-recruiter', this)">💼 Reclutadores & Clientes</button>
+            </div>
+
+            <!-- TAB 1: ARQUITECTURA DUAL -->
+            <div id="s5-arch" class="tab-panel active">
+                <div class="dual-brain">
+                    <div class="brain-card">
+                        <h3 style="color:#FFD700;">🎨 Frente A — Diseño Visual (Google AI Studio)</h3>
+                        <ul>
+                            <li>⚛️ React 19 + TypeScript + Vite 6</li>
+                            <li>🎨 Tailwind CSS 4 + Motion (animaciones)</li>
+                            <li>🪶 lucide-react (íconos)</li>
+                            <li>🗣️ Web Speech API (voz es-CO)</li>
+                            <li>🔊 Web Audio API (sonidos industriales)</li>
+                            <li>🤖 Generación creativa con Gemini</li>
+                            <li>📱 Diseño iterativo validado por cliente</li>
+                        </ul>
+                    </div>
+                    <div class="brain-divider">⇄</div>
+                    <div class="brain-card">
+                        <h3 style="color:#FFD700;">🗄️ Frente B — Backend/API (VS Code)</h3>
+                        <ul>
+                            <li>⚡ Express 4 + Vite middleware</li>
+                            <li>🤖 Gemini 2.5 Flash (@google/genai)</li>
+                            <li>📦 esbuild bundling para producción</li>
+                            <li>🐳 Docker multi-stage</li>
+                            <li>☁️ Render.com auto-deploy</li>
+                            <li>🔐 Secret managers (.env nunca subido)</li>
+                            <li>🔌 API REST con Vite SPA build</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(255,215,0,0.4); background: linear-gradient(90deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05)); color: #FFE082;">
+                    <strong style="color:#FFD700;">🔒 Regla de Oro del Dual-Workflow:</strong> El diseño visual (layout, estilos, animaciones, audio) es territorio EXCLUSIVO de Google AI Studio. El backend (endpoints, lógica, datos, tipos, server.ts) es territorio EXCLUSIVO de los agentes de código. Nunca se cruzan. Las imágenes usan rutas fijas (nunca nombres generados por IA). Cero datos inventados — toda información proviene de <code>companyData.ts</code> y <code>server.ts</code>.
+                </div>
+            </div>
+
+            <!-- TAB 2: STACK TECNOLÓGICO -->
+            <div id="s5-stack" class="tab-panel">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px;">
+                    <div>
+                        <p style="color:#FFD700; font-weight:bold; margin-bottom:12px;">⚛️ Frontend (AI Studio)</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚛️ React 19</span>
+                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🔷 TypeScript</span>
+                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite 6</span>
+                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🎨 Tailwind CSS 4</span>
+                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🌀 Motion</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#FFE082; font-weight:bold; margin-bottom:12px;">⚡ Backend / API (VS Code)</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🐍 Node.js</span>
+                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Express 4</span>
+                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite Middleware</span>
+                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🤖 Gemini 2.5 Flash</span>
+                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">📦 esbuild</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#44ff44; font-weight:bold; margin-bottom:12px;">☁️ Infraestructura</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🐳 Docker</span>
+                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">☁️ Render.com</span>
+                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔐 dotenv / Secrets</span>
+                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔁 Auto-deploy</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#00eaff; font-weight:bold; margin-bottom:12px;">🎵 Audio & Accesibilidad</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🗣️ Web Speech API</span>
+                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🔊 Web Audio API</span>
+                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🎵 Voz es-CO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: COMPONENTES -->
+            <div id="s5-components" class="tab-panel">
+                <div class="skills-grid">
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">⚡</span>
+                        <div class="skill-text"><strong>App.tsx:</strong> Entry point SPA con orquestación de tabs de navegación y composición de todos los componentes.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🔋</span>
+                        <div class="skill-text"><strong>LiveCommercialPoster.tsx:</strong> Anuncios comerciales en vivo con slides interactivos, síntesis de voz en es-CO y sonidos industriales.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">💰</span>
+                        <div class="skill-text"><strong>RoiCalculator.tsx:</strong> Calculadora de ROI para baterías LiFePO4 vs. plomo-ácido — ahorro energético y productividad multi-turno.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">📦</span>
+                        <div class="skill-text"><strong>ProductsAndServices.tsx:</strong> Catálogo dinámico renderizado desde datos verificados — productos y servicios reales.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🔍</span>
+                        <div class="skill-text"><strong>InteractivePortal.tsx:</strong> Portal interactivo con hotspots visuales sobre instalación, equipos y tecnología.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🤖</span>
+                        <div class="skill-text"><strong>AiCampaignGenerator.tsx:</strong> Generador de copy publicitario asistido por IA — consume /api/generate-ad-copy (Gemini 2.5 Flash).</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: ENDPOINTS API -->
+            <div id="s5-api" class="tab-panel">
+                <div class="db-flow">
+                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                        <h4 style="color:#FFD700;">📡 GET /api/company-info</h4>
+                        <p>Información corporativa verificada: empresa, contacto, redes sociales, servicios y productos. Fuente única de verdad desde <code>companyData.ts</code>. Cero inventos — todos los datos (teléfonos, correos, direcciones) provienen de la empresa real.</p>
+                    </div>
+                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                        <h4 style="color:#FFD700;">🤖 POST /api/generate-ad-copy</h4>
+                        <p>Generación de copy publicitario con Gemini 2.5 Flash. Prompt estructurado con datos de contacto reales. Fallback estático verificado si no hay API key disponible.</p>
+                    </div>
+                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                        <h4 style="color:#FFD700;">💰 POST /api/quote-request</h4>
+                        <p>Simulación de cotización. Genera ID único <code>COT-XXXXX</code> y enlace de WhatsApp preformateado con datos del cliente.</p>
+                    </div>
+                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                        <h4 style="color:#FFD700;">📅 POST /api/schedule-visit</h4>
+                        <p>Programación de visita técnica. Genera ID único <code>VIS-XXXXX</code> y enlace de WhatsApp con todos los datos de la solicitud.</p>
+                    </div>
+                </div>
+                <div class="zero-mock-badge" style="border-color: #FFD700; color: #FFD700; background: linear-gradient(90deg, #1a140a, #0f0e05);">
+                    <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
+                    <span style="font-size:0.9em; color:#FFE082;">Ningún servicio, producto, teléfono o correo es inventado. Todos los datos corporativos provienen verificados de F&R Servicios Industriales S.A.S. / TRAX POWER (Medellín, Antioquia, Colombia).</span>
+                </div>
+            </div>
+
+            <!-- TAB 5: DESTREZAS -->
+            <div id="s5-skills" class="tab-panel">
+                <div class="skills-grid">
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">⚡</span>
+                        <span class="skill-text">Desarrollo full-stack moderno con React 19, TypeScript, Vite y Tailwind CSS para experiencias web industriales.</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🗄️</span>
+                        <span class="skill-text">Backend con Express 4 y Vite middleware, con API REST bien estructuradas y build de producción optimizada con esbuild.</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🤖</span>
+                        <span class="skill-text">Integración de IA generativa (Gemini 2.5 Flash) para generación de copy publicitario asistido con datos verificados.</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🎵</span>
+                        <span class="skill-text">Experiencia auditiva inmersiva con Web Speech API (español colombiano) y Web Audio API (sonidos industriales personalizados).</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🏗️</span>
+                        <span class="skill-text">Arquitectura de dual-workflow: separación estricta entre diseño visual (AI Studio) y lógica de negocio (VS Code).</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🔐</span>
+                        <span class="skill-text">Gestión de secretos con dotenv y Render secret managers; nunca se sube .env a repositorio.</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">🐳</span>
+                        <span class="skill-text">Despliegue con Docker multi-stage y auto-deploy continuo en Render.com.</span>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #FFD700;">
+                        <span class="skill-icon">📊</span>
+                        <span class="skill-text">Documentación técnica orientada a reclutadores, clientes y equipos de desarrollo.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 6: RECLUTADORES -->
+            <div id="s5-recruiter" class="tab-panel">
+                <div class="recruiter-box" style="border-color: #FFD700; background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));">
+                    <p>⚙️ <strong style="color:#FFD700;">GT_Trax_Power (Sucursal 5)</strong> es un proyecto full-stack moderno que demuestra dominio integral de desarrollo web: desde el diseño visual iterativo en Google AI Studio hasta el backend con Express, integración con IA generativa (Gemini), experiencia de usuario inmersiva con Web Speech y Web Audio API, y una arquitectura de dual-workflow que separa estrictamente diseño de lógica — un patrón escalable reutilizable para futuros clientes industriales.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">⚡</div>
+                            <div style="color:#FFD700; font-weight:bold;">Full-stack Real</div>
+                        </div>
+                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">🤖</div>
+                            <div style="color:#FFD700; font-weight:bold;">IA Generativa</div>
+                        </div>
+                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">🗣️</div>
+                            <div style="color:#FFD700; font-weight:bold;">Web Speech</div>
+                        </div>
+                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">🐳</div>
+                            <div style="color:#FFD700; font-weight:bold;">Docker + Render</div>
+                        </div>
+                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">✅</div>
+                            <div style="color:#44ff44; font-weight:bold;">Datos Verídicos</div>
+                        </div>
+                    </div>
+                    <p style="font-style:italic; color:#FFD700;">"Energía que impulsa tu operación — de la idea al despliegue productivo."</p>
+                </div>
+            </div>
+        </div>
+
         <!-- FLUJO DE DATOS -->
         <div class="section">
             <h2>🔄 Flujo Operativo y Soberanía</h2>
