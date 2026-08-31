@@ -5,7 +5,7 @@
 
 ---
 
-<a href="diagrama.html" style="background:#e94560;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin-bottom:16px;">📊 Ver Diagrama de Arquitectura</a>
+[![Ver Diagrama de Arquitectura](https://img.shields.io/badge/📊_Ver_Diagrama_de_Arquitectura-e94560?style=for-the-badge)](./diagrama.html)
 
 ## 📋 Índice de Módulos del Sistema
 
