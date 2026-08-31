@@ -21,6 +21,9 @@
 * 📁 **[Sucursal 2: EVA Connect — Minoristas & Inteligencia Macro](./README_Eva_Minoristas.md)**  
   Capa operativa de recolección, clasificación de fauna minorista (Pez / Delfín / Tiburón), métricas retail, alertas on-chain, monitoreo macroeconómico y endpoints públicos normalizados para consumo de otras capas sin acceso directo a base de datos.
 
+* 📁 **[Sucursal 3: Eva Green Battery — Notaría Digital Industrial](./README_Green_battery.md)**  
+  Cerebro industrial para gestión de flotas de activos críticos (baterías, UPS, rectificadores). Notarización criptográfica de mantenimientos con auditoría humana, portal transaccional para clientes finales, agenda inteligente tipo CRM con despacho de técnicos y semáforo de visitas, y reportería institucional con anclaje en blockchain pública.
+
 ---
 
 ## 🛠️ Stack Tecnológico y Conocimientos Aplicados
