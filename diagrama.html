@@ -232,6 +232,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .ballenas-hero::before {
             content: '';
             position: absolute;
@@ -239,19 +240,31 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(ellipse at center, rgba(68,170,255,0.05) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(68, 170, 255, 0.05) 0%, transparent 70%);
             animation: pulse-bg 4s ease-in-out infinite;
         }
+
         @keyframes pulse-bg {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.7; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.7;
+            }
         }
+
         .ballenas-hero h2 {
             color: #44aaff;
             font-size: 2em;
             margin-bottom: 10px;
             position: relative;
         }
+
         .ballenas-hero p {
             color: #aac4dd;
             font-size: 0.95em;
@@ -259,18 +272,20 @@
             margin: 0 auto;
             position: relative;
         }
+
         .tabs {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
             margin-bottom: 20px;
-            border-bottom: 2px solid rgba(68,170,255,0.2);
+            border-bottom: 2px solid rgba(68, 170, 255, 0.2);
             padding-bottom: 10px;
         }
+
         .tab-btn {
-            background: rgba(68,170,255,0.1);
+            background: rgba(68, 170, 255, 0.1);
             color: #aac4dd;
-            border: 1px solid rgba(68,170,255,0.3);
+            border: 1px solid rgba(68, 170, 255, 0.3);
             padding: 10px 20px;
             border-radius: 25px;
             cursor: pointer;
@@ -279,31 +294,53 @@
             transition: all 0.3s;
             font-family: 'Segoe UI', sans-serif;
         }
+
         .tab-btn:hover {
-            background: rgba(68,170,255,0.25);
+            background: rgba(68, 170, 255, 0.25);
             color: #fff;
         }
+
         .tab-btn.active {
             background: #44aaff;
             color: #0a0a1a;
             border-color: #44aaff;
-            box-shadow: 0 4px 15px rgba(68,170,255,0.4);
+            box-shadow: 0 4px 15px rgba(68, 170, 255, 0.4);
         }
-        .tab-panel { display: none; }
-        .tab-panel.active { display: block; animation: fadeInTab 0.3s ease; }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeInTab 0.3s ease;
+        }
+
         @keyframes fadeInTab {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .dual-brain {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
             gap: 20px;
             align-items: center;
         }
+
         @media (max-width: 700px) {
-            .dual-brain { grid-template-columns: 1fr; }
+            .dual-brain {
+                grid-template-columns: 1fr;
+            }
         }
+
         .brain-card {
             background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
             border: 2px solid #44aaff;
@@ -311,23 +348,43 @@
             padding: 25px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .brain-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(68,170,255,0.25);
+            box-shadow: 0 15px 40px rgba(68, 170, 255, 0.25);
         }
-        .brain-card h3 { color: #44aaff; margin-bottom: 12px; font-size: 1.1em; }
-        .brain-card ul { list-style: none; }
-        .brain-card li { padding: 6px 0; color: #aac4dd; border-bottom: 1px solid rgba(68,170,255,0.1); font-size: 0.9em; }
-        .brain-card li:last-child { border-bottom: none; }
+
+        .brain-card h3 {
+            color: #44aaff;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .brain-card ul {
+            list-style: none;
+        }
+
+        .brain-card li {
+            padding: 6px 0;
+            color: #aac4dd;
+            border-bottom: 1px solid rgba(68, 170, 255, 0.1);
+            font-size: 0.9em;
+        }
+
+        .brain-card li:last-child {
+            border-bottom: none;
+        }
+
         .brain-divider {
             text-align: center;
             font-size: 2.5em;
             color: #44aaff;
             opacity: 0.5;
         }
+
         .stank-badge {
-            background: linear-gradient(90deg, rgba(68,170,255,0.15), rgba(68,170,255,0.05));
-            border: 1px solid rgba(68,170,255,0.4);
+            background: linear-gradient(90deg, rgba(68, 170, 255, 0.15), rgba(68, 170, 255, 0.05));
+            border: 1px solid rgba(68, 170, 255, 0.4);
             border-radius: 10px;
             padding: 15px 20px;
             margin-top: 20px;
@@ -335,24 +392,31 @@
             font-size: 0.9em;
             text-align: center;
         }
-        .stank-badge strong { color: #44aaff; }
+
+        .stank-badge strong {
+            color: #44aaff;
+        }
+
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
         }
+
         .metric-card {
             background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
-            border: 1px solid rgba(68,170,255,0.3);
+            border: 1px solid rgba(68, 170, 255, 0.3);
             border-radius: 15px;
             padding: 25px 15px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .metric-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(68,170,255,0.2);
+            box-shadow: 0 10px 30px rgba(68, 170, 255, 0.2);
         }
+
         .metric-number {
             font-size: 2.5em;
             font-weight: bold;
@@ -360,23 +424,27 @@
             display: block;
             line-height: 1;
         }
+
         .metric-label {
             color: #888;
             font-size: 0.8em;
             margin-top: 8px;
             display: block;
         }
+
         .metric-sub {
             color: #aac4dd;
             font-size: 0.75em;
             margin-top: 5px;
             display: block;
         }
+
         .pill-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
+
         .pill {
             padding: 8px 18px;
             border-radius: 25px;
@@ -387,17 +455,48 @@
             gap: 8px;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .pill:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .pill-blue  { background: rgba(68,170,255,0.15); border: 1px solid #44aaff; color: #44aaff; }
-        .pill-green { background: rgba(68,255,68,0.15);  border: 1px solid #44ff44; color: #44ff44; }
-        .pill-purple{ background: rgba(180,68,255,0.15); border: 1px solid #b444ff; color: #b444ff; }
-        .pill-orange{ background: rgba(255,170,68,0.15); border: 1px solid #ffaa44; color: #ffaa44; }
-        .pill-red   { background: rgba(233,69,96,0.15);  border: 1px solid #e94560; color: #e94560; }
+
+        .pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .pill-blue {
+            background: rgba(68, 170, 255, 0.15);
+            border: 1px solid #44aaff;
+            color: #44aaff;
+        }
+
+        .pill-green {
+            background: rgba(68, 255, 68, 0.15);
+            border: 1px solid #44ff44;
+            color: #44ff44;
+        }
+
+        .pill-purple {
+            background: rgba(180, 68, 255, 0.15);
+            border: 1px solid #b444ff;
+            color: #b444ff;
+        }
+
+        .pill-orange {
+            background: rgba(255, 170, 68, 0.15);
+            border: 1px solid #ffaa44;
+            color: #ffaa44;
+        }
+
+        .pill-red {
+            background: rgba(233, 69, 96, 0.15);
+            border: 1px solid #e94560;
+            color: #e94560;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
         }
+
         .skill-item {
             background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
             border-left: 3px solid #44aaff;
@@ -408,9 +507,21 @@
             gap: 12px;
             transition: transform 0.2s;
         }
-        .skill-item:hover { transform: translateX(5px); }
-        .skill-icon { font-size: 1.5em; flex-shrink: 0; }
-        .skill-text { color: #aac4dd; font-size: 0.9em; }
+
+        .skill-item:hover {
+            transform: translateX(5px);
+        }
+
+        .skill-icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+
+        .skill-text {
+            color: #aac4dd;
+            font-size: 0.9em;
+        }
+
         .db-flow {
             display: flex;
             gap: 20px;
@@ -418,9 +529,10 @@
             justify-content: center;
             align-items: stretch;
         }
+
         .db-card {
             background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
-            border: 1px solid rgba(68,170,255,0.4);
+            border: 1px solid rgba(68, 170, 255, 0.4);
             border-radius: 15px;
             padding: 20px;
             flex: 1;
@@ -428,9 +540,23 @@
             max-width: 350px;
             transition: box-shadow 0.3s;
         }
-        .db-card:hover { box-shadow: 0 10px 30px rgba(68,170,255,0.2); }
-        .db-card h4 { color: #44aaff; margin-bottom: 10px; font-size: 1em; }
-        .db-card p { color: #aac4dd; font-size: 0.85em; line-height: 1.6; }
+
+        .db-card:hover {
+            box-shadow: 0 10px 30px rgba(68, 170, 255, 0.2);
+        }
+
+        .db-card h4 {
+            color: #44aaff;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .db-card p {
+            color: #aac4dd;
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
         .zero-mock-badge {
             background: linear-gradient(90deg, #1a3d1a, #0f2a0f);
             border: 2px solid #44ff44;
@@ -440,14 +566,20 @@
             text-align: center;
             color: #44ff44;
         }
+
         .recruiter-box {
-            background: linear-gradient(135deg, rgba(68,170,255,0.05), rgba(68,255,68,0.05));
-            border: 1px solid rgba(68,170,255,0.3);
+            background: linear-gradient(135deg, rgba(68, 170, 255, 0.05), rgba(68, 255, 68, 0.05));
+            border: 1px solid rgba(68, 170, 255, 0.3);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
         }
-        .recruiter-box p { color: #aac4dd; line-height: 1.8; margin-bottom: 20px; }
+
+        .recruiter-box p {
+            color: #aac4dd;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -465,10 +597,10 @@
 
         <!-- ARQUITECTURA GENERAL -->
         <div class="section">
-            <h2>🏗️ Arquitectura de Sucursales y Aislamiento</h2>
+            <h2>🏗️ Arquitectura de Proyectos y Aislamiento</h2>
             <div class="card mcp-suprema" style="margin-bottom: 30px;">
                 <h3>👑 NÚCLEO SUPREMO: CENTRO DE MANDO SOBERANO</h3>
-                <div class="url">Nodo central de agregación, inteligencia y orquestación entre sucursales.</div>
+                <div class="url">Nodo central de agregación, inteligencia y orquestación entre proyectos.</div>
             </div>
 
             <div class="grid">
@@ -527,7 +659,9 @@
         <div class="section" id="section-s1">
             <div class="ballenas-hero">
                 <h2>⚡ S1: Ballenas — Inteligencia Forense On-Chain</h2>
-                <p>Central Autónoma de Análisis Institucional. Recolección, procesamiento y correlación de métricas a gran escala sobre redes blockchain, con alertas en tiempo real vía Telegram Bot y persistencia soberana en MongoDB Atlas.</p>
+                <p>Central Autónoma de Análisis Institucional. Recolección, procesamiento y correlación de métricas a
+                    gran escala sobre redes blockchain, con alertas en tiempo real vía Telegram Bot y persistencia
+                    soberana en MongoDB Atlas.</p>
             </div>
 
             <!-- TABS DE NAVEGACIÓN S1 -->
@@ -567,7 +701,9 @@
                     </div>
                 </div>
                 <div class="stank-badge">
-                    <strong>🛡️ Estanqueidad Estricta:</strong> Separación absoluta entre la capa analítica y los motores relacionales externos. Ambos cerebros comparten historial on-chain en MongoDB Atlas, pero mantienen ciclo de vida, despliegue y dominio funcional independientes.
+                    <strong>🛡️ Estanqueidad Estricta:</strong> Separación absoluta entre la capa analítica y los
+                    motores relacionales externos. Ambos cerebros comparten historial on-chain en MongoDB Atlas, pero
+                    mantienen ciclo de vida, despliegue y dominio funcional independientes.
                 </div>
             </div>
 
@@ -597,11 +733,16 @@
                 </div>
                 <div class="stank-badge" style="margin-top: 20px; text-align: left;">
                     <strong>📦 Volumen de Datos Procesados:</strong><br><br>
-                    🔷 <strong style="color:#44aaff;">Transacciones indexadas:</strong> Decenas de miles de registros on-chain con precios de mercado reales.<br>
-                    🔷 <strong style="color:#44aaff;">Reportes predictivos:</strong> Miles de modelos de comportamiento institucional generados y persistidos en MongoDB Atlas.<br>
-                    🔷 <strong style="color:#44aaff;">Jerarquías de entidades:</strong> Miles de billeteras clasificadas por poder de concentración.<br>
-                    🔷 <strong style="color:#44aaff;">Alertas Telegram:</strong> Miles de señales enviadas en tiempo real al ecosistema visual y canales operativos.<br>
-                    🔷 <strong style="color:#44aaff;">FVG calculados:</strong> Miles de brechas de valor calculadas en tiempo real.
+                    🔷 <strong style="color:#44aaff;">Transacciones indexadas:</strong> Decenas de miles de registros
+                    on-chain con precios de mercado reales.<br>
+                    🔷 <strong style="color:#44aaff;">Reportes predictivos:</strong> Miles de modelos de comportamiento
+                    institucional generados y persistidos en MongoDB Atlas.<br>
+                    🔷 <strong style="color:#44aaff;">Jerarquías de entidades:</strong> Miles de billeteras clasificadas
+                    por poder de concentración.<br>
+                    🔷 <strong style="color:#44aaff;">Alertas Telegram:</strong> Miles de señales enviadas en tiempo
+                    real al ecosistema visual y canales operativos.<br>
+                    🔷 <strong style="color:#44aaff;">FVG calculados:</strong> Miles de brechas de valor calculadas en
+                    tiempo real.
                 </div>
             </div>
 
@@ -674,35 +815,43 @@
                 <div class="skills-grid">
                     <div class="skill-item">
                         <span class="skill-icon">⚡</span>
-                        <span class="skill-text">Ingeniería de backends de alta precisión con FastAPI y procesamiento asíncrono.</span>
+                        <span class="skill-text">Ingeniería de backends de alta precisión con FastAPI y procesamiento
+                            asíncrono.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">🧬</span>
-                        <span class="skill-text">Diseño de arquitectura de doble cerebro con separación estricta de dominios analíticos y operativos.</span>
+                        <span class="skill-text">Diseño de arquitectura de doble cerebro con separación estricta de
+                            dominios analíticos y operativos.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">🔬</span>
-                        <span class="skill-text">Procesamiento de datos on-chain a gran escala, modelado forense y detección matemática de anomalías institucionales.</span>
+                        <span class="skill-text">Procesamiento de datos on-chain a gran escala, modelado forense y
+                            detección matemática de anomalías institucionales.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">🛡️</span>
-                        <span class="skill-text">Implementación de sistemas resilientes, tolerantes a fallos y con recuperación automática (circuit breaker, fail-safe).</span>
+                        <span class="skill-text">Implementación de sistemas resilientes, tolerantes a fallos y con
+                            recuperación automática (circuit breaker, fail-safe).</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">✈️</span>
-                        <span class="skill-text">Construcción de Telegram Bots para extracción de datos y envío de alertas de mercado en tiempo real.</span>
+                        <span class="skill-text">Construcción de Telegram Bots para extracción de datos y envío de
+                            alertas de mercado en tiempo real.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">🍃</span>
-                        <span class="skill-text">Gestión y diseño de esquemas en MongoDB Atlas para persistencia de series históricas on-chain.</span>
+                        <span class="skill-text">Gestión y diseño de esquemas en MongoDB Atlas para persistencia de
+                            series históricas on-chain.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">🔐</span>
-                        <span class="skill-text">Criptografía aplicada, hashing y protección de propiedad intelectual.</span>
+                        <span class="skill-text">Criptografía aplicada, hashing y protección de propiedad
+                            intelectual.</span>
                     </div>
                     <div class="skill-item">
                         <span class="skill-icon">📄</span>
-                        <span class="skill-text">Documentación técnica orientada a clientes, auditores y equipos de desarrollo.</span>
+                        <span class="skill-text">Documentación técnica orientada a clientes, auditores y equipos de
+                            desarrollo.</span>
                     </div>
                 </div>
             </div>
@@ -712,16 +861,24 @@
                 <div class="db-flow">
                     <div class="db-card">
                         <h4>🍃 MongoDB Atlas — Base On-Chain Principal</h4>
-                        <p>Almacenamiento distribuido en la nube (NoSQL) con series históricas de transacciones on-chain, reportes predictivos, jerarquías de billeteras por concentración y estado operativo del sistema. Conexión asíncrona con <strong>Motor+</strong> y auditorías locales.</p>
+                        <p>Almacenamiento distribuido en la nube (NoSQL) con series históricas de transacciones
+                            on-chain, reportes predictivos, jerarquías de billeteras por concentración y estado
+                            operativo del sistema. Conexión asíncrona con <strong>Motor+</strong> y auditorías locales.
+                        </p>
                     </div>
                     <div class="db-card">
                         <h4>🔗 Capas Relacionales Externas</h4>
-                        <p>Integración con fuentes de datos relacionales para métricas macroeconómicas y retail, consumidas exclusivamente por el Cerebro 1 a través de pasarelas HTTP seguras. Nunca expuestas al frontend.</p>
+                        <p>Integración con fuentes de datos relacionales para métricas macroeconómicas y retail,
+                            consumidas exclusivamente por el Cerebro 1 a través de pasarelas HTTP seguras. Nunca
+                            expuestas al frontend.</p>
                     </div>
                 </div>
                 <div class="zero-mock-badge">
                     <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
-                    <span style="font-size:0.9em; color:#aac4dd;">Ningún dato es inventado ni simulado. Toda la información proviene de APIs oficiales, bloques de cadena pública (Blockfrost) y configuraciones verificadas. Si una fuente falla, el sistema entra en <strong>estado degradado seguro</strong> sin romper la experiencia.</span>
+                    <span style="font-size:0.9em; color:#aac4dd;">Ningún dato es inventado ni simulado. Toda la
+                        información proviene de APIs oficiales, bloques de cadena pública (Blockfrost) y configuraciones
+                        verificadas. Si una fuente falla, el sistema entra en <strong>estado degradado seguro</strong>
+                        sin romper la experiencia.</span>
                 </div>
             </div>
 
@@ -750,51 +907,65 @@
                     </div>
                 </div>
                 <div class="stank-badge" style="margin-top:20px; text-align: left;">
-                    <strong style="color:#27a7e7;">✈️ python-telegram-bot + asyncio:</strong> Ambos bots operan de forma completamente asíncrona, desacoplados del resto del sistema. Un fallo en el canal de Telegram <strong>nunca detiene</strong> la extracción ni el análisis principal.
+                    <strong style="color:#27a7e7;">✈️ python-telegram-bot + asyncio:</strong> Ambos bots operan de forma
+                    completamente asíncrona, desacoplados del resto del sistema. Un fallo en el canal de Telegram
+                    <strong>nunca detiene</strong> la extracción ni el análisis principal.
                 </div>
             </div>
 
             <!-- TAB 7: RECLUTADORES S1 -->
             <div id="s1-recruiter" class="tab-panel">
                 <div class="recruiter-box">
-                    <p>⚡ <strong style="color:#44aaff;">Eva Blockseer (Sucursal 1)</strong> es un stack tecnológico de vanguardia, diseñado a la medida de necesidades complejas en el ámbito de datos soberanos, inteligencia on-chain y automatización financiera.</p>
+                    <p>⚡ <strong style="color:#44aaff;">Eva Blockseer (Sucursal 1)</strong> es un stack tecnológico de
+                        vanguardia, diseñado a la medida de necesidades complejas en el ámbito de datos soberanos,
+                        inteligencia on-chain y automatización financiera.</p>
                     <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
-                        <div style="background:rgba(68,170,255,0.1); border:1px solid rgba(68,170,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(68,170,255,0.1); border:1px solid rgba(68,170,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">🏗️</div>
                             <div style="color:#44aaff; font-weight:bold;">Ingeniería de Alto Nivel</div>
                         </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">🍃</div>
                             <div style="color:#44ff44; font-weight:bold;">MongoDB Atlas</div>
                         </div>
-                        <div style="background:rgba(39,167,231,0.1); border:1px solid rgba(39,167,231,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(39,167,231,0.1); border:1px solid rgba(39,167,231,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">✈️</div>
                             <div style="color:#27a7e7; font-weight:bold;">Telegram Bots</div>
                         </div>
-                        <div style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">⛓️</div>
                             <div style="color:#e94560; font-weight:bold;">Blockchain Real (Cardano)</div>
                         </div>
-                        <div style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">📡</div>
                             <div style="color:#b444ff; font-weight:bold;">Observabilidad & Fallos</div>
                         </div>
                     </div>
-                    <p style="font-style:italic; color:#44aaff;">"No importa la magnitud del proyecto: Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento."</p>
+                    <p style="font-style:italic; color:#44aaff;">"No importa la magnitud del proyecto: Eva Blockseer, tu
+                        mundo digital en un solo ecosistema, en paralelo y continuo crecimiento."</p>
                 </div>
             </div>
         </div>
 
         <!-- ===== S2 EVA CONNECT: MÓDULO INTERACTIVO ===== -->
         <div class="section" id="section-s2" style="border: 2px solid #00eaec; background: rgba(0, 234, 236, 0.04);">
-            <div class="ballenas-hero" style="border-color: #00eaec; background: linear-gradient(135deg, #0a0a1a 0%, #082530 50%, #101c2e 100%);">
+            <div class="ballenas-hero"
+                style="border-color: #00eaec; background: linear-gradient(135deg, #0a0a1a 0%, #082530 50%, #101c2e 100%);">
                 <h2 style="color: #00eaec;">🌐 S2: EVA Connect — Minoristas & Macro</h2>
-                <p style="color: #b0e5ec;">Capa Operativa y de Inteligencia de Mercado. Recolección, normalización y exposición de datos reales del ecosistema Cardano y mercados financieros: flujo minorista, métricas macroeconómicas, muro de capitulación y streams en tiempo real.</p>
+                <p style="color: #b0e5ec;">Capa Operativa y de Inteligencia de Mercado. Recolección, normalización y
+                    exposición de datos reales del ecosistema Cardano y mercados financieros: flujo minorista, métricas
+                    macroeconómicas, muro de capitulación y streams en tiempo real.</p>
             </div>
 
             <!-- TABS DE NAVEGACIÓN S2 -->
             <div class="tabs" style="border-bottom-color: rgba(0,234,236,0.25);">
-                <button class="tab-btn active" style="border-color: #00eaec; background: #00eaec; color: #0a0a1a;" onclick="showTab('s2-arch', this)">🏗️ Arquitectura</button>
+                <button class="tab-btn active" style="border-color: #00eaec; background: #00eaec; color: #0a0a1a;"
+                    onclick="showTab('s2-arch', this)">🏗️ Arquitectura</button>
                 <button class="tab-btn" onclick="showTab('s2-metrics', this)">📊 Capacidades & Métricas</button>
                 <button class="tab-btn" onclick="showTab('s2-stack', this)">🛠️ Stack Tecnológico</button>
                 <button class="tab-btn" onclick="showTab('s2-skills', this)">🧠 Destrezas & Conocimientos</button>
@@ -843,8 +1014,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="stank-badge" style="border-color: rgba(0,234,236,0.4); background: linear-gradient(90deg, rgba(0,234,236,0.15), rgba(0,234,236,0.05)); color: #b0e5ec;">
-                    <strong style="color: #00eaec;">🔒 Aislamiento y Estanqueidad Estricta:</strong> La base operativa es privada del módulo. Las demás sucursales y clientes consumen datos <strong>exclusivamente a través de la API pública normalizada con validación de tokens</strong>. Cero accesos directos a la base de datos de S2.
+                <div class="stank-badge"
+                    style="border-color: rgba(0,234,236,0.4); background: linear-gradient(90deg, rgba(0,234,236,0.15), rgba(0,234,236,0.05)); color: #b0e5ec;">
+                    <strong style="color: #00eaec;">🔒 Aislamiento y Estanqueidad Estricta:</strong> La base operativa
+                    es privada del módulo. Las demás sucursales y clientes consumen datos <strong>exclusivamente a
+                        través de la API pública normalizada con validación de tokens</strong>. Cero accesos directos a
+                    la base de datos de S2.
                 </div>
             </div>
 
@@ -867,7 +1042,8 @@
                         <span class="metric-sub">Scouts · Macro · Noticias · Precios</span>
                     </div>
                     <div class="metric-card" style="border-color: rgba(0,234,236,0.3);">
-                        <span class="metric-number" style="color: #00eaec;" data-target="0" data-suffix=" Bloqueos">0</span>
+                        <span class="metric-number" style="color: #00eaec;" data-target="0"
+                            data-suffix=" Bloqueos">0</span>
                         <span class="metric-label">Arquitectura No Bloqueante</span>
                         <span class="metric-sub">asyncio + streams asíncronos</span>
                     </div>
@@ -875,19 +1051,24 @@
                 <div class="skills-grid" style="margin-top: 20px;">
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🎯</span>
-                        <div class="skill-text"><strong>Detección y Clasificación Retail:</strong> Segmentación de wallets minoristas en Cardano según volumen, balance histórico y patrones de acumulación/distribución.</div>
+                        <div class="skill-text"><strong>Detección y Clasificación Retail:</strong> Segmentación de
+                            wallets minoristas en Cardano según volumen, balance histórico y patrones de
+                            acumulación/distribución.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🧱</span>
-                        <div class="skill-text"><strong>Muro de Capitulación:</strong> Snapshots diarios y métricas cuantitativas de pánico/liquidación en el ecosistema minorista.</div>
+                        <div class="skill-text"><strong>Muro de Capitulación:</strong> Snapshots diarios y métricas
+                            cuantitativas de pánico/liquidación en el ecosistema minorista.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🌍</span>
-                        <div class="skill-text"><strong>Inteligencia Macro & Noticias:</strong> Agregación de eventos económicos globales, calendario macro y cables financieros en tiempo real.</div>
+                        <div class="skill-text"><strong>Inteligencia Macro & Noticias:</strong> Agregación de eventos
+                            económicos globales, calendario macro y cables financieros en tiempo real.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">📈</span>
-                        <div class="skill-text"><strong>Profundidad y Precios Resilientes:</strong> Seguimiento multiactivo con fuentes redundantes y cache inteligente para alta disponibilidad.</div>
+                        <div class="skill-text"><strong>Profundidad y Precios Resilientes:</strong> Seguimiento
+                            multiactivo con fuentes redundantes y cache inteligente para alta disponibilidad.</div>
                     </div>
                 </div>
             </div>
@@ -898,11 +1079,21 @@
                     <div>
                         <p style="color:#00eaec; font-weight:bold; margin-bottom:12px;">⚙️ Backend</p>
                         <div class="pill-grid">
-                            <span class="pill pill-blue" style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🐍 Python 3.12+</span>
-                            <span class="pill pill-blue" style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">⚡ FastAPI</span>
-                            <span class="pill pill-blue" style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🌐 Uvicorn</span>
-                            <span class="pill pill-blue" style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🔄 asyncio</span>
-                            <span class="pill pill-blue" style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">📡 httpx asíncrono</span>
+                            <span class="pill pill-blue"
+                                style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🐍 Python
+                                3.12+</span>
+                            <span class="pill pill-blue"
+                                style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">⚡
+                                FastAPI</span>
+                            <span class="pill pill-blue"
+                                style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🌐
+                                Uvicorn</span>
+                            <span class="pill pill-blue"
+                                style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">🔄
+                                asyncio</span>
+                            <span class="pill pill-blue"
+                                style="border-color:#00eaec; color:#00eaec; background:rgba(0,234,236,0.15);">📡 httpx
+                                asíncrono</span>
                         </div>
                     </div>
                     <div>
@@ -954,35 +1145,43 @@
                 <div class="skills-grid">
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">⚡</span>
-                        <span class="skill-text">Desarrollo de backends asíncronos de alto rendimiento con FastAPI, Python y httpx.</span>
+                        <span class="skill-text">Desarrollo de backends asíncronos de alto rendimiento con FastAPI,
+                            Python y httpx.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">📑</span>
-                        <span class="skill-text">Diseño de contratos de API claros, seguros y normalizados para consumo entre módulos y sucursales.</span>
+                        <span class="skill-text">Diseño de contratos de API claros, seguros y normalizados para consumo
+                            entre módulos y sucursales.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🔬</span>
-                        <span class="skill-text">Procesamiento de datos on-chain en producción: ingesta, clasificación, scoring y métricas minoristas.</span>
+                        <span class="skill-text">Procesamiento de datos on-chain en producción: ingesta, clasificación,
+                            scoring y métricas minoristas.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🛡️</span>
-                        <span class="skill-text">Implementación de arquitecturas resilientes: circuit breaker, colas offline, modo degradado y recuperación automática.</span>
+                        <span class="skill-text">Implementación de arquitecturas resilientes: circuit breaker, colas
+                            offline, modo degradado y recuperación automática.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">⚛️</span>
-                        <span class="skill-text">Desarrollo frontend moderno orientado a dashboards operativos con actualización en vivo (React + Vite + SSE/WebSocket).</span>
+                        <span class="skill-text">Desarrollo frontend moderno orientado a dashboards operativos con
+                            actualización en vivo (React + Vite + SSE/WebSocket).</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">⚙️</span>
-                        <span class="skill-text">Operación de workers autónomos, cron jobs y orquestadores multi-proceso en entornos Docker.</span>
+                        <span class="skill-text">Operación de workers autónomos, cron jobs y orquestadores multi-proceso
+                            en entornos Docker.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">🔐</span>
-                        <span class="skill-text">Criptografía aplicada al servicio de la soberanía de datos y la integridad operativa del sistema.</span>
+                        <span class="skill-text">Criptografía aplicada al servicio de la soberanía de datos y la
+                            integridad operativa del sistema.</span>
                     </div>
                     <div class="skill-item" style="border-left-color: #00eaec;">
                         <span class="skill-icon">📄</span>
-                        <span class="skill-text">Documentación técnica rigurosa orientada a integradores, auditores y equipos de desarrollo.</span>
+                        <span class="skill-text">Documentación técnica rigurosa orientada a integradores, auditores y
+                            equipos de desarrollo.</span>
                     </div>
                 </div>
             </div>
@@ -992,16 +1191,22 @@
                 <div class="db-flow">
                     <div class="db-card" style="border-color: rgba(0,234,236,0.4);">
                         <h4 style="color:#00eaec;">🐘 PostgreSQL / Supabase — Base Operativa</h4>
-                        <p>Almacenamiento relacional estructurado con esquemas versionados, estrategias de retención, purga periódica automática y circuit breaker para garantizar alta disponibilidad y tolerancia a fallos.</p>
+                        <p>Almacenamiento relacional estructurado con esquemas versionados, estrategias de retención,
+                            purga periódica automática y circuit breaker para garantizar alta disponibilidad y
+                            tolerancia a fallos.</p>
                     </div>
                     <div class="db-card" style="border-color: rgba(0,234,236,0.4);">
                         <h4 style="color:#00eaec;">🌐 Publicación Normalizada (API Gateway)</h4>
-                        <p>Endpoints públicos y streams en vivo donde los datos crudos de Cardano y macroeconomía se entregan normalizados y listos para consumo sin exponer la base interna.</p>
+                        <p>Endpoints públicos y streams en vivo donde los datos crudos de Cardano y macroeconomía se
+                            entregan normalizados y listos para consumo sin exponer la base interna.</p>
                     </div>
                 </div>
-                <div class="zero-mock-badge" style="border-color: #00eaec; color: #00eaec; background: linear-gradient(90deg, #0f2d33, #0a1f24);">
+                <div class="zero-mock-badge"
+                    style="border-color: #00eaec; color: #00eaec; background: linear-gradient(90deg, #0f2d33, #0a1f24);">
                     <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
-                    <span style="font-size:0.9em; color:#b0e5ec;">Todas las métricas de mercado y movimientos on-chain se calculan a partir de transacciones reales de Cardano Mainnet y fuentes oficiales verificadas. Cero datos simulados o placeholders.</span>
+                    <span style="font-size:0.9em; color:#b0e5ec;">Todas las métricas de mercado y movimientos on-chain
+                        se calculan a partir de transacciones reales de Cardano Mainnet y fuentes oficiales verificadas.
+                        Cero datos simulados o placeholders.</span>
                 </div>
             </div>
 
@@ -1027,52 +1232,67 @@
                         </ul>
                     </div>
                 </div>
-                <div class="stank-badge" style="margin-top:20px; text-align: left; border-color: rgba(0,234,236,0.4); color: #b0e5ec;">
-                    <strong style="color:#00eaec;">⏱️ Tareas Programadas (Cron Jobs):</strong> Ejecución periódica en background para censo histórico de la red, purga de retención de base de datos y generación de snapshots del mercado.
+                <div class="stank-badge"
+                    style="margin-top:20px; text-align: left; border-color: rgba(0,234,236,0.4); color: #b0e5ec;">
+                    <strong style="color:#00eaec;">⏱️ Tareas Programadas (Cron Jobs):</strong> Ejecución periódica en
+                    background para censo histórico de la red, purga de retención de base de datos y generación de
+                    snapshots del mercado.
                 </div>
             </div>
 
             <!-- TAB 7: RECLUTADORES S2 -->
             <div id="s2-recruiter" class="tab-panel">
                 <div class="recruiter-box" style="border-color: rgba(0,234,236,0.4);">
-                    <p>⚡ <strong style="color:#00eaec;">EVA Connect (Sucursal 2)</strong> es la capa operativa del ecosistema EVA, diseñada para capturar, normalizar y exponer inteligencia de mercado y flujos on-chain con estándar de producción real.</p>
+                    <p>⚡ <strong style="color:#00eaec;">EVA Connect (Sucursal 2)</strong> es la capa operativa del
+                        ecosistema EVA, diseñada para capturar, normalizar y exponer inteligencia de mercado y flujos
+                        on-chain con estándar de producción real.</p>
                     <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
-                        <div style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">🏗️</div>
                             <div style="color:#00eaec; font-weight:bold;">Ingeniería Asíncrona</div>
                         </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">🐘</div>
                             <div style="color:#44ff44; font-weight:bold;">PostgreSQL / Supabase</div>
                         </div>
-                        <div style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">📡</div>
                             <div style="color:#00eaec; font-weight:bold;">SSE & WebSockets</div>
                         </div>
-                        <div style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">⛓️</div>
                             <div style="color:#e94560; font-weight:bold;">Blockchain Cardano Real</div>
                         </div>
-                        <div style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div
+                            style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
                             <div style="font-size:2em;">🛡️</div>
                             <div style="color:#b444ff; font-weight:bold;">Circuit Breakers & Resiliencia</div>
                         </div>
                     </div>
-                    <p style="font-style:italic; color:#00eaec;">"No importa la magnitud del proyecto: Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento."</p>
+                    <p style="font-style:italic; color:#00eaec;">"No importa la magnitud del proyecto: Eva Blockseer, tu
+                        mundo digital en un solo ecosistema, en paralelo y continuo crecimiento."</p>
                 </div>
             </div>
         </div>
 
         <!-- ===== S3 GREEN BATTERY: MÓDULO INTERACTIVO ===== -->
         <div class="section" id="section-s3" style="border: 2px solid #44ff44;">
-            <div class="ballenas-hero" style="border-color: #44ff44; background: linear-gradient(135deg, #0a0a1a 0%, #0f2a0f 50%, #101c2e 100%);">
+            <div class="ballenas-hero"
+                style="border-color: #44ff44; background: linear-gradient(135deg, #0a0a1a 0%, #0f2a0f 50%, #101c2e 100%);">
                 <h2 style="color: #44ff44;">🔋 S3: Green Battery — Notaría Digital Industrial</h2>
-                <p style="color: #aaff44;">Gestión Industrial de Flotas, Portal de Clientes y Agenda CRM. Trazabilidad forense de activos industriales con notarización blockchain y auditoría humana del administrador.</p>
+                <p style="color: #aaff44;">Gestión Industrial de Flotas, Portal de Clientes y Agenda CRM. Trazabilidad
+                    forense de activos industriales con notarización blockchain y auditoría humana del administrador.
+                </p>
             </div>
 
             <!-- TABS DE NAVEGACIÓN S3 -->
             <div class="tabs" style="border-bottom-color: rgba(68,255,68,0.25);">
-                <button class="tab-btn active" style="border-color: #44ff44; background: #44ff44; color: #0a0a1a;" onclick="showTab('s3-arch', this)">🏗️ Arquitectura</button>
+                <button class="tab-btn active" style="border-color: #44ff44; background: #44ff44; color: #0a0a1a;"
+                    onclick="showTab('s3-arch', this)">🏗️ Arquitectura</button>
                 <button class="tab-btn" onclick="showTab('s3-metrics', this)">📊 Magnitud</button>
                 <button class="tab-btn" onclick="showTab('s3-stack', this)">🛠️ Stack Tecnológico</button>
                 <button class="tab-btn" onclick="showTab('s3-notary', this)">🔐 Protocolo Notarial</button>
@@ -1112,8 +1332,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(68,255,68,0.4); color: #aaff44;">
-                    <strong style="color:#44ff44;">🔒 Estanqueidad Industrial:</strong> La lógica de Green Battery (activos, historial, notarización, facturación) opera en completa aislamiento de las sucursales de análisis on-chain. Cero datos inventados — toda información proviene de blockchains públicas, bases de datos verificadas y APIs oficiales.
+                <div class="stank-badge"
+                    style="margin-top: 20px; text-align: left; border-color: rgba(68,255,68,0.4); color: #aaff44;">
+                    <strong style="color:#44ff44;">🔒 Estanqueidad Industrial:</strong> La lógica de Green Battery
+                    (activos, historial, notarización, facturación) opera en completa aislamiento de las sucursales de
+                    análisis on-chain. Cero datos inventados — toda información proviene de blockchains públicas, bases
+                    de datos verificadas y APIs oficiales.
                 </div>
             </div>
 
@@ -1149,19 +1373,23 @@
                 <div class="skills-grid" style="margin-top: 20px;">
                     <div class="skill-item" style="border-left-color: #44ff44;">
                         <span class="skill-icon">🔗</span>
-                        <div class="skill-text"><strong>Notarización Blockchain:</strong> Anclaje de bancos de baterías, UPS y sistemas de respaldo en Cardano Mainnet con verificación pública.</div>
+                        <div class="skill-text"><strong>Notarización Blockchain:</strong> Anclaje de bancos de baterías,
+                            UPS y sistemas de respaldo en Cardano Mainnet con verificación pública.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #44ff44;">
                         <span class="skill-icon">📊</span>
-                        <div class="skill-text"><strong>Bitácora Operativa:</strong> Registro auditable de mantenimientos, diagnósticos y pruebas de autonomía con fotos y firmas digitales.</div>
+                        <div class="skill-text"><strong>Bitácora Operativa:</strong> Registro auditable de
+                            mantenimientos, diagnósticos y pruebas de autonomía con fotos y firmas digitales.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #44ff44;">
                         <span class="skill-icon">💰</span>
-                        <div class="skill-text"><strong>Facturación Maestra:</strong> Motor de cálculo de costos, márgenes de utilidad y consolidación financiera por cliente.</div>
+                        <div class="skill-text"><strong>Facturación Maestra:</strong> Motor de cálculo de costos,
+                            márgenes de utilidad y consolidación financiera por cliente.</div>
                     </div>
                     <div class="skill-item" style="border-left-color: #44ff44;">
                         <span class="skill-icon">🗓️</span>
-                        <div class="skill-text"><strong>Agenda Inteligente:</strong> Calendario de despacho con semáforo de visitas, timer de actividades y festivos laborales.</div>
+                        <div class="skill-text"><strong>Agenda Inteligente:</strong> Calendario de despacho con semáforo
+                            de visitas, timer de actividades y festivos laborales.</div>
                     </div>
                 </div>
             </div>
@@ -1222,526 +1450,641 @@
                 </div>
             </div>
 
-            <!-- TAB 4: PROTOCOLO NOTARIAL S3 -->
-            <div id="s3-notary" class="tab-panel">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
-                    <div class="brain-card" style="border-color: #44ff44;">
-                        <h3 style="color:#44ff44;">1. Registro del Técnico</h3>
-                        <ul>
-                            <li>📥 El técnico registra intervención en el historial</li>
-                            <li>📸 Fotografías y mediciones adjuntas</li>
-                            <li>🔧 Estado inicial: EN REVISION</li>
-                        </ul>
-                    </div>
-                    <div class="brain-card" style="border-color: #44ff44;">
-                        <h3 style="color:#44ff44;">2. Notarización Automática</h3>
-                        <ul>
-                            <li>⛓️ El evento se ancla en blockchain pública</li>
-                            <li>🔔 Notificación al administrador para auditoría</li>
-                            <li>🔒 Hash inmutable registrado</li>
-                        </ul>
-                    </div>
-                    <div class="brain-card" style="border-color: #44ff44;">
-                        <h3 style="color:#44ff44;">3. Auditoría Humana (Óscar)</h3>
-                        <ul>
-                            <li>👁️ El administrador revisa el informe</li>
-                            <li>✅ Aprobar y publicar al cliente</li>
-                            <li>❌ Rechazar con observaciones para corrección</li>
-                        </ul>
-                    </div>
-                    <div class="brain-card" style="border-color: #44ff44;">
-                        <h3 style="color:#44ff44;">4. Publicación al Cliente</h3>
-                        <ul>
-                            <li>📄 Reporte disponible en el portal</li>
-                            <li>📧 Notificación automática por email</li>
-                            <li>🔍 Verificación vía código QR en blockchain</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(68,255,68,0.4); color: #aaff44;">
-                    <strong style="color:#44ff44;">🛡️ Doble Perímetro de Datos:</strong> BD1 (forense) con privilegios de servicio; BD2 (portal cliente) con Row-Level Security (RLS) activado en todas sus tablas. Cero exposición de llaves en el frontend.
-                </div>
-            </div>
-
-            <!-- TAB 5: DESTREZAS S3 -->
-            <div id="s3-skills" class="tab-panel">
-                <div class="skills-grid">
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">⚡</span>
-                        <span class="skill-text">Ingeniería de backends de alta precisión con FastAPI, Pydantic V2 y procesamiento asíncrono.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">⛓️</span>
-                        <span class="skill-text">Modelado de ciclos de vida de activos industriales y anclaje criptográfico en blockchain pública.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">🔄</span>
-                        <span class="skill-text">Arquitectura de doble base de datos relacional con sincronización bidireccional y auto-reparación.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">🔐</span>
-                        <span class="skill-text">Implementación de políticas de seguridad por segregación de dominios y RLS en portales de clientes.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">📊</span>
-                        <span class="skill-text">Desarrollo de dashboards operativos con React + Vite, timers de actividad y semáforos de gestión.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">📄</span>
-                        <span class="skill-text">Generación de reportes institucionales PDF con firma digital, código QR y exploración blockchain.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">🤖</span>
-                        <span class="skill-text">Integración de modelos de lenguaje con datos operativos reales (cero mocks, cero alucinaciones).</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">📧</span>
-                        <span class="skill-text">Operación de pipelines asíncronos con tareas en segundo plano para notificaciones transaccionales.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">🧮</span>
-                        <span class="skill-text">Diseño de motores de facturación con cálculo automático de márgenes y consolidación financiera.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #44ff44;">
-                        <span class="skill-icon">📋</span>
-                        <span class="skill-text">Documentación técnica profunda orientada a auditores, integradores y equipos de desarrollo.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 6: BASES DE DATOS S3 -->
-            <div id="s3-data" class="tab-panel">
-                <div class="db-flow">
-                    <div class="db-card" style="border-color: rgba(68,255,68,0.4);">
-                        <h4 style="color:#44ff44;">🐘 BD1 — Forense Industrial</h4>
-                        <p>Base de datos principal de Green Battery. Contiene equipos, historial de intervenciones, sedes, técnicos, pruebas de autonomía, facturación maestra, agenda CRM y toda la lógica operativa. Privilegios de servicio con acceso completo.</p>
-                    </div>
-                    <div class="db-card" style="border-color: rgba(68,255,68,0.4);">
-                        <h4 style="color:#44ff44;">🔒 BD2 — Portal de Clientes</h4>
-                        <p>Base de datos aislada exclusivamente para el portal transaccional del cliente final. 4 tablas con Row-Level Security (RLS) activado. Sincronización controlada y bidireccional con BD1.</p>
-                    </div>
-                </div>
-                <div class="zero-mock-badge" style="border-color: #44ff44; color: #44ff44; background: linear-gradient(90deg, #0f2a0f, #0a1f1a);">
-                    <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
-                    <span style="font-size:0.9em; color:#aaff44;">Ningún activo, transacción o reporte es simulado. Todos los datos provienen de inspecciones reales, blockchains públicas (Cardano) y APIs oficiales verificadas.</span>
-                </div>
-            </div>
-
-            <!-- TAB 7: RECLUTADORES S3 -->
-            <div id="s3-recruiter" class="tab-panel">
-                <div class="recruiter-box" style="border-color: #44ff44;">
-                    <p>🔋 <strong style="color:#44ff44;">Green Battery (Sucursal 3)</strong> es la columna vertebral industrial del ecosistema EVA, diseñada para la trazabilidad soberana de activos críticos mediante notarización blockchain y auditoría humana.</p>
-                    <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">⛓️</div>
-                            <div style="color:#44ff44; font-weight:bold;">Blockchain Real</div>
-                        </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🐘</div>
-                            <div style="color:#44ff44; font-weight:bold;">PostgreSQL / Supabase</div>
-                        </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🔐</div>
-                            <div style="color:#44ff44; font-weight:bold;">Auditoría Humana</div>
-                        </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">📱</div>
-                            <div style="color:#44ff44; font-weight:bold;">React + PWA</div>
-                        </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🧮</div>
-                            <div style="color:#44ff44; font-weight:bold;">Facturación IA</div>
-                        </div>
-                    </div>
-                    <p style="font-style:italic; color:#44ff44;">"Trazabilidad soberana para activos críticos. Cada mantenimiento, notarizado."</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== S5 GT TRAX POWER: MÓDULO INTERACTIVO ===== -->
-        <div class="section" id="section-s5" style="border: 2px solid #FFD700;">
-            <div class="ballenas-hero" style="border-color: #FFD700; background: linear-gradient(135deg, #0a0a1a 0%, #1a140a 50%, #101c2e 100%);">
-                <h2 style="color: #FFD700;">⚙️ S5: GT_Trax_Power — Presencia Digital Industrial</h2>
-                <p style="color: #FFE082;">Sitio web institucional y generador de leads para TRAX POWER — Motive Energy, empresa colombiana (Medellín, 2017) especializada en baterías industriales LiFePO4, cargadores y sistemas BMS. Arquitectura Dual-Workflow: Google AI Studio (diseño) ↔ VS Code (backend/API).</p>
-            </div>
-
-            <!-- TABS DE NAVEGACIÓN S5 -->
-            <div class="tabs" style="border-bottom-color: rgba(255,215,0,0.25);">
-                <button class="tab-btn active" style="border-color: #FFD700; background: #FFD700; color: #0a0a1a;" onclick="showTab('s5-arch', this)">🏗️ Arquitectura Dual</button>
-                <button class="tab-btn" onclick="showTab('s5-stack', this)">🛠️ Stack Tecnológico</button>
-                <button class="tab-btn" onclick="showTab('s5-components', this)">⚛️ Componentes</button>
-                <button class="tab-btn" onclick="showTab('s5-api', this)">🔌 Endpoints API</button>
-                <button class="tab-btn" onclick="showTab('s5-skills', this)">🧠 Destrezas & Conocimientos</button>
-                <button class="tab-btn" onclick="showTab('s5-recruiter', this)">💼 Reclutadores & Clientes</button>
-            </div>
-
-            <!-- TAB 1: ARQUITECTURA DUAL -->
-            <div id="s5-arch" class="tab-panel active">
-                <div class="dual-brain">
-                    <div class="brain-card">
-                        <h3 style="color:#FFD700;">🎨 Frente A — Diseño Visual (Google AI Studio)</h3>
-                        <ul>
-                            <li>⚛️ React 19 + TypeScript + Vite 6</li>
-                            <li>🎨 Tailwind CSS 4 + Motion (animaciones)</li>
-                            <li>🪶 lucide-react (íconos)</li>
-                            <li>🗣️ Web Speech API (voz es-CO)</li>
-                            <li>🔊 Web Audio API (sonidos industriales)</li>
-                            <li>🤖 Generación creativa con Gemini</li>
-                            <li>📱 Diseño iterativo validado por cliente</li>
-                        </ul>
-                    </div>
-                    <div class="brain-divider">⇄</div>
-                    <div class="brain-card">
-                        <h3 style="color:#FFD700;">🗄️ Frente B — Backend/API (VS Code)</h3>
-                        <ul>
-                            <li>⚡ Express 4 + Vite middleware</li>
-                            <li>🤖 Gemini 2.5 Flash (@google/genai)</li>
-                            <li>📦 esbuild bundling para producción</li>
-                            <li>🐳 Docker multi-stage</li>
-                            <li>☁️ Render.com auto-deploy</li>
-                            <li>🔐 Secret managers (.env nunca subido)</li>
-                            <li>🔌 API REST con Vite SPA build</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(255,215,0,0.4); background: linear-gradient(90deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05)); color: #FFE082;">
-                    <strong style="color:#FFD700;">🔒 Regla de Oro del Dual-Workflow:</strong> El diseño visual (layout, estilos, animaciones, audio) es territorio EXCLUSIVO de Google AI Studio. El backend (endpoints, lógica, datos, tipos, server.ts) es territorio EXCLUSIVO de los agentes de código. Nunca se cruzan. Las imágenes usan rutas fijas (nunca nombres generados por IA). Cero datos inventados — toda información proviene de <code>companyData.ts</code> y <code>server.ts</code>.
-                </div>
-            </div>
-
-            <!-- TAB 2: STACK TECNOLÓGICO -->
-            <div id="s5-stack" class="tab-panel">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px;">
-                    <div>
-                        <p style="color:#FFD700; font-weight:bold; margin-bottom:12px;">⚛️ Frontend (AI Studio)</p>
-                        <div class="pill-grid">
-                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚛️ React 19</span>
-                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🔷 TypeScript</span>
-                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite 6</span>
-                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🎨 Tailwind CSS 4</span>
-                            <span class="pill pill-blue" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🌀 Motion</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p style="color:#FFE082; font-weight:bold; margin-bottom:12px;">⚡ Backend / API (VS Code)</p>
-                        <div class="pill-grid">
-                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🐍 Node.js</span>
-                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Express 4</span>
-                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite Middleware</span>
-                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🤖 Gemini 2.5 Flash</span>
-                            <span class="pill pill-orange" style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">📦 esbuild</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p style="color:#44ff44; font-weight:bold; margin-bottom:12px;">☁️ Infraestructura</p>
-                        <div class="pill-grid">
-                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🐳 Docker</span>
-                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">☁️ Render.com</span>
-                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔐 dotenv / Secrets</span>
-                            <span class="pill pill-green" style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔁 Auto-deploy</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p style="color:#00eaff; font-weight:bold; margin-bottom:12px;">🎵 Audio & Accesibilidad</p>
-                        <div class="pill-grid">
-                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🗣️ Web Speech API</span>
-                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🔊 Web Audio API</span>
-                            <span class="pill pill-blue" style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🎵 Voz es-CO</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 3: COMPONENTES -->
-            <div id="s5-components" class="tab-panel">
-                <div class="skills-grid">
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">⚡</span>
-                        <div class="skill-text"><strong>App.tsx:</strong> Entry point SPA con orquestación de tabs de navegación y composición de todos los componentes.</div>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🔋</span>
-                        <div class="skill-text"><strong>LiveCommercialPoster.tsx:</strong> Anuncios comerciales en vivo con slides interactivos, síntesis de voz en es-CO y sonidos industriales.</div>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">💰</span>
-                        <div class="skill-text"><strong>RoiCalculator.tsx:</strong> Calculadora de ROI para baterías LiFePO4 vs. plomo-ácido — ahorro energético y productividad multi-turno.</div>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">📦</span>
-                        <div class="skill-text"><strong>ProductsAndServices.tsx:</strong> Catálogo dinámico renderizado desde datos verificados — productos y servicios reales.</div>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🔍</span>
-                        <div class="skill-text"><strong>InteractivePortal.tsx:</strong> Portal interactivo con hotspots visuales sobre instalación, equipos y tecnología.</div>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🤖</span>
-                        <div class="skill-text"><strong>AiCampaignGenerator.tsx:</strong> Generador de copy publicitario asistido por IA — consume /api/generate-ad-copy (Gemini 2.5 Flash).</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 4: ENDPOINTS API -->
-            <div id="s5-api" class="tab-panel">
-                <div class="db-flow">
-                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
-                        <h4 style="color:#FFD700;">📡 GET /api/company-info</h4>
-                        <p>Información corporativa verificada: empresa, contacto, redes sociales, servicios y productos. Fuente única de verdad desde <code>companyData.ts</code>. Cero inventos — todos los datos (teléfonos, correos, direcciones) provienen de la empresa real.</p>
-                    </div>
-                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
-                        <h4 style="color:#FFD700;">🤖 POST /api/generate-ad-copy</h4>
-                        <p>Generación de copy publicitario con Gemini 2.5 Flash. Prompt estructurado con datos de contacto reales. Fallback estático verificado si no hay API key disponible.</p>
-                    </div>
-                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
-                        <h4 style="color:#FFD700;">💰 POST /api/quote-request</h4>
-                        <p>Simulación de cotización. Genera ID único <code>COT-XXXXX</code> y enlace de WhatsApp preformateado con datos del cliente.</p>
-                    </div>
-                    <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
-                        <h4 style="color:#FFD700;">📅 POST /api/schedule-visit</h4>
-                        <p>Programación de visita técnica. Genera ID único <code>VIS-XXXXX</code> y enlace de WhatsApp con todos los datos de la solicitud.</p>
-                    </div>
-                </div>
-                <div class="zero-mock-badge" style="border-color: #FFD700; color: #FFD700; background: linear-gradient(90deg, #1a140a, #0f0e05);">
-                    <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
-                    <span style="font-size:0.9em; color:#FFE082;">Ningún servicio, producto, teléfono o correo es inventado. Todos los datos corporativos provienen verificados de F&R Servicios Industriales S.A.S. / TRAX POWER (Medellín, Antioquia, Colombia).</span>
-                </div>
-            </div>
-
-            <!-- TAB 5: DESTREZAS -->
-            <div id="s5-skills" class="tab-panel">
-                <div class="skills-grid">
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">⚡</span>
-                        <span class="skill-text">Desarrollo full-stack moderno con React 19, TypeScript, Vite y Tailwind CSS para experiencias web industriales.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🗄️</span>
-                        <span class="skill-text">Backend con Express 4 y Vite middleware, con API REST bien estructuradas y build de producción optimizada con esbuild.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🤖</span>
-                        <span class="skill-text">Integración de IA generativa (Gemini 2.5 Flash) para generación de copy publicitario asistido con datos verificados.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🎵</span>
-                        <span class="skill-text">Experiencia auditiva inmersiva con Web Speech API (español colombiano) y Web Audio API (sonidos industriales personalizados).</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🏗️</span>
-                        <span class="skill-text">Arquitectura de dual-workflow: separación estricta entre diseño visual (AI Studio) y lógica de negocio (VS Code).</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🔐</span>
-                        <span class="skill-text">Gestión de secretos con dotenv y Render secret managers; nunca se sube .env a repositorio.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">🐳</span>
-                        <span class="skill-text">Despliegue con Docker multi-stage y auto-deploy continuo en Render.com.</span>
-                    </div>
-                    <div class="skill-item" style="border-left-color: #FFD700;">
-                        <span class="skill-icon">📊</span>
-                        <span class="skill-text">Documentación técnica orientada a reclutadores, clientes y equipos de desarrollo.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 6: RECLUTADORES -->
-            <div id="s5-recruiter" class="tab-panel">
-                <div class="recruiter-box" style="border-color: #FFD700; background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));">
-                    <p>⚙️ <strong style="color:#FFD700;">GT_Trax_Power (Sucursal 5)</strong> es un proyecto full-stack moderno que demuestra dominio integral de desarrollo web: desde el diseño visual iterativo en Google AI Studio hasta el backend con Express, integración con IA generativa (Gemini), experiencia de usuario inmersiva con Web Speech y Web Audio API, y una arquitectura de dual-workflow que separa estrictamente diseño de lógica — un patrón escalable reutilizable para futuros clientes industriales.</p>
-                    <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
-                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">⚡</div>
-                            <div style="color:#FFD700; font-weight:bold;">Full-stack Real</div>
-                        </div>
-                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🤖</div>
-                            <div style="color:#FFD700; font-weight:bold;">IA Generativa</div>
-                        </div>
-                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🗣️</div>
-                            <div style="color:#FFD700; font-weight:bold;">Web Speech</div>
-                        </div>
-                        <div style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">🐳</div>
-                            <div style="color:#FFD700; font-weight:bold;">Docker + Render</div>
-                        </div>
-                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
-                            <div style="font-size:2em;">✅</div>
-                            <div style="color:#44ff44; font-weight:bold;">Datos Verídicos</div>
-                        </div>
-                    </div>
-                    <p style="font-style:italic; color:#FFD700;">"Energía que impulsa tu operación — de la idea al despliegue productivo."</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- FLUJO DE DATOS -->
-        <div class="section">
-            <h2>🔄 Flujo Operativo y Soberanía</h2>
-            <div class="flow-chart">
-                <div class="flow-step">
-                    <div style="font-size: 2em;">⏱️</div>
-                    <div><strong>Orquestación</strong></div>
-                    <div style="font-size: 0.8em; color: #888;">Workers + Cron</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div style="font-size: 2em;">🛡️</div>
-                    <div><strong>Cifrado</strong></div>
-                    <div style="font-size: 0.8em; color: #888;">AES-GCM / Zero-Knowledge</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div style="font-size: 2em;">⛓️</div>
-                    <div><strong>Notaría</strong></div>
-                    <div style="font-size: 0.8em; color: #888;">Sello On-Chain</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step" style="border-color: #44ff44;">
-                    <div style="font-size: 2em;">💾</div>
-                    <div><strong>Almacén</strong></div>
-                    <div style="font-size: 0.8em; color: #888;">Soberano</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- APIS EXTERNAS -->
-        <div class="section">
-            <h2>🔗 Integraciones del Ecosistema</h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <div class="tech-icon">🤖</div>
-                    <div><strong>Groq LLM</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">Procesamiento IA</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">✨</div>
-                    <div><strong>Google Gemini</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">Asistencia Avanzada</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">⛓️</div>
-                    <div><strong>Blockfrost</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">Cardano Mainnet</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">📦</div>
-                    <div><strong>Supabase</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">PostgreSQL gestionado</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🐳</div>
-                    <div><strong>Docker</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">Contenedores multi-stage</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🚀</div>
-                    <div><strong>Render</strong></div>
-                    <div style="color: #888; font-size: 0.9em;">Despliegue continuo</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEGURIDAD -->
-        <div class="section" style="border: 2px solid #44ff44; background: rgba(68, 255, 68, 0.05);">
-            <h2 style="color: #44ff44; border-color: #44ff44;">🛡️ Estándar de Seguridad y Cero Mocks</h2>
-            <div class="grid">
-                <div class="card" style="border-color: #44ff44;">
-                    <h3 style="color: #44ff44;">🟢 Aislamiento Absoluto</h3>
+            <!-- TAB 4: PROTOCOLO NOTARIAL GreenBattery  -->
+            <div id="s3-notary" class="tab-panel" <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+                <div class="brain-card" style="border-color: #44ff44;">
+                    <h3 style="color:#44ff44;">1. Registro del Técnico</h3>
                     <ul>
-                        <li>✅ Resguardo estricto de propiedad intelectual.</li>
-                        <li>✅ Cero exposición de llaves privadas o URLs de producción.</li>
-                        <li>✅ Arquitectura orientada a la soberanía del operador.</li>
+                        <li>📥 El técnico registra intervención en el historial</li>
+                        <li>📸 Fotografías y mediciones adjuntas</li>
+                        <li>🔧 Estado inicial: EN REVISION</li>
                     </ul>
                 </div>
-                <div class="card" style="border-color: #44ff44;">
-                    <h3 style="color: #44ff44;">🟢 Integridad de Datos</h3>
+                <div class="brain-card" style="border-color: #44ff44;">
+                    <h3 style="color:#44ff44;">2. Notarización Automática</h3>
                     <ul>
-                        <li>✨ Validación rigurosa de flujos reales.</li>
-                        <li>✨ Protocolos de estanqueidad entre sucursales.</li>
+                        <li>⛓️ El evento se ancla en blockchain pública</li>
+                        <li>🔔 Notificación al administrador para auditoría</li>
+                        <li>🔒 Hash inmutable registrado</li>
+                    </ul>
+                </div>
+                <div class="brain-card" style="border-color: #44ff44;">
+                    <h3 style="color:#44ff44;">3. Auditoría Humana (Óscar)</h3>
+                    <ul>
+                        <li>👁️ El administrador revisa el informe</li>
+                        <li>✅ Aprobar y publicar al cliente</li>
+                        <li>❌ Rechazar con observaciones para corrección</li>
+                    </ul>
+                </div>
+                <div class="brain-card" style="border-color: #44ff44;">
+                    <h3 style="color:#44ff44;">4. Publicación al Cliente</h3>
+                    <ul>
+                        <li>📄 Reporte disponible en el portal</li>
+                        <li>📧 Notificación automática por email</li>
+                        <li>🔍 Verificación vía código QR en blockchain</li>
                     </ul>
                 </div>
             </div>
+            <div class="stank-badge"
+                style="margin-top: 20px; text-align: left; border-color: rgba(68,255,68,0.4); color: #aaff44;">
+                <strong style="color:#44ff44;">🛡️ Doble Perímetro de Datos:</strong> BD1 (forense) con privilegios
+                de servicio; BD2 (portal cliente) con Row-Level Security (RLS) activado en todas sus tablas. Cero
+                exposición de llaves en el frontend.
+            </div>
         </div>
 
-        <!-- STACK / HABILIDADES -->
-        <div class="section">
-            <h2>🧰 Stack Tecnológico y Conocimientos Aplicados</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><span class="icon">⚙️</span> Backend & Datos</h3>
+        <!-- TAB 5: DESTREZAS GreenBattery -->
+        <div id="s3-skills" class="tab-panel">
+            <div class="skills-grid">
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">⚡</span>
+                    <span class="skill-text">Ingeniería de backends de alta precisión con FastAPI, Pydantic V2 y
+                        procesamiento asíncrono.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">⛓️</span>
+                    <span class="skill-text">Modelado de ciclos de vida de activos industriales y anclaje
+                        criptográfico en blockchain pública.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">🔄</span>
+                    <span class="skill-text">Arquitectura de doble base de datos relacional con sincronización
+                        bidireccional y auto-reparación.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">🔐</span>
+                    <span class="skill-text">Implementación de políticas de seguridad por segregación de dominios y
+                        RLS en portales de clientes.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">📊</span>
+                    <span class="skill-text">Desarrollo de dashboards operativos con React + Vite, timers de
+                        actividad y semáforos de gestión.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">📄</span>
+                    <span class="skill-text">Generación de reportes institucionales PDF con firma digital, código QR
+                        y exploración blockchain.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">🤖</span>
+                    <span class="skill-text">Integración de modelos de lenguaje con datos operativos reales (cero
+                        mocks, cero alucinaciones).</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">📧</span>
+                    <span class="skill-text">Operación de pipelines asíncronos con tareas en segundo plano para
+                        notificaciones transaccionales.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">🧮</span>
+                    <span class="skill-text">Diseño de motores de facturación con cálculo automático de márgenes y
+                        consolidación financiera.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #44ff44;">
+                    <span class="skill-icon">📋</span>
+                    <span class="skill-text">Documentación técnica profunda orientada a auditores, integradores y
+                        equipos de desarrollo.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 6: BASES DE DATOS GreenBattery -->
+        <div id="s3-data" class="tab-panel">
+            <div class="db-flow">
+                <div class="db-card" style="border-color: rgba(68,255,68,0.4);">
+                    <h4 style="color:#44ff44;">🐘 BD1 — Forense Industrial</h4>
+                    <p>Base de datos principal de Green Battery. Contiene equipos, historial de intervenciones,
+                        sedes, técnicos, pruebas de autonomía, facturación maestra, agenda CRM y toda la lógica
+                        operativa. Privilegios de servicio con acceso completo.</p>
+                </div>
+                <div class="db-card" style="border-color: rgba(68,255,68,0.4);">
+                    <h4 style="color:#44ff44;">🔒 BD2 — Portal de Clientes</h4>
+                    <p>Base de datos aislada exclusivamente para el portal transaccional del cliente final. 4 tablas
+                        con Row-Level Security (RLS) activado. Sincronización controlada y bidireccional con BD1.
+                    </p>
+                </div>
+            </div>
+            <div class="zero-mock-badge"
+                style="border-color: #44ff44; color: #44ff44; background: linear-gradient(90deg, #0f2a0f, #0a1f1a);">
+                <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
+                <span style="font-size:0.9em; color:#aaff44;">Ningún activo, transacción o reporte es simulado.
+                    Todos los datos provienen de inspecciones reales, blockchains públicas (Cardano) y APIs
+                    oficiales verificadas.</span>
+            </div>
+        </div>
+
+        <!-- TAB 7: RECLUTADORES GreenBattery -->
+        <div id="s3-recruiter" class="tab-panel">
+            <div class="recruiter-box" style="border-color: #44ff44;">
+                <p>🔋 <strong style="color:#44ff44;">Green Battery</strong> es la columna vertebral
+                    industrial del ecosistema EVA, diseñada para la trazabilidad soberana de activos críticos
+                    mediante notarización blockchain y auditoría humana.</p>
+                <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">⛓️</div>
+                        <div style="color:#44ff44; font-weight:bold;">Blockchain Real</div>
+                    </div>
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🐘</div>
+                        <div style="color:#44ff44; font-weight:bold;">PostgreSQL / Supabase</div>
+                    </div>
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🔐</div>
+                        <div style="color:#44ff44; font-weight:bold;">Auditoría Humana</div>
+                    </div>
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">📱</div>
+                        <div style="color:#44ff44; font-weight:bold;">React + PWA</div>
+                    </div>
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🧮</div>
+                        <div style="color:#44ff44; font-weight:bold;">Facturación IA</div>
+                    </div>
+                </div>
+                <p style="font-style:italic; color:#44ff44;">"Trazabilidad soberana para activos críticos. Cada
+                    mantenimiento, notarizado."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== GT TRAX POWER: MÓDULO INTERACTIVO ===== -->
+    <div class="section" id="section-s5" style="border: 2px solid #FFD700;">
+        <div class="ballenas-hero"
+            style="border-color: #FFD700; background: linear-gradient(135deg, #0a0a1a 0%, #1a140a 50%, #101c2e 100%);">
+            <h2 style="color: #FFD700;">⚙️ GT Trax Power — Presencia Digital Industrial</h2>
+            <p style="color: #FFE082;">Sitio web institucional y generador de leads para GT TRAX POWER — Motive
+                Energy,
+                empresa colombiana (Medellín, 2017) especializada en baterías industriales LiFePO4, cargadores y
+                sistemas BMS. Arquitectura Dual-Workflow: Google AI Studio (diseño) ↔ VS Code (backend/API).</p>
+        </div>
+
+        <!-- TABS DE NAVEGACIÓN  -->
+        <div class="tabs" style="border-bottom-color: rgba(255,215,0,0.25);">
+            <button class="tab-btn active" style="border-color: #FFD700; background: #FFD700; color: #0a0a1a;"
+                onclick="showTab('s5-arch', this)">🏗️ Arquitectura Dual</button>
+            <button class="tab-btn" onclick="showTab('s5-stack', this)">🛠️ Stack Tecnológico</button>
+            <button class="tab-btn" onclick="showTab('s5-components', this)">⚛️ Componentes</button>
+            <button class="tab-btn" onclick="showTab('s5-api', this)">🔌 Endpoints API</button>
+            <button class="tab-btn" onclick="showTab('s5-skills', this)">🧠 Destrezas & Conocimientos</button>
+            <button class="tab-btn" onclick="showTab('s5-recruiter', this)">💼 Reclutadores & Clientes</button>
+        </div>
+
+        <!-- TAB 1: ARQUITECTURA DUAL -->
+        <div id="s5-arch" class="tab-panel active">
+            <div class="dual-brain">
+                <div class="brain-card">
+                    <h3 style="color:#FFD700;">🎨 Frente A — Diseño Visual (Google AI Studio)</h3>
                     <ul>
-                        <li>🐍 Python 3.12+</li>
-                        <li>⚡ FastAPI + Uvicorn</li>
-                        <li>🐘 PostgreSQL / Supabase</li>
-                        <li>🔗 httpx asíncrono</li>
-                        <li>🧩 asyncio + colas desacopladas</li>
+                        <li>⚛️ React 19 + TypeScript + Vite 6</li>
+                        <li>🎨 Tailwind CSS 4 + Motion (animaciones)</li>
+                        <li>🪶 lucide-react (íconos)</li>
+                        <li>🗣️ Web Speech API (voz es-CO)</li>
+                        <li>🔊 Web Audio API (sonidos industriales)</li>
+                        <li>🤖 Generación creativa con Gemini</li>
+                        <li>📱 Diseño iterativo validado por cliente</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h3><span class="icon">⚛️</span> Frontend & Tiempo Real</h3>
+                <div class="brain-divider">⇄</div>
+                <div class="brain-card">
+                    <h3 style="color:#FFD700;">🗄️ Frente B — Backend/API (VS Code)</h3>
                     <ul>
-                        <li>⚛️ React + Vite + TypeScript</li>
-                        <li>🎨 Tailwind CSS</li>
-                        <li>🔌 SSE / WebSocket</li>
-                        <li>📡 Context API + hooks</li>
-                        <li>📊 Dashboards en vivo</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3><span class="icon">🚀</span> Infraestructura & Despliegue</h3>
-                    <ul>
+                        <li>⚡ Express 4 + Vite middleware</li>
+                        <li>🤖 Gemini 2.5 Flash (@google/genai)</li>
+                        <li>📦 esbuild bundling para producción</li>
                         <li>🐳 Docker multi-stage</li>
-                        <li>☁️ Render.com (Workers + Cron)</li>
-                        <li>🔐 Secret managers</li>
-                        <li>🔁 CI/CD y health checks</li>
-                        <li>📈 Escalado por workers</li>
+                        <li>☁️ Render.com auto-deploy</li>
+                        <li>🔐 Secret managers (.env nunca subido)</li>
+                        <li>🔌 API REST con Vite SPA build</li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h3><span class="icon">🔒</span> Seguridad & Resiliencia</h3>
-                    <ul>
-                        <li>🛡️ Circuit breaker + fail-safe</li>
-                        <li>🔑 Cifrado AES-GCM / PBKDF2</li>
-                        <li>🎟️ Tokens Bearer</li>
-                        <li>⏱️ Backoff + reintentos</li>
-                        <li>📦 Cache TTL y degraded mode</li>
-                    </ul>
+            </div>
+            <div class="stank-badge"
+                style="margin-top: 20px; text-align: left; border-color: rgba(255,215,0,0.4); background: linear-gradient(90deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05)); color: #FFE082;">
+                <strong style="color:#FFD700;">🔒 Regla de Oro del Dual-Workflow:</strong> El diseño visual (layout,
+                estilos, animaciones, audio) es territorio EXCLUSIVO de Google AI Studio. El backend (endpoints,
+                lógica, datos, tipos, server.ts) es territorio EXCLUSIVO de los agentes de código. Nunca se cruzan.
+                Las imágenes usan rutas fijas (nunca nombres generados por IA). Cero datos inventados — toda
+                información proviene de <code>companyData.ts</code> y <code>server.ts</code>.
+            </div>
+        </div>
+
+        <!-- TAB 2: STACK TECNOLÓGICO -->
+        <div id="s5-stack" class="tab-panel">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px;">
+                <div>
+                    <p style="color:#FFD700; font-weight:bold; margin-bottom:12px;">⚛️ Frontend (AI Studio)</p>
+                    <div class="pill-grid">
+                        <span class="pill pill-blue"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚛️ React
+                            19</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🔷
+                            TypeScript</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite
+                            6</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🎨
+                            Tailwind CSS 4</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🌀
+                            Motion</span>
+                    </div>
+                </div>
+                <div>
+                    <p style="color:#FFE082; font-weight:bold; margin-bottom:12px;">⚡ Backend / API (VS Code)</p>
+                    <div class="pill-grid">
+                        <span class="pill pill-orange"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🐍
+                            Node.js</span>
+                        <span class="pill pill-orange"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Express
+                            4</span>
+                        <span class="pill pill-orange"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">⚡ Vite
+                            Middleware</span>
+                        <span class="pill pill-orange"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">🤖 Gemini
+                            2.5 Flash</span>
+                        <span class="pill pill-orange"
+                            style="border-color:#FFD700; color:#FFD700; background:rgba(255,215,0,0.15);">📦
+                            esbuild</span>
+                    </div>
+                </div>
+                <div>
+                    <p style="color:#44ff44; font-weight:bold; margin-bottom:12px;">☁️ Infraestructura</p>
+                    <div class="pill-grid">
+                        <span class="pill pill-green"
+                            style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🐳
+                            Docker</span>
+                        <span class="pill pill-green"
+                            style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">☁️
+                            Render.com</span>
+                        <span class="pill pill-green"
+                            style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔐 dotenv /
+                            Secrets</span>
+                        <span class="pill pill-green"
+                            style="border-color:#44ff44; color:#44ff44; background:rgba(68,255,68,0.1);">🔁
+                            Auto-deploy</span>
+                    </div>
+                </div>
+                <div>
+                    <p style="color:#00eaff; font-weight:bold; margin-bottom:12px;">🎵 Audio & Accesibilidad</p>
+                    <div class="pill-grid">
+                        <span class="pill pill-blue"
+                            style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🗣️ Web
+                            Speech API</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🔊 Web
+                            Audio API</span>
+                        <span class="pill pill-blue"
+                            style="border-color:#00eaff; color:#00eaff; background:rgba(0,234,255,0.1);">🎵 Voz
+                            es-CO</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <!-- ACTIVIDAD Y COMPROMISO -->
-        <div class="section" style="text-align: center;">
-            <h2>📈 Actividad y Compromiso (GitHub)</h2>
-            <p style="color: #888; margin-bottom: 20px; font-size: 0.9em;">Dado que el código fuente de los módulos es privado por soberanía de datos, mi constancia, commits y esfuerzo en la arquitectura se reflejan de forma pública.</p>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
-                <!-- Tarjeta de Racha de Commits -->
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=KarlosAHP&theme=tokyonight&hide_border=true&background=1a1a2e" alt="Racha de contribuciones" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
-            </div>
-            
-            <div style="background: #1a1a2e; padding: 20px; border-radius: 15px; border: 1px solid rgba(233, 69, 96, 0.3); display: inline-block; max-width: 100%; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <p style="color: #e94560; margin-bottom: 15px; font-weight: bold; text-align: left;">Historial de Commits (Cuadros Verdes)</p>
-                <img src="https://ghchart.rshah.org/44ff44/KarlosAHP" alt="Gráfico de contribuciones de KarlosAHP en GitHub" style="max-width: 100%; min-width: 650px;" />
-            </div>
-            
-            <div style="margin-top: 30px;">
-                <a href="https://github.com/KarlosAHP" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(90deg, #1f4a1f, #1a3d1a); color: #44ff44; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1em; display: inline-block; box-shadow: 0 5px 20px rgba(68, 255, 68, 0.2); border: 2px solid #44ff44; transition: all 0.3s;">
-                    🔍 Verificar Perfil y Commits Oficiales en GitHub
-                </a>
-                <p style="color: #888; font-size: 0.85em; margin-top: 10px;">Enlace directo al perfil para auditores y reclutadores que deseen validar esta información.</p>
+        <!-- TAB 3: COMPONENTES -->
+        <div id="s5-components" class="tab-panel">
+            <div class="skills-grid">
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">⚡</span>
+                    <div class="skill-text"><strong>App.tsx:</strong> Entry point SPA con orquestación de tabs de
+                        navegación y composición de todos los componentes.</div>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🔋</span>
+                    <div class="skill-text"><strong>LiveCommercialPoster.tsx:</strong> Anuncios comerciales en vivo
+                        con slides interactivos, síntesis de voz en es-CO y sonidos industriales.</div>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">💰</span>
+                    <div class="skill-text"><strong>RoiCalculator.tsx:</strong> Calculadora de ROI para baterías
+                        LiFePO4 vs. plomo-ácido — ahorro energético y productividad multi-turno.</div>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">📦</span>
+                    <div class="skill-text"><strong>ProductsAndServices.tsx:</strong> Catálogo dinámico renderizado
+                        desde datos verificados — productos y servicios reales.</div>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🔍</span>
+                    <div class="skill-text"><strong>InteractivePortal.tsx:</strong> Portal interactivo con hotspots
+                        visuales sobre instalación, equipos y tecnología.</div>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🤖</span>
+                    <div class="skill-text"><strong>AiCampaignGenerator.tsx:</strong> Generador de copy publicitario
+                        asistido por IA — consume /api/generate-ad-copy (Gemini 2.5 Flash).</div>
+                </div>
             </div>
         </div>
+
+        <!-- TAB 4: ENDPOINTS API -->
+        <div id="s5-api" class="tab-panel">
+            <div class="db-flow">
+                <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                    <h4 style="color:#FFD700;">📡 GET /api/company-info</h4>
+                    <p>Información corporativa verificada: empresa, contacto, redes sociales, servicios y productos.
+                        Fuente única de verdad desde <code>companyData.ts</code>. Cero inventos — todos los datos
+                        (teléfonos, correos, direcciones) provienen de la empresa real.</p>
+                </div>
+                <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                    <h4 style="color:#FFD700;">🤖 POST /api/generate-ad-copy</h4>
+                    <p>Generación de copy publicitario con Gemini 2.5 Flash. Prompt estructurado con datos de
+                        contacto reales. Fallback estático verificado si no hay API key disponible.</p>
+                </div>
+                <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                    <h4 style="color:#FFD700;">💰 POST /api/quote-request</h4>
+                    <p>Simulación de cotización. Genera ID único <code>COT-XXXXX</code> y enlace de WhatsApp
+                        preformateado con datos del cliente.</p>
+                </div>
+                <div class="db-card" style="border-color: rgba(255,215,0,0.4);">
+                    <h4 style="color:#FFD700;">📅 POST /api/schedule-visit</h4>
+                    <p>Programación de visita técnica. Genera ID único <code>VIS-XXXXX</code> y enlace de WhatsApp
+                        con todos los datos de la solicitud.</p>
+                </div>
+            </div>
+            <div class="zero-mock-badge"
+                style="border-color: #FFD700; color: #FFD700; background: linear-gradient(90deg, #1a140a, #0f0e05);">
+                <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
+                <span style="font-size:0.9em; color:#FFE082;">Ningún servicio, producto, teléfono o correo es
+                    inventado. Todos los datos corporativos provienen verificados de F&R Servicios Industriales
+                    S.A.S. / GT TRAX POWER (Medellín, Antioquia, Colombia).</span>
+            </div>
+        </div>
+
+        <!-- TAB 5: DESTREZAS -->
+        <div id="s5-skills" class="tab-panel">
+            <div class="skills-grid">
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">⚡</span>
+                    <span class="skill-text">Desarrollo full-stack moderno con React 19, TypeScript, Vite y Tailwind
+                        CSS para experiencias web industriales.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🗄️</span>
+                    <span class="skill-text">Backend con Express 4 y Vite middleware, con API REST bien
+                        estructuradas y build de producción optimizada con esbuild.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🤖</span>
+                    <span class="skill-text">Integración de IA generativa (Gemini 2.5 Flash) para generación de copy
+                        publicitario asistido con datos verificados.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🎵</span>
+                    <span class="skill-text">Experiencia auditiva inmersiva con Web Speech API (español colombiano)
+                        y Web Audio API (sonidos industriales personalizados).</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🏗️</span>
+                    <span class="skill-text">Arquitectura de dual-workflow: separación estricta entre diseño visual
+                        (AI Studio) y lógica de negocio (VS Code).</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🔐</span>
+                    <span class="skill-text">Gestión de secretos con dotenv y Render secret managers; nunca se sube
+                        .env a repositorio.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">🐳</span>
+                    <span class="skill-text">Despliegue con Docker multi-stage y auto-deploy continuo en
+                        Render.com.</span>
+                </div>
+                <div class="skill-item" style="border-left-color: #FFD700;">
+                    <span class="skill-icon">📊</span>
+                    <span class="skill-text">Documentación técnica orientada a reclutadores, clientes y equipos de
+                        desarrollo.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 6: RECLUTADORES -->
+        <div id="s5-recruiter" class="tab-panel">
+            <div class="recruiter-box"
+                style="border-color: #FFD700; background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.02));">
+                <p>⚙️ <strong style="color:#FFD700;">GT Trax Power </strong> es un proyecto full-stack
+                    moderno que demuestra dominio integral de desarrollo web: desde el diseño visual iterativo en
+                    Google AI Studio hasta el backend con Express, integración con IA generativa (Gemini),
+                    experiencia de usuario inmersiva con Web Speech y Web Audio API, y una arquitectura de
+                    dual-workflow que separa estrictamente diseño de lógica — un patrón escalable reutilizable para
+                    futuros clientes industriales.</p>
+                <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                    <div
+                        style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">⚡</div>
+                        <div style="color:#FFD700; font-weight:bold;">Full-stack Real</div>
+                    </div>
+                    <div
+                        style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🤖</div>
+                        <div style="color:#FFD700; font-weight:bold;">IA Generativa</div>
+                    </div>
+                    <div
+                        style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🗣️</div>
+                        <div style="color:#FFD700; font-weight:bold;">Web Speech</div>
+                    </div>
+                    <div
+                        style="background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">🐳</div>
+                        <div style="color:#FFD700; font-weight:bold;">Docker + Render</div>
+                    </div>
+                    <div
+                        style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                        <div style="font-size:2em;">✅</div>
+                        <div style="color:#44ff44; font-weight:bold;">Datos Verídicos</div>
+                    </div>
+                </div>
+                <p style="font-style:italic; color:#FFD700;">"Energía que impulsa tu operación — de la idea al
+                    despliegue productivo."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLUJO DE DATOS -->
+    <div class="section">
+        <h2>🔄 Flujo Operativo y Soberanía</h2>
+        <div class="flow-chart">
+            <div class="flow-step">
+                <div style="font-size: 2em;">⏱️</div>
+                <div><strong>Orquestación</strong></div>
+                <div style="font-size: 0.8em; color: #888;">Workers + Cron</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div style="font-size: 2em;">🛡️</div>
+                <div><strong>Cifrado</strong></div>
+                <div style="font-size: 0.8em; color: #888;">AES-GCM / Zero-Knowledge</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div style="font-size: 2em;">⛓️</div>
+                <div><strong>Notaría</strong></div>
+                <div style="font-size: 0.8em; color: #888;">Sello On-Chain</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" style="border-color: #44ff44;">
+                <div style="font-size: 2em;">💾</div>
+                <div><strong>Almacén</strong></div>
+                <div style="font-size: 0.8em; color: #888;">Soberano</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- APIS EXTERNAS -->
+    <div class="section">
+        <h2>🔗 Integraciones del Ecosistema</h2>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <div class="tech-icon">🤖</div>
+                <div><strong>Groq LLM</strong></div>
+                <div style="color: #888; font-size: 0.9em;">Procesamiento IA</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">✨</div>
+                <div><strong>Google Gemini</strong></div>
+                <div style="color: #888; font-size: 0.9em;">Asistencia Avanzada</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">⛓️</div>
+                <div><strong>Blockfrost</strong></div>
+                <div style="color: #888; font-size: 0.9em;">Cardano Mainnet</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">📦</div>
+                <div><strong>Supabase</strong></div>
+                <div style="color: #888; font-size: 0.9em;">PostgreSQL gestionado</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🐳</div>
+                <div><strong>Docker</strong></div>
+                <div style="color: #888; font-size: 0.9em;">Contenedores multi-stage</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon">🚀</div>
+                <div><strong>Render</strong></div>
+                <div style="color: #888; font-size: 0.9em;">Despliegue continuo</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEGURIDAD -->
+    <div class="section" style="border: 2px solid #44ff44; background: rgba(68, 255, 68, 0.05);">
+        <h2 style="color: #44ff44; border-color: #44ff44;">🛡️ Estándar de Seguridad y Cero Mocks</h2>
+        <div class="grid">
+            <div class="card" style="border-color: #44ff44;">
+                <h3 style="color: #44ff44;">🟢 Aislamiento Absoluto</h3>
+                <ul>
+                    <li>✅ Resguardo estricto de propiedad intelectual.</li>
+                    <li>✅ Cero exposición de llaves privadas o URLs de producción.</li>
+                    <li>✅ Arquitectura orientada a la soberanía del operador.</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: #44ff44;">
+                <h3 style="color: #44ff44;">🟢 Integridad de Datos</h3>
+                <ul>
+                    <li>✨ Validación rigurosa de flujos reales.</li>
+                    <li>✨ Protocolos de estanqueidad entre sucursales.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- STACK / HABILIDADES -->
+    <div class="section">
+        <h2>🧰 Stack Tecnológico y Conocimientos Aplicados</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><span class="icon">⚙️</span> Backend & Datos</h3>
+                <ul>
+                    <li>🐍 Python 3.12+</li>
+                    <li>⚡ FastAPI + Uvicorn</li>
+                    <li>🐘 PostgreSQL / Supabase</li>
+                    <li>🔗 httpx asíncrono</li>
+                    <li>🧩 asyncio + colas desacopladas</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><span class="icon">⚛️</span> Frontend & Tiempo Real</h3>
+                <ul>
+                    <li>⚛️ React + Vite + TypeScript</li>
+                    <li>🎨 Tailwind CSS</li>
+                    <li>🔌 SSE / WebSocket</li>
+                    <li>📡 Context API + hooks</li>
+                    <li>📊 Dashboards en vivo</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><span class="icon">🚀</span> Infraestructura & Despliegue</h3>
+                <ul>
+                    <li>🐳 Docker multi-stage</li>
+                    <li>☁️ Render.com (Workers + Cron)</li>
+                    <li>🔐 Secret managers</li>
+                    <li>🔁 CI/CD y health checks</li>
+                    <li>📈 Escalado por workers</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><span class="icon">🔒</span> Seguridad & Resiliencia</h3>
+                <ul>
+                    <li>🛡️ Circuit breaker + fail-safe</li>
+                    <li>🔑 Cifrado AES-GCM / PBKDF2</li>
+                    <li>🎟️ Tokens Bearer</li>
+                    <li>⏱️ Backoff + reintentos</li>
+                    <li>📦 Cache TTL y degraded mode</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ACTIVIDAD Y COMPROMISO -->
+    <div class="section" style="text-align: center;">
+        <h2>📈 Actividad y Compromiso (GitHub)</h2>
+        <p style="color: #888; margin-bottom: 20px; font-size: 0.9em;">Dado que el código fuente de los módulos es
+            privado por soberanía de datos, mi constancia, commits y esfuerzo en la arquitectura se reflejan de
+            forma pública.</p>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <!-- Tarjeta de Racha de Commits -->
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=KarlosAHP&theme=tokyonight&hide_border=true&background=1a1a2e"
+                alt="Racha de contribuciones" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
+        </div>
+
+        <div
+            style="background: #1a1a2e; padding: 20px; border-radius: 15px; border: 1px solid rgba(233, 69, 96, 0.3); display: inline-block; max-width: 100%; overflow-x: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <p style="color: #e94560; margin-bottom: 15px; font-weight: bold; text-align: left;">Historial de
+                Commits (Cuadros Verdes)</p>
+            <img src="https://ghchart.rshah.org/44ff44/KarlosAHP" alt="Gráfico de contribuciones de KarlosAHP en GitHub"
+                style="max-width: 100%; min-width: 650px;" />
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="https://github.com/KarlosAHP" target="_blank" rel="noopener noreferrer"
+                style="background: linear-gradient(90deg, #1f4a1f, #1a3d1a); color: #44ff44; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1em; display: inline-block; box-shadow: 0 5px 20px rgba(68, 255, 68, 0.2); border: 2px solid #44ff44; transition: all 0.3s;">
+                🔍 Verificar Perfil y Commits Oficiales en GitHub
+            </a>
+            <p style="color: #888; font-size: 0.85em; margin-top: 10px;">Enlace directo al perfil para auditores y
+                reclutadores que deseen validar esta información.</p>
+        </div>
+    </div>
     </div>
 
     <footer>
         <p>🔱 Vitrina Tecnológica — Ecosistema EVA Blockseer</p>
         <p style="font-size: 0.8em; color: #888;">Arquitectura de Datos, Lógica Implacable y Seguridad Soberana.</p>
-        <p style="font-size: 0.8em; color: #888;">Carlos H & Eva Blockseer — En constante evolución de nuevas herramientas para tu emprendimiento o negocio.</p>
+        <p style="font-size: 0.8em; color: #888;">Carlos H & Eva Blockseer — En constante evolución de nuevas
+            herramientas para tu emprendimiento o negocio.</p>
     </footer>
     <script>
         function showTab(tabId, btn) {

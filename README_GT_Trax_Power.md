@@ -1,6 +1,6 @@
-# ⚙️ GT_Trax_Power — Sucursal 5: Presencia Digital Industrial
+# ⚙️ GT Trax Power — Presencia Digital Industrial
 
-> **Sitio web institucional y generador de leads para TRAX POWER — Motive Energy, empresa colombiana especializada en baterías industriales LiFePO4, cargadores y sistemas BMS para la industria, logística y movilidad pesada.**
+> **Sitio web institucional y generador de leads para GT TRAX POWER — Motive Energy, empresa colombiana especializada en baterías industriales LiFePO4, cargadores y sistemas BMS para la industria, logística y movilidad pesada.**
 > Desarrollado bajo un **flujo de trabajo dual estratégico**: Google AI Studio (diseño/UX) y VS Code (backend/API), con arquitectura de separación estricta de responsabilidades y datos 100% verificados.
 
 ---
@@ -47,7 +47,7 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 
 | Indicador | Valor |
 |---|---|
-| **Empresa** | F&R Servicios Industriales S.A.S. / TRAX POWER — Motive Energy |
+| **Empresa** | F&R Servicios Industriales S.A.S. / GT TRAX POWER — Motive Energy |
 | **Ubicación** | Medellín, Antioquia, Colombia |
 | **Año de fundación** | 2017 |
 | **Sitio web productivo** | https://traxpower.onrender.com |
@@ -198,9 +198,9 @@ Reglas estrictas que preservan la integridad del desarrollo:
 |---|---|---|
 | **S1 Blockseer** | Inteligencia on-chain (whales) | Python, FastAPI, MongoDB Atlas, Docker |
 | **S2 Eva Connect** | Datos macro/retail | Python, FastAPI, Supabase, SSE/WebSocket |
-| **S3 Green Battery** | Notaría digital industrial | Python, FastAPI, Supabase, Blockchain (pycardano) |
-| **S4 EVA Web** | Fachada corporativa | React, Vite, TypeScript |
-| **S5 GT_Trax_Power** | Presencia digital cliente | React 19, Vite 6, Tailwind, Express 4, Gemini |
+| **Green Battery** | Notaría digital industrial | Python, FastAPI, Supabase, Blockchain (pycardano) |
+| **EVA Web** | Fachada corporativa | React, Vite, TypeScript |
+| **GT_Trax_Power** | Presencia digital cliente | React 19, Vite 6, Tailwind, Express 4, Gemini |
 | **MCP Suprema** | Orquestador / Director | FastAPI, Groq, Gemini, Supabase multi-instancia |
 
 ---

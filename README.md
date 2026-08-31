@@ -21,10 +21,10 @@
 * 📁 **[Sucursal 2: EVA Connect — Minoristas & Inteligencia Macro](./README_Eva_Minoristas.md)**  
   Capa operativa de recolección, clasificación de fauna minorista (Pez / Delfín / Tiburón), métricas retail, alertas on-chain, monitoreo macroeconómico y endpoints públicos normalizados para consumo de otras capas sin acceso directo a base de datos.
 
-* 📁 **[Sucursal 3: Eva Green Battery — Notaría Digital Industrial](./README_Green_battery.md)**  
+* 📁 **[Eva Green Battery — Notaría Digital Industrial](./README_Green_battery.md)**  
   Cerebro industrial para gestión de flotas de activos críticos (baterías, UPS, rectificadores). Notarización criptográfica de mantenimientos con auditoría humana, portal transaccional para clientes finales, agenda inteligente tipo CRM con despacho de técnicos y semáforo de visitas, y reportería institucional con anclaje en blockchain pública.
 
-* 📁 **[Sucursal 5: GT_Trax_Power — Presencia Digital Industrial](./README_GT_Trax_Power.md)**  
+* 📁 **[GT_Trax_Power — Presencia Digital Industrial](./README_GT_Trax_Power.md)**  
   Sitio web institucional y generador de leads para TRAX POWER (Medellín, Colombia), empresa de baterías industriales LiFePO4, cargadores y sistemas BMS. Arquitectura Dual-Workflow: Google AI Studio (diseño) ↔ VS Code (backend/API con Express 4 + Gemini 2.5 Flash). SPA React 19 + Vite 6 + Tailwind CSS 4 con síntesis de voz (es-CO), sonidos industriales (Web Audio API) e integración IA generativa para copy publicitario.
 
 ---
