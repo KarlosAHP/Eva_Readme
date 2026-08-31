@@ -5,6 +5,8 @@
 
 ---
 
+<a href="diagrama.html" style="background:#e94560;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin-bottom:16px;">📊 Ver Diagrama de Arquitectura</a>
+
 ## 📋 Índice de Módulos del Sistema
 
 * 📁 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
