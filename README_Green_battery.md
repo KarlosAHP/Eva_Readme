@@ -32,7 +32,7 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 | **Endpoints productivos** | Más de 100 endpoints REST documentados con Pydantic V2 |
 | **Tablas operativas** | 25+ tablas activas en el núcleo industrial + 4 tablas del portal del cliente |
 | **Bases de datos** | 2 instancias PostgreSQL administradas (Supabase) con propósitos diferenciados |
-| **Lenguaje de reportes** | Generación de PDFs clínicos con firma institucional y código QR |
+| **Lenguaje de reportes** | Generación de reportes técnicos con firma institucional y código QR |
 | **Notarización** | Anclaje de eventos críticos en blockchain pública (red de pruebas y red principal) |
 
 ### Capacidades funcionales verificables
@@ -70,7 +70,7 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 La Sucursal 3 implementa un protocolo de **revisión por auditor humano** antes de cualquier publicación:
 
-1. El técnico registra la intervención en la **Clínica Forense** con estado de *en revisión*.
+1. El técnico registra la intervención en el **historial clínico** del activo con estado de *en revisión*.
 2. El sistema dispara automáticamente la **notarización criptográfica** del evento.
 3. El administrador visualiza el informe en su panel de auditoría, evalúa las mediciones, fotos y observaciones, y emite un veredicto:
    * **Aprobado y publicado:** el informe se promueve a la vista oficial del cliente y queda anclado en blockchain.
@@ -126,10 +126,11 @@ La agenda de Green Battery funciona como un CRM ligero con foco operativo:
 
 ## 🎯 8. Casos de Uso Reales
 
-* **Mantenimiento hospitalario y datacenter:** seguimiento clínico de UPS de sala de cirugía, bancos de baterías de resonadores y sistemas de respaldo crítico.
-* **Industria logística y transporte:** gestión de baterías de montacargas eléctricas con trazabilidad por flota.
-* **Retail y cadenas de frío:** auditoría de UPS en puntos de venta con evidencia fotográfica firmada.
-* **Industria con múltiples sedes:** administración jerárquica sede → sub-sede con reportería autónoma por cliente.
+* **UPS:** Seguimiento de sistemas de alimentación de respaldo en centros de datos y puntos de venta.
+* **Baterías industriales:** Gestión y trazabilidad de bancos de baterías para infraestructura crítica.
+* **Cargadores industriales:** Registro de cargadores de baterías y su historial de mantenimiento.
+* **Montacargas eléctricos:** Trazabilidad de flotas de montacargas con historial clínico por equipo.
+* **Gestión multi-sede:** Administración jerárquica sede → sub-sede con reportes autónomos por cliente.
 
 ---
 
