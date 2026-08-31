@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔱 Eva Blockseer — Ecosistema Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #e94560, #0f3460, #e94560);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(233, 69, 96, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .header .version {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 30px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            color: #e94560;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(233, 69, 96, 0.2);
+        }
+
+        .card h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .mcp-suprema {
+            background: linear-gradient(145deg, #e94560, #0f3460);
+            border: 2px solid #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .mcp-suprema h3 {
+            font-size: 1.8em;
+            justify-content: center;
+        }
+
+        .mcp-suprema .url {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .arrow-section {
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            color: #e94560;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .box {
+            background: linear-gradient(145deg, #0f3460, #1a1a2e);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(233, 69, 96, 0.5);
+            font-size: 0.9em;
+        }
+
+        .box.secure {
+            background: linear-gradient(145deg, #1a3d1a, #1f4a1f);
+            border-color: #44ff44;
+        }
+
+        .flow-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .flow-step {
+            background: linear-gradient(145deg, #0f3460, #16213e);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 120px;
+            border: 2px solid #e94560;
+        }
+
+        .flow-arrow {
+            font-size: 2em;
+            color: #e94560;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .tech-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.7;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #e94560;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff4444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Volver al README Principal</a>
+
+        <div class="header">
+            <h1>🔱 EVA BLOCKSEER — Ecosistema Digital</h1>
+            <div class="version">
+                <span>Estado: Vitrina de Arquitectura Protegida</span> |
+                <span>Soberanía de Datos y Cifrado Extremo</span>
+            </div>
+        </div>
+
+        <!-- ARQUITECTURA GENERAL -->
+        <div class="section">
+            <h2>🏗️ Arquitectura de Sucursales y Aislamiento</h2>
+            <div class="card mcp-suprema" style="margin-bottom: 30px;">
+                <h3>👑 NÚCLEO SUPREMO: CENTRO DE MANDO SOBERANO</h3>
+                <div class="url">Nodo central de agregación, inteligencia y orquestación entre sucursales.</div>
+            </div>
+
+            <div class="grid">
+                <!-- S1 -->
+                <div class="card" style="border-color: #44ff44;">
+                    <h3><span class="icon">🧠</span> S1: Blockseer — Inteligencia On-Chain</h3>
+                    <p style="color: #888; font-size: 0.8em;">Análisis Forense & Motores de Alta Precisión</p>
+                    <ul style="font-size: 0.85em; margin-top: 10px;">
+                        <li>🤖 Procesamiento de Señales y Métricas Institucionales</li>
+                        <li>🌊 Monitoreo de Grandes Flujos y Balizas</li>
+                        <li>📊 Estructuras de Datos Locales Optimizadas</li>
+                        <li>🔒 Conexión Segura Backend (FastAPI)</li>
+                    </ul>
+                </div>
+
+                <!-- S2 -->
+                <div class="card">
+                    <h3><span class="icon">🐠</span> S2: EVA Connect — Minoristas & Macro</h3>
+                    <p style="color: #888; font-size: 0.8em;">Sensores de Mercado y Conectores</p>
+                    <ul style="font-size: 0.85em;">
+                        <li>📄 Orquestador de Background Loops</li>
+                        <li>📊 Monitoreo de Tendencias y Liquidez</li>
+                        <li style="color: #44ff44; font-size: 0.8em;">✅ Datos Verídicos (Zero Mocks)</li>
+                        <li>🔗 API Pública Normalizada para Integración</li>
+                    </ul>
+                </div>
+
+                <!-- S3 -->
+                <div class="card" style="border: 2px solid #00ff64;">
+                    <h3><span class="icon">🔋</span> S3: Green Battery (Notaría Digital)</h3>
+                    <p style="color: #00ff64; font-size: 0.75em; font-weight: bold;">[SECURE_INDUSTRIAL_NODE]</p>
+                    <div style="margin-top: 8px;">
+                        <ul style="font-size: 0.82em;">
+                            <li>🚀 Dashboard Operativo e Industrial</li>
+                            <li>⚡ Arquitectura FastAPI Modular</li>
+                            <li>⚛️ Frontend React + Vite optimizado</li>
+                            <li>⛓️ Activación de Registros Inmutables (Cardano)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S4 -->
+                <div class="card">
+                    <h3><span class="icon">🌐</span> S4: Eva Web (Notariado Público)</h3>
+                    <p style="color: #888; font-size: 0.8em;">Interfaz de Cliente y Actas</p>
+                    <ul style="font-size: 0.85em;">
+                        <li>Receptor de eventos y alertas notariales</li>
+                        <li>Generación de actas y trazabilidad</li>
+                        <li>Portal de visualización seguro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FLUJO DE DATOS -->
+        <div class="section">
+            <h2>🔄 Flujo Operativo y Soberanía</h2>
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div style="font-size: 2em;">⏱️</div>
+                    <div><strong>Orquestación</strong></div>
+                    <div style="font-size: 0.8em; color: #888;">Workers + Cron</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div style="font-size: 2em;">🛡️</div>
+                    <div><strong>Cifrado</strong></div>
+                    <div style="font-size: 0.8em; color: #888;">AES-GCM / Zero-Knowledge</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div style="font-size: 2em;">⛓️</div>
+                    <div><strong>Notaría</strong></div>
+                    <div style="font-size: 0.8em; color: #888;">Sello On-Chain</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step" style="border-color: #44ff44;">
+                    <div style="font-size: 2em;">💾</div>
+                    <div><strong>Almacén</strong></div>
+                    <div style="font-size: 0.8em; color: #888;">Soberano</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APIS EXTERNAS -->
+        <div class="section">
+            <h2>🔗 Integraciones del Ecosistema</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">🤖</div>
+                    <div><strong>Groq LLM</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">Procesamiento IA</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">✨</div>
+                    <div><strong>Google Gemini</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">Asistencia Avanzada</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⛓️</div>
+                    <div><strong>Blockfrost</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">Cardano Mainnet</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📦</div>
+                    <div><strong>Supabase</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">PostgreSQL gestionado</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🐳</div>
+                    <div><strong>Docker</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">Contenedores multi-stage</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🚀</div>
+                    <div><strong>Render</strong></div>
+                    <div style="color: #888; font-size: 0.9em;">Despliegue continuo</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEGURIDAD -->
+        <div class="section" style="border: 2px solid #44ff44; background: rgba(68, 255, 68, 0.05);">
+            <h2 style="color: #44ff44; border-color: #44ff44;">🛡️ Estándar de Seguridad y Cero Mocks</h2>
+            <div class="grid">
+                <div class="card" style="border-color: #44ff44;">
+                    <h3 style="color: #44ff44;">🟢 Aislamiento Absoluto</h3>
+                    <ul>
+                        <li>✅ Resguardo estricto de propiedad intelectual.</li>
+                        <li>✅ Cero exposición de llaves privadas o URLs de producción.</li>
+                        <li>✅ Arquitectura orientada a la soberanía del operador.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-color: #44ff44;">
+                    <h3 style="color: #44ff44;">🟢 Integridad de Datos</h3>
+                    <ul>
+                        <li>✨ Validación rigurosa de flujos reales.</li>
+                        <li>✨ Protocolos de estanqueidad entre sucursales.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- STACK / HABILIDADES -->
+        <div class="section">
+            <h2>🧰 Stack Tecnológico y Conocimientos Aplicados</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><span class="icon">⚙️</span> Backend & Datos</h3>
+                    <ul>
+                        <li>🐍 Python 3.12+</li>
+                        <li>⚡ FastAPI + Uvicorn</li>
+                        <li>🐘 PostgreSQL / Supabase</li>
+                        <li>🔗 httpx asíncrono</li>
+                        <li>🧩 asyncio + colas desacopladas</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">⚛️</span> Frontend & Tiempo Real</h3>
+                    <ul>
+                        <li>⚛️ React + Vite + TypeScript</li>
+                        <li>🎨 Tailwind CSS</li>
+                        <li>🔌 SSE / WebSocket</li>
+                        <li>📡 Context API + hooks</li>
+                        <li>📊 Dashboards en vivo</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">🚀</span> Infraestructura & Despliegue</h3>
+                    <ul>
+                        <li>🐳 Docker multi-stage</li>
+                        <li>☁️ Render.com (Workers + Cron)</li>
+                        <li>🔐 Secret managers</li>
+                        <li>🔁 CI/CD y health checks</li>
+                        <li>📈 Escalado por workers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">🔒</span> Seguridad & Resiliencia</h3>
+                    <ul>
+                        <li>🛡️ Circuit breaker + fail-safe</li>
+                        <li>🔑 Cifrado AES-GCM / PBKDF2</li>
+                        <li>🎟️ Tokens Bearer</li>
+                        <li>⏱️ Backoff + reintentos</li>
+                        <li>📦 Cache TTL y degraded mode</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🔱 Vitrina Tecnológica — Ecosistema EVA Blockseer</p>
+        <p style="font-size: 0.8em; color: #888;">Arquitectura de Datos, Lógica Implacable y Seguridad Soberana.</p>
+        <p style="font-size: 0.8em; color: #888;">Carlos H & Eva Blockseer — En constante evolución de nuevas herramientas para tu emprendimiento o negocio.</p>
+    </footer>
+</body>
+
+</html>

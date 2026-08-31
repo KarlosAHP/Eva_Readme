@@ -23,3 +23,36 @@ La Sucursal 1 opera como el **Cerebro de Inteligencia On-Chain** del ecosistema,
 
 ---
 *Arquitectura de Datos, Soberanía Operativa y Lógica Implacable.*
+
+---
+
+## 🛠️ Herramientas, stack y conocimientos aplicados
+
+Este módulo está construido con herramientas de producción real, seleccionadas para máxima precisión, rendimiento y soberanía de datos:
+
+* **Backend:** Python 3.12+, FastAPI, Uvicorn, `asyncio`, `httpx`, procesos worker y orquestación multi-cerebro.
+* **Datos:** PostgreSQL, Supabase, `psycopg2`, migraciones versionadas, auditorías locales de conexión.
+* **Eventos y tiempo real:** bus de eventos propio, SSE, WebSocket, colas asíncronas desacopladas.
+* **Frontend:** HTML/JS estático avanzado, dashboards interactivos, PWA, estándares de seguridad web.
+* **Infraestructura:** Docker multi-stage, Render.com (Web Service + Workers), secret managers, health checks.
+* **Integraciones:** Blockfrost (Cardano Mainnet), APIs de mercado, motores de IA generativa para análisis semántico.
+* **Seguridad:** cifrado extremo, estanqueidad por módulos, circuit breaker, fail-safe, backoff exponencial.
+* **Gobernanza:** Git, GitHub, despliegue continuo, documentación técnica orientada a integradores.
+
+### 🧠 Destrezas y conocimientos que hacen posible este módulo
+
+* Ingeniería de backends de alta precisión con FastAPI y procesamiento asíncrono.
+* Diseño de arquitectura de doble cerebro con separación estricta de dominios analíticos y operativos.
+* Procesamiento de datos on-chain a gran escala y modelado forense.
+* Implementación de sistemas resilientes y tolerantes a fallos.
+* Desarrollo de interfaces seguras y despliegue modular en producción.
+* Criptografía aplicada, hashing y protección de propiedad intelectual.
+* Documentación técnica orientada a clientes, auditores y equipos de desarrollo.
+
+---
+
+## 💼 Para reclutadores, clientes y socios estratégicos
+
+**Eva Blockseer** es un stack tecnológico de vanguardia, diseñado a la medida de necesidades complejas en el ámbito de datos soberanos, inteligencia on-chain y automatización financiera. Combinamos ingeniería de software de alto nivel, arquitectura distribuida y segura, integración con ecosistemas blockchain reales, y despliegue en producción con observabilidad y control de fallos.
+
+No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
