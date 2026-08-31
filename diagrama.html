@@ -220,6 +220,234 @@
         .back-btn:hover {
             background: #ff4444;
         }
+
+        /* === BALLENAS SECTION STYLES === */
+        .ballenas-hero {
+            background: linear-gradient(135deg, #0a0a1a 0%, #0f1a3d 50%, #1a0a2e 100%);
+            border: 2px solid #44aaff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ballenas-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(68,170,255,0.05) 0%, transparent 70%);
+            animation: pulse-bg 4s ease-in-out infinite;
+        }
+        @keyframes pulse-bg {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+        }
+        .ballenas-hero h2 {
+            color: #44aaff;
+            font-size: 2em;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .ballenas-hero p {
+            color: #aac4dd;
+            font-size: 0.95em;
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(68,170,255,0.2);
+            padding-bottom: 10px;
+        }
+        .tab-btn {
+            background: rgba(68,170,255,0.1);
+            color: #aac4dd;
+            border: 1px solid rgba(68,170,255,0.3);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .tab-btn:hover {
+            background: rgba(68,170,255,0.25);
+            color: #fff;
+        }
+        .tab-btn.active {
+            background: #44aaff;
+            color: #0a0a1a;
+            border-color: #44aaff;
+            box-shadow: 0 4px 15px rgba(68,170,255,0.4);
+        }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; animation: fadeInTab 0.3s ease; }
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dual-brain {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        @media (max-width: 700px) {
+            .dual-brain { grid-template-columns: 1fr; }
+        }
+        .brain-card {
+            background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
+            border: 2px solid #44aaff;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .brain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(68,170,255,0.25);
+        }
+        .brain-card h3 { color: #44aaff; margin-bottom: 12px; font-size: 1.1em; }
+        .brain-card ul { list-style: none; }
+        .brain-card li { padding: 6px 0; color: #aac4dd; border-bottom: 1px solid rgba(68,170,255,0.1); font-size: 0.9em; }
+        .brain-card li:last-child { border-bottom: none; }
+        .brain-divider {
+            text-align: center;
+            font-size: 2.5em;
+            color: #44aaff;
+            opacity: 0.5;
+        }
+        .stank-badge {
+            background: linear-gradient(90deg, rgba(68,170,255,0.15), rgba(68,170,255,0.05));
+            border: 1px solid rgba(68,170,255,0.4);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-top: 20px;
+            color: #aac4dd;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .stank-badge strong { color: #44aaff; }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .metric-card {
+            background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
+            border: 1px solid rgba(68,170,255,0.3);
+            border-radius: 15px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(68,170,255,0.2);
+        }
+        .metric-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #44aaff;
+            display: block;
+            line-height: 1;
+        }
+        .metric-label {
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 8px;
+            display: block;
+        }
+        .metric-sub {
+            color: #aac4dd;
+            font-size: 0.75em;
+            margin-top: 5px;
+            display: block;
+        }
+        .pill-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .pill {
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .pill:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .pill-blue  { background: rgba(68,170,255,0.15); border: 1px solid #44aaff; color: #44aaff; }
+        .pill-green { background: rgba(68,255,68,0.15);  border: 1px solid #44ff44; color: #44ff44; }
+        .pill-purple{ background: rgba(180,68,255,0.15); border: 1px solid #b444ff; color: #b444ff; }
+        .pill-orange{ background: rgba(255,170,68,0.15); border: 1px solid #ffaa44; color: #ffaa44; }
+        .pill-red   { background: rgba(233,69,96,0.15);  border: 1px solid #e94560; color: #e94560; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
+            border-left: 3px solid #44aaff;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            transition: transform 0.2s;
+        }
+        .skill-item:hover { transform: translateX(5px); }
+        .skill-icon { font-size: 1.5em; flex-shrink: 0; }
+        .skill-text { color: #aac4dd; font-size: 0.9em; }
+        .db-flow {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .db-card {
+            background: linear-gradient(145deg, #0f1a3d, #1a1a2e);
+            border: 1px solid rgba(68,170,255,0.4);
+            border-radius: 15px;
+            padding: 20px;
+            flex: 1;
+            min-width: 240px;
+            max-width: 350px;
+            transition: box-shadow 0.3s;
+        }
+        .db-card:hover { box-shadow: 0 10px 30px rgba(68,170,255,0.2); }
+        .db-card h4 { color: #44aaff; margin-bottom: 10px; font-size: 1em; }
+        .db-card p { color: #aac4dd; font-size: 0.85em; line-height: 1.6; }
+        .zero-mock-badge {
+            background: linear-gradient(90deg, #1a3d1a, #0f2a0f);
+            border: 2px solid #44ff44;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            color: #44ff44;
+        }
+        .recruiter-box {
+            background: linear-gradient(135deg, rgba(68,170,255,0.05), rgba(68,255,68,0.05));
+            border: 1px solid rgba(68,170,255,0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+        .recruiter-box p { color: #aac4dd; line-height: 1.8; margin-bottom: 20px; }
     </style>
 </head>
 
@@ -431,6 +659,219 @@
             </div>
         </div>
 
+        <!-- ===== S1 BALLENAS: MÓDULO INTERACTIVO ===== -->
+        <div class="section">
+            <div class="ballenas-hero">
+                <h2>⚡ S1: Ballenas — Inteligencia Forense On-Chain</h2>
+                <p>Central Autónoma de Análisis Institucional. Subsistema especializado en recolección, procesamiento y correlación de métricas a gran escala sobre redes blockchain.</p>
+            </div>
+
+            <!-- TABS DE NAVEGACIÓN -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('arch')">🏗️ Arquitectura</button>
+                <button class="tab-btn" onclick="showTab('metrics')">📊 Magnitud</button>
+                <button class="tab-btn" onclick="showTab('stack')">🛠️ Stack Tecnológico</button>
+                <button class="tab-btn" onclick="showTab('skills')">🧠 Destrezas</button>
+                <button class="tab-btn" onclick="showTab('data')">🗄️ Datos & Persistencia</button>
+                <button class="tab-btn" onclick="showTab('recruiter')">💼 Reclutadores</button>
+            </div>
+
+            <!-- TAB 1: ARQUITECTURA -->
+            <div id="tab-arch" class="tab-panel active">
+                <div class="dual-brain">
+                    <div class="brain-card">
+                        <h3>🧠 Cerebro 1 — Analítico e Integrador</h3>
+                        <ul>
+                            <li>🔗 Correlación de flujos de datos macro</li>
+                            <li>📊 Gestión de interfaces de usuario estáticas</li>
+                            <li>🔒 Consumo seguro via pasarelas HTTP cifradas</li>
+                            <li>📡 Integración con capas de datos externas</li>
+                        </ul>
+                    </div>
+                    <div class="brain-divider">⇄</div>
+                    <div class="brain-card">
+                        <h3>⚡ Cerebro 2 — Operativo de Alta Precisión</h3>
+                        <ul>
+                            <li>📐 Detección de anomalías matemáticas</li>
+                            <li>📉 Cálculo de FVG (Fair Value Gaps)</li>
+                            <li>🚨 Emisión de alertas de alta prioridad</li>
+                            <li>🏢 Canales hacia ecosistemas corporativos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stank-badge">
+                    <strong>🛡️ Estanqueidad Estricta:</strong> Separación absoluta entre la capa de análisis de grandes volúmenes y los motores relacionales externos. Ambos cerebros comparten base de datos histórica on-chain, pero mantienen ciclo de vida, despliegue y dominio funcional independientes.
+                </div>
+            </div>
+
+            <!-- TAB 2: MAGNITUD -->
+            <div id="tab-metrics" class="tab-panel">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="122">0</span>
+                        <span class="metric-label">Archivos de código fuente</span>
+                        <span class="metric-sub">Python · TypeScript · HTML · JS</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="58000" data-suffix="+">0</span>
+                        <span class="metric-label">Líneas de código</span>
+                        <span class="metric-sub">Lógica productiva real</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="35">0</span>
+                        <span class="metric-label">Scripts activos</span>
+                        <span class="metric-sub">Workers · Agentes · Orquestadores</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="2">0</span>
+                        <span class="metric-label">Servidores en producción</span>
+                        <span class="metric-sub">Despliegues independientes en la nube</span>
+                    </div>
+                </div>
+                <div class="stank-badge" style="margin-top: 20px; text-align: left;">
+                    <strong>📦 Volumen de Datos Procesados:</strong><br><br>
+                    🔷 <strong style="color:#44aaff;">Transacciones indexadas:</strong> Decenas de miles de registros on-chain con precios de mercado reales.<br>
+                    🔷 <strong style="color:#44aaff;">Reportes predictivos:</strong> Miles de modelos de comportamiento institucional generados y persistidos.<br>
+                    🔷 <strong style="color:#44aaff;">Jerarquías de entidades:</strong> Miles de billeteras clasificadas por poder de concentración.<br>
+                    🔷 <strong style="color:#44aaff;">Alertas operativas:</strong> Miles de señales históricas enviadas al ecosistema visual.<br>
+                    🔷 <strong style="color:#44aaff;">FVG calculados:</strong> Miles de brechas de valor calculadas en tiempo real.
+                </div>
+            </div>
+
+            <!-- TAB 3: STACK TECNOLÓGICO -->
+            <div id="tab-stack" class="tab-panel">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px;">
+                    <div>
+                        <p style="color:#44aaff; font-weight:bold; margin-bottom:12px;">⚙️ Backend</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-blue">🐍 Python 3.12+</span>
+                            <span class="pill pill-blue">⚡ FastAPI</span>
+                            <span class="pill pill-blue">🌐 Uvicorn</span>
+                            <span class="pill pill-blue">🔄 asyncio</span>
+                            <span class="pill pill-blue">📡 httpx</span>
+                            <span class="pill pill-blue">⚙️ Workers Multi-Cerebro</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#44ff44; font-weight:bold; margin-bottom:12px;">🗃️ Datos & Eventos</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-green">☁️ NoSQL Distribuido</span>
+                            <span class="pill pill-green">🐘 psycopg2</span>
+                            <span class="pill pill-green">📋 Migraciones Versionadas</span>
+                            <span class="pill pill-green">📡 SSE / WebSocket</span>
+                            <span class="pill pill-green">🔄 Bus de Eventos Propio</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#b444ff; font-weight:bold; margin-bottom:12px;">🎨 Frontend</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-purple">🖥️ HTML/JS Avanzado</span>
+                            <span class="pill pill-purple">📊 Dashboards Interactivos</span>
+                            <span class="pill pill-purple">📱 PWA</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#ffaa44; font-weight:bold; margin-bottom:12px;">🚀 Infraestructura</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-orange">🐳 Docker Multi-Stage</span>
+                            <span class="pill pill-orange">☁️ Web Services + Workers</span>
+                            <span class="pill pill-orange">🔐 Secret Managers</span>
+                            <span class="pill pill-orange">♻️ CI/CD + Health Checks</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#e94560; font-weight:bold; margin-bottom:12px;">🔗 Integraciones & Seguridad</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-red">⛓️ Blockfrost (Cardano)</span>
+                            <span class="pill pill-red">📈 APIs de Mercado</span>
+                            <span class="pill pill-red">🤖 IA Generativa</span>
+                            <span class="pill pill-red">🛡️ Circuit Breaker</span>
+                            <span class="pill pill-red">🔑 Cifrado Extremo</span>
+                            <span class="pill pill-red">⏳ Backoff Exponencial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: DESTREZAS -->
+            <div id="tab-skills" class="tab-panel">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-icon">⚡</span>
+                        <span class="skill-text">Ingeniería de backends de alta precisión con FastAPI y procesamiento asíncrono.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🧬</span>
+                        <span class="skill-text">Diseño de arquitectura de doble cerebro con separación estricta de dominios analíticos y operativos.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🔬</span>
+                        <span class="skill-text">Procesamiento de datos on-chain a gran escala, modelado forense y detección matemática de anomalías institucionales.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🛡️</span>
+                        <span class="skill-text">Implementación de sistemas resilientes, tolerantes a fallos y con recuperación automática.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🚀</span>
+                        <span class="skill-text">Desarrollo de interfaces seguras, PWA y despliegue modular en producción.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🔐</span>
+                        <span class="skill-text">Criptografía aplicada, hashing y protección de propiedad intelectual.</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">📄</span>
+                        <span class="skill-text">Documentación técnica orientada a clientes, auditores y equipos de desarrollo.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: BASES DE DATOS -->
+            <div id="tab-data" class="tab-panel">
+                <div class="db-flow">
+                    <div class="db-card">
+                        <h4>⛓️ Base On-Chain Principal</h4>
+                        <p>Almacenamiento distribuido en la nube con series históricas de transacciones, reportes predictivos, jerarquías de entidades y estado operativo del sistema.</p>
+                    </div>
+                    <div class="db-card">
+                        <h4>🔗 Capas Relacionales Externas</h4>
+                        <p>Integración con fuentes de datos relacionales para métricas macroeconómicas y retail, consumidas exclusivamente por el componente analítico a través de pasarelas HTTP seguras.</p>
+                    </div>
+                </div>
+                <div class="zero-mock-badge">
+                    <strong>✅ PROTOCOLO ZERO MOCKS</strong><br>
+                    <span style="font-size:0.9em; color:#aac4dd;">Ningún dato es inventado ni simulado. Toda la información proviene de APIs oficiales, bloques de cadena pública y configuraciones verificadas. Si una fuente falla, el sistema entra en <strong>estado degradado seguro</strong> sin romper la experiencia.</span>
+                </div>
+            </div>
+
+            <!-- TAB 6: RECLUTADORES -->
+            <div id="tab-recruiter" class="tab-panel">
+                <div class="recruiter-box">
+                    <p>⚡ <strong style="color:#44aaff;">Eva Blockseer</strong> es un stack tecnológico de vanguardia, diseñado a la medida de necesidades complejas en el ámbito de datos soberanos, inteligencia on-chain y automatización financiera.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                        <div style="background:rgba(68,170,255,0.1); border:1px solid rgba(68,170,255,0.3); border-radius:10px; padding:15px 25px; min-width:200px;">
+                            <div style="font-size:2em;">🏗️</div>
+                            <div style="color:#44aaff; font-weight:bold;">Ingeniería de Alto Nivel</div>
+                        </div>
+                        <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:15px 25px; min-width:200px;">
+                            <div style="font-size:2em;">🔒</div>
+                            <div style="color:#44ff44; font-weight:bold;">Arquitectura Distribuida y Segura</div>
+                        </div>
+                        <div style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:15px 25px; min-width:200px;">
+                            <div style="font-size:2em;">⛓️</div>
+                            <div style="color:#e94560; font-weight:bold;">Blockchain Real (Cardano)</div>
+                        </div>
+                        <div style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:15px 25px; min-width:200px;">
+                            <div style="font-size:2em;">📡</div>
+                            <div style="color:#b444ff; font-weight:bold;">Observabilidad y Control de Fallos</div>
+                        </div>
+                    </div>
+                    <p style="font-style:italic; color:#44aaff;">"No importa la magnitud del proyecto: Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento."</p>
+                </div>
+            </div>
+        </div>
+
         <!-- ACTIVIDAD Y COMPROMISO -->
         <div class="section" style="text-align: center;">
             <h2>📈 Actividad y Compromiso (GitHub)</h2>
@@ -460,6 +901,41 @@
         <p style="font-size: 0.8em; color: #888;">Arquitectura de Datos, Lógica Implacable y Seguridad Soberana.</p>
         <p style="font-size: 0.8em; color: #888;">Carlos H & Eva Blockseer — En constante evolución de nuevas herramientas para tu emprendimiento o negocio.</p>
     </footer>
+    <script>
+        function showTab(tabId) {
+            // Hide all panels
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            // Show selected
+            document.getElementById('tab-' + tabId).classList.add('active');
+            event.target.classList.add('active');
+
+            // Trigger counters when magnitud tab is opened
+            if (tabId === 'metrics') animateCounters();
+        }
+
+        function animateCounters() {
+            document.querySelectorAll('.metric-number[data-target]').forEach(el => {
+                const target = parseInt(el.getAttribute('data-target'));
+                const suffix = el.getAttribute('data-suffix') || '+';
+                const duration = 1200;
+                const step = target / (duration / 16);
+                let current = 0;
+                el.textContent = '0';
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                        el.textContent = target.toLocaleString('es') + suffix;
+                    } else {
+                        el.textContent = Math.floor(current).toLocaleString('es');
+                    }
+                }, 16);
+            });
+        }
+    </script>
 </body>
 
 </html>
