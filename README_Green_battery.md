@@ -1,7 +1,7 @@
 # 🔋 Eva Green Battery — Sucursal 3: Notaría Digital Industrial
 
 > **Gestión Industrial de Flotas, Portal de Clientes y Agenda Inteligente tipo CRM.**
-> Sistema productivo de trazabilidad forense para activos industriales (baterías, UPS, rectificadores) con portal transaccional para clientes finales y agenda corporativa para despacho de técnicos.
+> Sistema productivo de trazabilidad forense para activos industriales (baterías, cargadores y sistemas de alimentación) con portal transaccional para clientes finales y agenda corporativa para despacho de técnicos.
 
 ---
 
@@ -38,7 +38,7 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 ### Capacidades funcionales verificables
 
 * **Equipos registrados:** gestión integral de activos industriales con atributos técnicos completos (voltaje, amperaje, celdas, tecnología, conectores, ADN de celdas, matriz de baterías).
-* **Historial clínico forense:** bitácora auditable de cada intervención técnica con fotografías, mediciones y observaciones del técnico y del auditor.
+* **Bitácora de intervenciones técnicas:** bitácora auditable de cada intervención con fotografías, mediciones y observaciones del técnico y del auditor.
 * **Pruebas de autonomía:** captura de curvas de descarga para certificación de rendimiento del activo.
 * **Notarización criptográfica:** cada hito relevante queda anclado en blockchain con explorador público para verificación de terceros.
 * **Catálogo de precios y facturación maestra:** motor de cálculo de márgenes de utilidad y consolidación financiera por cliente.
@@ -52,17 +52,70 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 ## 🛠️ 3. Stack Tecnológico
 
-* **Backend:** Python 3.11+, FastAPI, Uvicorn, Pydantic V2, passlib con bcrypt, asyncio para tareas en segundo plano.
-* **Frontend Web:** React 18 + TypeScript + Vite + Tailwind CSS, con patrón de componentes especializados por dominio (activos, sedes, técnicos, autonomía, reportes, chat).
-* **Dashboard legacy:** Streamlit para herramientas administrativas internas y panel de auditoría del administrador.
-* **Bases de datos:** 2 instancias Supabase (PostgreSQL administrado) con sincronización bidireccional controlada entre ellas.
-* **Generación de PDFs:** fpdf2 y reportlab para informes técnicos con firma digital y código QR de verificación.
-* **Blockchain:** pycardano + Blockfrost para anclaje y consulta de eventos en redes públicas.
-* **Inteligencia Artificial:** integración con modelos de lenguaje de gran tamaño vía Groq para asistencia conversacional industrial basada en datos reales.
-* **Email transaccional:** servicio propio con envío en segundo plano desde FastAPI.
-* **Procesamiento de imágenes:** Pillow para evidencias fotográficas.
-* **Códigos QR:** qrcode con PIL para verificación de certificados.
-* **Infraestructura:** Docker multi-stage, plataforma de Web Services en la nube, secret managers y health checks.
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐍 Python 3.11+</div>
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ FastAPI</div>
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🌐 Uvicorn</div>
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 Pydantic V2</div>
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔐 passlib/bcrypt</div>
+  <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔄 asyncio</div>
+</div>
+
+**Backend:** Python 3.11+, FastAPI, Uvicorn, Pydantic V2, passlib con bcrypt, asyncio para tareas en segundo plano.
+
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React 18</div>
+  <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 TypeScript</div>
+  <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ Vite</div>
+  <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🎨 Tailwind CSS</div>
+  <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📱 PWA</div>
+</div>
+
+**Frontend Web:** React 18 + TypeScript + Vite + Tailwind CSS, con patrón de componentes especializados.
+
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐘 PostgreSQL</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔌 Supabase</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📋 Migraciones SQL</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔒 RLS Activo</div>
+</div>
+
+**Bases de datos:** 2 instancias Supabase (PostgreSQL administrado) con sincronización bidireccional controlada y Row-Level Security en el portal.
+
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⛓️ pycardano</div>
+  <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔗 Blockfrost</div>
+  <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📄 QR Verify</div>
+  <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">✍️ Firma Digital</div>
+</div>
+
+**Blockchain:** pycardano + Blockfrost para anclaje y consulta de eventos en redes públicas.
+
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📄 fpdf2</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 reportlab</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🖼️ Pillow</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ qrcode</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🤖 Groq LLM</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📧 Email Service</div>
+</div>
+
+**Herramientas & Generación:** fpdf2, reportlab, Pillow, qrcode, Groq LLM, servicio de email transaccional.
+
+```html
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 Streamlit</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐳 Docker</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">☁️ Render.com</div>
+  <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔐 Secrets</div>
+</div>
+
+**Infraestructura:** Docker multi-stage, Streamlit (dashboard legacy), Render.com, secret managers, health checks.
 
 ---
 
@@ -70,7 +123,7 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 La Sucursal 3 implementa un protocolo de **revisión por auditor humano** antes de cualquier publicación:
 
-1. El técnico registra la intervención en el **historial clínico** del activo con estado de *en revisión*.
+1. El técnico registra la intervención en el **historial de intervenciones** del activo con estado de *en revisión*.
 2. El sistema dispara automáticamente la **notarización criptográfica** del evento.
 3. El administrador visualiza el informe en su panel de auditoría, evalúa las mediciones, fotos y observaciones, y emite un veredicto:
    * **Aprobado y publicado:** el informe se promueve a la vista oficial del cliente y queda anclado en blockchain.
@@ -126,10 +179,10 @@ La agenda de Green Battery funciona como un CRM ligero con foco operativo:
 
 ## 🎯 8. Casos de Uso Reales
 
-* **UPS:** Seguimiento de sistemas de alimentación de respaldo en centros de datos y puntos de venta.
+* **Sistemas de alimentación de respaldo:** Seguimiento de sistemas de respaldo en centros de datos y puntos de venta.
 * **Baterías industriales:** Gestión y trazabilidad de bancos de baterías para infraestructura crítica.
 * **Cargadores industriales:** Registro de cargadores de baterías y su historial de mantenimiento.
-* **Montacargas eléctricos:** Trazabilidad de flotas de montacargas con historial clínico por equipo.
+* **Montacargas eléctricos:** Trazabilidad de flotas de montacargas con historial de intervenciones por equipo.
 * **Gestión multi-sede:** Administración jerárquica sede → sub-sede con reportes autónomos por cliente.
 
 ---
