@@ -9,6 +9,8 @@
 
 ## 🏗️ Arquitectura y Principios del Sistema
 
+Extensión de navegador nativa (Manifest V3) para gestión segura de accesos directos, credenciales locales y notas confidenciales. Cero almacenamiento externo, cifrado Zero-Knowledge (AES-GCM + PBKDF2) y soberanía total del operador. Panel multi-cuenta con perfiles de navegador, bloc de notas categorizado, panel de ideas y agenda inteligente.
+
 * **Zero-Knowledge & Cero Bases de Datos Externas:** La operativa descansa exclusivamente en contenedores locales cifrados (`.json`) mediante AES-GCM y PBKDF2. Ningún dato confidencial transita por servidores de terceros.
 * **Estanqueidad Absoluta:** Aislamiento total de perfiles y credenciales para garantizar que la información del operador permanezca incomunicada y blindada ante cualquier auditoría externa o intento de extracción.
 * **Soberanía del Operador:** La custodia de las llaves recae de forma exclusiva en el usuario. Sin claves de acceso, la recuperación de datos es criptográficamente imposible por diseño.
