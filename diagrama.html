@@ -1950,7 +1950,199 @@
         </div>
     </div>
 
-    <!-- FLUJO DE DATOS -->
+        <!-- ===== S6 TRANSITO VUELTAS: MÓDULO INTERACTIVO ===== -->
+        <div class="section" id="section-s6" style="border: 2px solid #7FD1FF;">
+            <div class="ballenas-hero" style="border-color: #7FD1FF; background: linear-gradient(135deg, #0a2e7a 0%, #1d56d6 50%, #0a2e7a 100%);">
+                <h2 style="color: #7FD1FF;">🚦 S6: Transito Vueltas — Trámites de Tránsito sin Filas</h2>
+                <p style="color: #AFC5F2;">Landing page institucional para Alex Piedrahíta en Medellín. Resuelve comparendos, fotomultas, prendas, traspasos y trámites vehiculares. WhatsApp-first, landing page monolítica HTML/CSS, cero frameworks.</p>
+            </div>
+
+            <!-- TABS DE NAVEGACIÓN S6 -->
+            <div class="tabs" style="border-bottom-color: rgba(127,209,255,0.25);">
+                <button class="tab-btn active" style="border-color: #7FD1FF; background: #7FD1FF; color: #0a2e7a;" onclick="showTab('s6-arch', this)">🏗️ Arquitectura</button>
+                <button class="tab-btn" onclick="showTab('s6-stack', this)">🛠️ Stack Tecnológico</button>
+                <button class="tab-btn" onclick="showTab('s6-serv', this)">📋 Servicios</button>
+                <button class="tab-btn" onclick="showTab('s6-design', this)">🎨 Diseño & Paleta</button>
+                <button class="tab-btn" onclick="showTab('s6-recruiter', this)">💼 Reclutadores & Clientes</button>
+            </div>
+
+            <!-- TAB 1: ARQUITECTURA S6 -->
+            <div id="s6-arch" class="tab-panel active">
+                <div class="dual-brain">
+                    <div class="brain-card" style="border-color: #7FD1FF;">
+                        <h3 style="color:#7FD1FF;">🎨 Diseño Visual (Google AI Studio)</h3>
+                        <ul>
+                            <li>📄 HTML5 semántico (header, section, footer)</li>
+                            <li>🎨 CSS3: variables, Flexbox, Grid, animaciones</li>
+                            <li>🔤 Web Fonts: Roboto Slab, Inter, IBM Plex Mono</li>
+                            <li>🔵 SVG inline para iconos vectoriales</li>
+                            <li>📱 Responsive con media queries</li>
+                        </ul>
+                    </div>
+                    <div class="brain-divider">⇄</div>
+                    <div class="brain-card" style="border-color: #7FD1FF;">
+                        <h3 style="color:#7FD1FF;">☁️ Infraestructura (Render)</h3>
+                        <ul>
+                            <li>🐳 Hosting estático en Render.com</li>
+                            <li>🔗 HTTPS auto gestionado</li>
+                            <li>📱 WhatsApp como canal principal</li>
+                            <li>🌐 https://transitovueltas.onrender.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(127,209,255,0.4); background: linear-gradient(90deg, rgba(127,209,255,0.15), rgba(127,209,255,0.05)); color: #AFC5F2;">
+                    <strong style="color:#7FD1FF;">🛡️ Zero Mocks & Zero Framework:</strong> Este es el proyecto <strong>más simple</strong> de la cartera. Landing page monolítica (HTML/CSS vanilla), sin backend, sin base de datos, sin React ni frameworks. WhatsApp-first: todos los CTAs enlazan al canal de WhatsApp del cliente. Cliente independiente — NO consume APIs de EVA, NO se sincroniza con S1/S2/S3/MCP.
+                </div>
+            </div>
+
+            <!-- TAB 2: STACK TECNOLÓGICO -->
+            <div id="s6-stack" class="tab-panel">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div>
+                        <p style="color:#7FD1FF; font-weight:bold; margin-bottom:12px;">📄 Frontend</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-blue" style="border-color:#7FD1FF; color:#7FD1FF; background:rgba(127,209,255,0.15);">📄 HTML5 Semántico</span>
+                            <span class="pill pill-blue" style="border-color:#7FD1FF; color:#7FD1FF; background:rgba(127,209,255,0.15);">🎨 CSS3 Variables</span>
+                            <span class="pill pill-blue" style="border-color:#7FD1FF; color:#7FD1FF; background:rgba(127,209,255,0.15);">🔵 Flexbox + Grid</span>
+                            <span class="pill pill-blue" style="border-color:#7FD1FF; color:#7FD1FF; background:rgba(127,209,255,0.15);">🔤 Web Fonts</span>
+                            <span class="pill pill-blue" style="border-color:#7FD1FF; color:#7FD1FF; background:rgba(127,209,255,0.15);">🔵 SVG Inline</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#25D366; font-weight:bold; margin-bottom:12px;">☁️ Infraestructura</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-green" style="border-color:#25D366; color:#25D366; background:rgba(37,211,102,0.1);">🐳 Render.com</span>
+                            <span class="pill pill-green" style="border-color:#25D366; color:#25D366; background:rgba(37,211,102,0.1);">🔗 HTTPS Auto</span>
+                            <span class="pill pill-green" style="border-color:#25D366; color:#25D366; background:rgba(37,211,102,0.1);">📱 WhatsApp-first</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#1877F2; font-weight:bold; margin-bottom:12px;">🎨 Tipografía</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-purple" style="border-color:#1877F2; color:#1877F2; background:rgba(9,46,122,0.3);">🖋️ Roboto Slab (serif)</span>
+                            <span class="pill pill-purple" style="border-color:#1877F2; color:#1877F2; background:rgba(9,46,122,0.3);">📄 Inter (body)</span>
+                            <span class="pill pill-purple" style="border-color:#1877F2; color:#1877F2; background:rgba(9,46,122,0.3);">🔢 IBM Plex Mono</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color:#E1306C; font-weight:bold; margin-bottom:12px;">🟡 Sin Backend</p>
+                        <div class="pill-grid">
+                            <span class="pill pill-orange" style="border-color:#E1306C; color:#E1306C; background:rgba(225,48,108,0.1);">❌ 0 Express</span>
+                            <span class="pill pill-orange" style="border-color:#E1306C; color:#E1306C; background:rgba(225,48,108,0.1);">❌ 0 Supabase</span>
+                            <span class="pill pill-orange" style="border-color:#E1306C; color:#E1306C; background:rgba(225,48,108,0.1);">❌ 0 React</span>
+                            <span class="pill pill-orange" style="border-color:#E1306C; color:#E1306C; background:rgba(225,48,108,0.1);">✅ HTML puro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SERVICIOS -->
+            <div id="s6-serv" class="tab-panel">
+                <div class="skills-grid">
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">⚡</span>
+                        <div class="skill-text"><strong>Servicio insignia:</strong> Asesorías de Tránsito, Fotomultas y Comparendos — consulta estado real, descuentos vigentes y gestión de pago.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">📜</span>
+                        <div class="skill-text"><strong>Levantamiento de prenda:</strong> gestión ante entidad financiera y organismo de tránsito para retirar la prenda del vehículo.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">🚗</span>
+                        <div class="skill-text"><strong>Traspaso de vehículo:</strong> preparación, radicación y seguimiento hasta inscripción completa.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">📄</span>
+                        <div class="skill-text"><strong>Duplicados de licencia:</strong> por pérdida, hurto o deterioro — gestión directa con el organismo.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">📋</span>
+                        <div class="skill-text"><strong>Paz y salvo / RUNT:</strong> certificados de tradición, paz y salvo y otros soportes.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">📲</span>
+                        <div class="skill-text"><strong>Citas y radicación:</strong> programación, radicación y reclamo en Secretaría de Movilidad.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">🔧</span>
+                        <div class="skill-text"><strong>Revisión técnico-mecánica:</strong> indicaciones, agendamiento CDA y acompañamiento en sitio.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">🏷️</span>
+                        <div class="skill-text"><strong>Matrículas y trámites:</strong> matrícula inicial, cambio de características y novedades ante tránsito.</div>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #7FD1FF;">
+                        <span class="skill-icon">⚖️</span>
+                        <div class="skill-text"><strong>Tutelas y petición:</strong> asesoría jurídica en tutelas, derecho de petición, apelaciones e impugnaciones.</div>
+                    </div>
+                </div>
+                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(127,209,255,0.4); color: #AFC5F2;">
+                    <strong>📊 Estado verificado:</strong> 900+ trámites gestionados en Medellín · 100% particular (sin intermediarios) · 1 solo contacto de principio a fin · 0 filas para el usuario.
+                </div>
+            </div>
+
+            <!-- TAB 4: DISEÑO & PALETA -->
+            <div id="s6-design" class="tab-panel">
+                <div class="metrics-grid">
+                    <div class="metric-card" style="border-color: rgba(127,209,255,0.3);">
+                        <span class="metric-number" style="color: #0A2E7A;" data-target="13">0</span>
+                        <span class="metric-label">Variables CSS definidas</span>
+                        <span class="metric-sub">:root palette institucional</span>
+                    </div>
+                    <div class="metric-card" style="border-color: rgba(127,209,255,0.3);">
+                        <span class="metric-number" style="color: #0A2E7A;" data-target="9">0</span>
+                        <span class="metric-label">Secciones semánticas</span>
+                        <span class="metric-sub">Header, Hero, Services, FAQ...</span>
+                    </div>
+                    <div class="metric-card" style="border-color: rgba(127,209,255,0.3);">
+                        <span class="metric-number" style="color: #0A2E7A;" data-target="3">0</span>
+                        <span class="metric-label">Fuentes tipográficas</span>
+                        <span class="metric-sub">Roboto Slab, Inter, IBM Plex Mono</span>
+                    </div>
+                    <div class="metric-card" style="border-color: rgba(127,209,255,0.3);">
+                        <span class="metric-number" style="color: #0A2E7A;" data-target="4">0</span>
+                        <span class="metric-label">Responsive breakpoints</span>
+                        <span class="metric-sub">640px, 700px, 800px, 900px</span>
+                    </div>
+                </div>
+                <div class="stank-badge" style="margin-top: 20px; text-align: left; border-color: rgba(127,209,255,0.4); color: #AFC5F2;">
+                    <strong>🎨 Paleta institucional:</strong><br>
+                    Azul marino (#0A2E7A → #123A96) · Azul cielo (#7FD1FF) · WhatsApp verde (#25D366) · Facebook azul (#1877F2) · Instagram rosa (#E1306C) · Tres fuentes: Roboto Slab (serif, títulos), Inter (body), IBM Plex Mono (labels/monoespaciada).
+                </div>
+            </div>
+
+            <!-- TAB 5: RECLUTADORES -->
+            <div id="s6-recruiter" class="tab-panel">
+                <div class="recruiter-box" style="border-color: #7FD1FF; background: linear-gradient(135deg, rgba(127,209,255,0.05), rgba(127,209,255,0.02));">
+                    <p>🚦 <strong style="color:#7FD1FF;">Transito Vueltas</strong> es un caso de estudio de landing page institucional minimalista: HTML5 + CSS3 puro, cero frameworks, cero backend. Demuestra cómo un sitio web monolítico bien diseñado — con paleta institucional profesional, tipografía cuidada, WhatsApp-first conversion y testimonios reales — puede convertir visitas en leads calificados sin necesidad de frameworks pesados.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                        <div style="background:rgba(127,209,255,0.1); border:1px solid rgba(127,209,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">📄</div>
+                            <div style="color:#7FD1FF; font-weight:bold;">HTML5 Puro</div>
+                        </div>
+                        <div style="background:rgba(127,209,255,0.1); border:1px solid rgba(127,209,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">🎨</div>
+                            <div style="color:#7FD1FF; font-weight:bold;">CSS3 Vanilla</div>
+                        </div>
+                        <div style="background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">📱</div>
+                            <div style="color:#25D366; font-weight:bold;">Responsive</div>
+                        </div>
+                        <div style="background:rgba(127,209,255,0.1); border:1px solid rgba(127,209,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">💬</div>
+                            <div style="color:#7FD1FF; font-weight:bold;">WhatsApp-first</div>
+                        </div>
+                        <div style="background:rgba(127,209,255,0.1); border:1px solid rgba(127,209,255,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                            <div style="font-size:2em;">☁️</div>
+                            <div style="color:#7FD1FF; font-weight:bold;">Render.com</div>
+                        </div>
+                    </div>
+                    <p style="font-style:italic; color:#7FD1FF;">"900+ trámites resueltos · 1 solo contacto · 0 filas para el usuario."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FLUJO DE DATOS -->
     <div class="section">
         <h2>🔄 Flujo Operativo y Soberanía</h2>
         <div class="flow-chart">
@@ -2127,7 +2319,7 @@
     </footer>
     <script>
         function showTab(tabId, btn) {
-            const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : (tabId.startsWith('s3') ? 'section-s3' : (tabId.startsWith('s5') ? 'section-s5' : 'section-s1')));
+            const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : (tabId.startsWith('s3') ? 'section-s3' : (tabId.startsWith('s5') ? 'section-s5' : (tabId.startsWith('s6') ? 'section-s6' : 'section-s1'))));
             if (!container) return;
 
             // Hide only panels inside this specific section
@@ -2148,6 +2340,11 @@
                     b.style.background = 'rgba(255,215,0,0.1)';
                     b.style.color = '#FFE082';
                     b.style.borderColor = 'rgba(255,215,0,0.3)';
+                }
+                if (container.id === 'section-s6') {
+                    b.style.background = 'rgba(127,209,255,0.1)';
+                    b.style.color = '#AFC5F2';
+                    b.style.borderColor = 'rgba(127,209,255,0.3)';
                 }
             });
 
@@ -2171,6 +2368,11 @@
                     btn.style.background = '#FFD700';
                     btn.style.color = '#0a0a1a';
                     btn.style.borderColor = '#FFD700';
+                }
+                if (container.id === 'section-s6') {
+                    btn.style.background = '#7FD1FF';
+                    btn.style.color = '#0a2e7a';
+                    btn.style.borderColor = '#7FD1FF';
                 }
             }
 

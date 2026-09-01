@@ -9,9 +9,7 @@
 
 ## 📋 Índice de Módulos del Sistema
 
-* 📁 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
-  Panel de control nativo con cifrado Zero-Knowledge (AES-GCM) para gestión segura de credenciales locales.
-  
+
 * 📁 **[Security Core (Módulo de Seguridad)](./README_Eva_Security_Core.md)**  
   Arquitectura de estanqueidad, políticas de aislamiento y control operativo de sucursales.
 
@@ -27,6 +25,11 @@
 * 📁 **[GT_Trax_Power — Presencia Digital Industrial](./README_GT_Trax_Power.md)**  
   Sitio web institucional y generador de leads para TRAX POWER (Medellín, Colombia), empresa de baterías industriales LiFePO4, cargadores y sistemas BMS. Arquitectura Dual-Workflow: Google AI Studio (diseño) ↔ VS Code (backend/API con Express 4 + Gemini 2.5 Flash). SPA React 19 + Vite 6 + Tailwind CSS 4 con síntesis de voz (es-CO), sonidos industriales (Web Audio API) e integración IA generativa para copy publicitario.
 
+* 📁 **[Transito Vueltas — Trámites de Tránsito](./README_Transito.md)**  
+  Landing page institucional monolítica (HTML5 + CSS3 vanilla) para Alex Piedrahíta en Medellín. Resuelve comparendos, fotomultas, prendas, traspasos y trámites vehiculares con WhatsApp-first conversion. Cero frameworks, cero backend — landing page estática en Render.com.
+
+* 📁 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
+  Panel de control nativo con cifrado Zero-Knowledge (AES-GCM) para gestión segura de credenciales locales.
 ---
 
 ## 🛠️ Stack Tecnológico y Conocimientos Aplicados
