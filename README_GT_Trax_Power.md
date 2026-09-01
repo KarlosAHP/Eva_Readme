@@ -71,7 +71,6 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 
 ## 🛠️ 3. Stack Tecnológico
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0a1f2a; border:1px solid #38bdf8; color:#38bdf8; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React 19</div>
   <div style="background:#0a1f2a; border:1px solid #38bdf8; color:#38bdf8; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 TypeScript</div>
@@ -82,9 +81,7 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 </div>
 
 **Frontend (Google AI Studio):** React 19, TypeScript, Vite 6, Tailwind CSS 4, Motion (animaciones), lucide-react (íconos). Renderizado SPA con componentes de presentación.
-```
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#2a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐍 Node.js</div>
   <div style="background:#2a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ Express 4</div>
@@ -95,9 +92,7 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 </div>
 
 **Backend / API (VS Code):** Express 4, Vite middleware (SPA proxy en dev), Gemini 2.5 Flash (@google/genai), esbuild para bundling, TypeScript estricto.
-```
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#2a1a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐳 Docker</div>
   <div style="background:#2a1a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">☁️ Render.com</div>
@@ -107,9 +102,7 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 </div>
 
 **Infraestructura:** Docker multi-stage, Render.com con auto-deploy desde `main`, secret managers para API keys, build de Vite para producción (SPA estático + Express server).
-```
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#052a05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🗣️ Web Speech API</div>
   <div style="background:#052a05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔊 Web Audio API</div>
@@ -118,7 +111,6 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 </div>
 
 **Audio & Accesibilidad:** Síntesis de voz en español colombiano (es-CO) para anuncios comerciales; sonidos industriales (zaps, power hum, UI clicks) via Web Audio API para inmersión táctil.
-```
 
 ---
 
@@ -151,7 +143,6 @@ GT_Trax_Power opera bajo un **modelo de dos frentes estratégicamente particiona
 
 ## 🧠 6. Destrezas y Conocimientos Aplicados
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0a1f2a; border:1px solid #38bdf8; color:#38bdf8; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ Ingeniería Full-Stack</div>
   <div style="background:#0a1f2a; border:1px solid #38bdf8; color:#38bdf8; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🤖 IA Generativa</div>

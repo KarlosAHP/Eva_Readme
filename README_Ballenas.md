@@ -1,4 +1,4 @@
-﻿# ⚡ Eva Blockseer — Ballenas: Inteligencia Forense On-Chain
+# ⚡ Eva Blockseer — Ballenas: Inteligencia Forense On-Chain
 
 > **Central Autónoma de Inteligencia de Red y Análisis Institucional.**
 > Subsistema especializado en la recolección, procesamiento y correlación de métricas a gran escala sobre redes blockchain, con alertas en tiempo real vía Telegram Bot y persistencia soberana en MongoDB Atlas.
@@ -41,7 +41,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 ## 🛠️ 3. Stack Tecnológico
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0f3460; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐍 Python 3.12+</div>
   <div style="background:#0f3460; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ FastAPI</div>
@@ -53,7 +52,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Backend:** Python 3.12+, FastAPI, Uvicorn, asyncio, httpx, workers y orquestación multi-cerebro.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🍃 MongoDB Atlas</div>
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐘 psycopg2</div>
@@ -62,7 +60,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Datos:** MongoDB Atlas (NoSQL distribuido), psycopg2, migraciones versionadas, auditorías locales.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#002535; border:1px solid #27a7e7; color:#27a7e7; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🤖 Bot Extractor de Datos</div>
   <div style="background:#002535; border:1px solid #27a7e7; color:#27a7e7; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🚨 Bot de Alertas</div>
@@ -72,7 +69,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Telegram Integration:** python-telegram-bot — Bot extractor de datos en tiempo real y Bot de alertas de mercado.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🖥️ HTML / JS Avanzado</div>
   <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 Dashboards Interactivos</div>
@@ -82,7 +78,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Frontend:** HTML/JS avanzado, dashboards interactivos, PWA, estándares de seguridad web.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐳 Docker Multi-Stage</div>
   <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">☁️ Cloud Web Services</div>
@@ -93,7 +88,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Infraestructura:** Docker multi-stage, despliegue en la nube (Web Service + Workers), secret managers, health checks.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⛓️ Blockfrost</div>
   <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📈 APIs de Mercado</div>
@@ -105,7 +99,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Integraciones & Seguridad:** Blockfrost (Cardano), APIs de mercado, IA generativa (Groq/Gemini), circuit breaker, cifrado AES-GCM, backoff exponencial.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#003300; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 SSE</div>
   <div style="background:#003300; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔌 WebSocket</div>
@@ -115,7 +108,6 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Eventos & tiempo real:** bus de eventos propio, SSE, WebSocket, colas asíncronas desacopladas.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0a1a2f; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 TypeScript</div>
   <div style="background:#0a1a2f; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React</div>

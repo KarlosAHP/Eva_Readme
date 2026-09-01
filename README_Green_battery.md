@@ -52,7 +52,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 ## 🛠️ 3. Stack Tecnológico
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐍 Python 3.11+</div>
   <div style="background:#0f2a0f; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ FastAPI</div>
@@ -64,7 +63,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 **Backend:** Python 3.11+, FastAPI, Uvicorn, Pydantic V2, passlib con bcrypt, asyncio para tareas en segundo plano.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React 18</div>
   <div style="background:#0a1a2e; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 TypeScript</div>
@@ -75,7 +73,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 **Frontend Web:** React 18 + TypeScript + Vite + Tailwind CSS, con patrón de componentes especializados.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐘 PostgreSQL</div>
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔌 Supabase</div>
@@ -85,7 +82,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 **Bases de datos:** 2 instancias Supabase (PostgreSQL administrado) con sincronización bidireccional controlada y Row-Level Security en el portal.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⛓️ pycardano</div>
   <div style="background:#0a1f2a; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔗 Blockfrost</div>
@@ -95,7 +91,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 **Blockchain:** pycardano + Blockfrost para anclaje y consulta de eventos en redes públicas.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📄 fpdf2</div>
   <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 reportlab</div>
@@ -107,7 +102,6 @@ Eva Green Battery es un sistema de producción real, desplegado y con operación
 
 **Herramientas & Generación:** fpdf2, reportlab, Pillow, qrcode, Groq LLM, servicio de email transaccional.
 
-```html
 <div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
   <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 Streamlit</div>
   <div style="background:#2a0a4a; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐳 Docker</div>
