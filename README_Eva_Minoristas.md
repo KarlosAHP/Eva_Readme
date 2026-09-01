@@ -1,136 +1,163 @@
-# EVA Connect — Sucursal 2
+# 🌐 EVA Connect — Minoristas & Inteligencia Macro
 
-## ¿Qué es EVA Connect?
-
-EVA Connect es la capa operativa y de inteligencia de mercado del ecosistema EVA. Su función es capturar, normalizar y exponer datos reales del ecosistema Cardano y mercados financieros, con foco en flujo minorista, métricas macroeconómicas y señales on-chain listas para consumo por otras capas analíticas y productos cliente.
-
-No es un analytics engine: es el **recolector, validador y publicador** de datos del sistema.
+> **Capa Operativa, Recolección en Tiempo Real e Inteligencia de Mercado.**
+> Sistema autónomo de ingesta, normalización y publicación de datos del ecosistema Cardano y mercados financieros: clasificación de fauna minorista (Pez / Delfín / Tiburón), métricas retail 24/7, monitoreo macroeconómico, alertas on-chain y endpoints públicos normalizados sin acceso directo a base de datos.
 
 ---
 
-## Arquitectura de alto nivel
+## 🏗️ 1. Arquitectura y Principios Operativos
 
-El sistema se organiza en capas independientes para preservar estanqueidad, resiliencia y escalabilidad:
+EVA Connect es el **recolector, validador y publicador de datos** del ecosistema EVA. Opera desacoplado de las capas analíticas superiores para garantizar aislamiento, resiliencia y escalabilidad en producción:
 
-```text
-[ Fuentes on-chain / APIs externas ]
-                ↓
-     [ Workers de recolección ]
-                ↓
-     [ Cola asíncrona + Circuit Breaker ]
-                ↓
-     [ Backend API — FastAPI ]
-                ↓
-     [ Frontend dashboard + endpoints públicos ]
+```
+┌──────────────────────────────────────┐        ┌──────────────────────────────────────┐
+│        FUENTES DE INGESTA            │        │         BACKEND / API HTTP           │
+│   Blockfrost · APIs Mercado · News   │        │     (FastAPI + Uvicorn + EventBus)   │
+├──────────────────────────────────────┤        ├──────────────────────────────────────┤
+│  Cardano Mainnet (transacciones)     │        │  /api/v1/s2/bridge-data (Bridge S1)  │
+│  Feeds macroeconómicos               │  →     │  /api/header_metrics                 │
+│  Cables financieros & RSS            │  Queue │  /api/volume_24h                     │
+│  Oráculos de precios (Binance ADA)   │        │  /api/raw_alerts & capitulation      │
+└──────────────────────────────────────┘        └──────────────────────────────────────┘
+                  │                                                │
+                  ▼                                                ▼
+┌──────────────────────────────────────┐        ┌──────────────────────────────────────┐
+│        WORKERS AUTÓNOMOS             │        │       PERSISTENCIA & EVENTOS         │
+├──────────────────────────────────────┤        ├──────────────────────────────────────┤
+│  Scout Minorista V3.0                │        │  PostgreSQL / Supabase               │
+│  Economic Monitor (Macro)            │        │  Circuit Breaker & Retención 2 Capas │
+│  Intel Noticias Obrero               │        │  SSE / WebSockets (StreamContext)    │
+└──────────────────────────────────────┘        └──────────────────────────────────────┘
 ```
 
-- **Frontend**: Dashboard React para monitoreo operativo en tiempo real.
-- **Backend API**: API REST y streams en vivo. Publica métricas normalizadas y protege el acceso mediante tokens y contratos de consumo claros.
-- **Workers**: Procesos autónomos que recorren on-chain, agregan noticias, ingestan feeds macro y actualizan precios.
-- **Persistence**: Base de datos operativa propia con estrategias de retención, purga y circuit breaker para alta disponibilidad.
+### Principios Rectores de Ingeniería
 
-> Regla de arquitectura: las capas externas consumen datos **exclusivamente por API pública**. No hay acceso directo a la base de datos desde fuera del módulo.
-
----
-
-## Capacidades operativas
-
-- **Detección y clasificación de wallets minoristas** en Cardano, con segmentación por perfil de flujo.
-- **Métricas de mercado 24/7**: volúmenes, balances, presión compradora/vendedora y rankings por poder de wallet.
-- **Alertas on-chain**: detección de movimientos relevantes y anomalías en tiempo real.
-- **Inteligencia macro y noticias**: agregación de eventos económicos, calendario macro y cables de mercado.
-- **Precio y profundidad**: tracking de activos y estados de mercado con fuentes múltiples y cache resiliente.
-- **Muro de capitulación**: snapshots diarios y métricas de pánico del mercado.
-- **Streams en vivo**: actualización continua hacia dashboards mediante SSE y WebSocket.
+* **Aislamiento y Estanqueidad Estricta:** La base de datos de EVA Connect es privada del módulo. Ninguna sucursal externa (como Blockseer S1) o cliente consulta PostgreSQL/Supabase directamente; consumen datos exclusivamente vía **API HTTP con Bearer Tokens**.
+* **Protocolo Zero-Mocks:** Cero datos simulados o placeholders. Todas las métricas de mercado y transacciones provienen de la red principal de Cardano Mainnet y oráculos oficiales verificados.
+* **Resiliencia & Supervivencia:** Implementación de **Circuit Breaker** para resguardo de la base de datos, sistema **Fail-Safe** en modo degradado seguro frente a caídas externas, y cola asíncrona (`async_queue`) para absorber picos de carga.
+* **Bus de Eventos Reactivo:** Transmisión unidireccional y bidireccional mediante **SSE (Server-Sent Events)** y **WebSockets**, permitiendo sincronización instantánea con el frontend (`StreamContext`).
 
 ---
 
-## Stack tecnológico
+## 📊 2. Magnitud del Proyecto
 
-### Backend
-- **Lenguaje**: Python 3.11+
-- **Framework**: FastAPI + Uvicorn
-- **Base de datos**: PostgreSQL / Supabase
-- **Cliente HTTP**: httpx (asíncrono)
-- **Colas y eventos**: asyncio + bus de eventos propio
-- **Integraciones**: Blockfrost (Cardano), APIs de mercado, feeds de noticias, IA generativa para análisis de documentos
+EVA Connect es un sistema productivo real con orquestación multi-worker y monitoreo continuo 24/7:
 
-### Frontend
-- **Framework**: React + Vite + TypeScript
-- **Estilos**: Tailwind CSS
-- **Tiempo real**: StreamContext con SSE / WebSocket
-- **Despliegue**: Build estático servido por el backend
-
-### Infraestructura
-- **Contenedores**: Docker multi-stage
-- **Orquestación**: Render.com
-- **Workers**: Servicios worker independientes para scouts, monitores macro, orquestadores de noticias y oráculos de precio
-- **Cron jobs**: Tareas programadas para censo histórico, purga de retención y snapshots periódicos
+| Indicador / Componente | Descripción |
+|---|---|
+| **Arquitectura Backend** | FastAPI V8.0 + Uvicorn + Python 3.12+ asíncrono |
+| **Worker Principal** | `scout_minorista_s2.py` V3.0 (recorrido on-chain via Blockfrost) |
+| **Obreros Especializados** | Economic Monitor (macro), Intel Noticias (cables RSS), Header Oracle (precios ADA) |
+| **Cron Workers** | Purga de retención en 2 capas (`db_retention_purger.py`), Censo Histórico diario, Snapshots |
+| **Clasificación Retail** | Segmentación por comportamiento y volumen (Pez 🐟 / Delfín 🐬 / Tiburón 🦈) |
+| **Protocolo de Integración** | Bridge seguro `/api/v1/s2/bridge-data` con cache en memoria y Bearer Token |
+| **Observabilidad** | Auditoría local de conexión, health checks, colas en memoria y logs estructurados |
 
 ---
 
-## Filosofía de diseño y seguridad
+## 🛠️ 3. Stack Tecnológico
 
-- **Zero mocks**: todas las métricas se calculan desde datos reales; no se usan simulaciones en producción.
-- **Estanqueidad**: cada módulo cumple una única responsabilidad. No hay dependencias cruzadas ocultas entre capas analíticas y operativas.
-- **Resiliencia by design**: circuit breaker, fail-safe, cache local, cola offline y backoff controlado para mantener servicio aunque fallen servicios externos.
-- **Soberanía de datos**: la base operativa es privada del módulo; la única vía de integración oficial es la API pública con token compartido.
-- **Secret management**: las credenciales y claves se manejan exclusivamente por variables de entorno y gestores de secretos en plataforma; nunca se versionan en repositorio.
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐍 Python 3.12+</div>
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚡ FastAPI</div>
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🌐 Uvicorn</div>
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔄 asyncio</div>
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📡 httpx asíncrono</div>
+  <div style="background:#0f3460; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚙️ Workers Multi-Proceso</div>
+</div>
+
+**Backend:** Python 3.12+, FastAPI, Uvicorn (ASGI), asyncio, httpx asíncrono, colas de trabajo y subprocesos autónomos.
+
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐘 PostgreSQL</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔌 Supabase</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📋 psycopg2-binary</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🛡️ Circuit Breaker</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🧹 Purga Inteligente</div>
+</div>
+
+**Persistencia & Datos:** PostgreSQL / Supabase, cliente `psycopg2`, estrategias de purga periódica en dos capas, resiliencia con Circuit Breaker.
+
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#002535; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📡 SSE / Server-Sent Events</div>
+  <div style="background:#002535; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔌 WebSockets Real-time</div>
+  <div style="background:#002535; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔄 Bus de Eventos Pub/Sub</div>
+  <div style="background:#002535; border:1px solid #00eaec; color:#00eaec; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📦 Async Write Queue</div>
+</div>
+
+**Streaming & Eventos:** Bus de eventos propio, canales SSE y WebSockets para transmisión reactiva sin bloqueo de hilos.
+
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React + Vite</div>
+  <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔷 TypeScript</div>
+  <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🎨 Tailwind CSS</div>
+  <div style="background:#4b0082; border:1px solid #b444ff; color:#b444ff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📡 StreamContext en vivo</div>
+</div>
+
+**Frontend:** React, Vite, TypeScript, Tailwind CSS con arquitectura de contextos reactivos en tiempo real.
+
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🐳 Docker Multi-Stage</div>
+  <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">☁️ Render.com</div>
+  <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⏱️ Cron Jobs Programados</div>
+  <div style="background:#4a2a0a; border:1px solid #ffaa44; color:#ffaa44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔐 Secret Managers</div>
+</div>
+
+**Infraestructura:** Docker multi-stage, Render.com (Web Service + Workers + Cron Jobs), Secret Managers para credenciales aisladas.
+
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
+  <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⛓️ Blockfrost (Cardano Mainnet)</div>
+  <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📈 Oráculos de Mercado</div>
+  <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📰 Feeds RSS Macro</div>
+  <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🤖 IA Documental</div>
+  <div style="background:#3a0a0a; border:1px solid #e94560; color:#e94560; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🎟️ Bearer Tokens</div>
+</div>
+
+**Integraciones & Seguridad:** API Blockfrost en tiempo real, oráculos de precio ADA, feeds de noticias financieras, autenticación por Bearer tokens y políticas de estanqueidad.
 
 ---
 
-## Despliegue y operación
+## 🦈 4. Clasificación de Fauna Minorista (Tiering System)
 
-- **Modelo**: despliegue continuo con contenedores optimizados.
-- **Servicios**: API web + workers especializados por dominio (scout minorista, macro, noticias, precio).
-- **Escalado**: cada worker puede escalarse de forma independiente según carga.
-- **Monitoreo**: health checks, métricas de cola, estado de circuit breaker y auditorías locales de conexión.
+El motor de clasificación analiza patrones de volumen, concentración y frecuencia sobre wallets minoristas en Cardano:
 
----
-
-## Integración en el ecosistema EVA
-
-EVA Connect se integra con otras sucursales del ecosistema bajo contrato de API:
-
-- **Entrada**: fuentes on-chain, APIs de mercado, noticias y documentos AI.
-- **Salida**: endpoints normalizados para consumo por capas analíticas, dashboards y productos cliente.
-- **Aislamiento**: otras sucursales no consultan directamente la base de S2; consumen endpoints públicos con validación de token.
+* 🐟 **Pez (Retail Flujo Menor):** Wallets de bajo volumen transaccional diario. Representan el pulso orgánico de la red.
+* 🐬 **Delfín (Mid-Tier Acumulador):** Wallets medianas con patrones recurrentes de acumulación y holding en ciclos de mercado.
+* 🦈 **Tiburón (Heavy Retail / Concentrador):** Wallets de alta densidad minorista con capacidad de generar picos de volumen local.
 
 ---
 
-## 🛠️ Herramientas, stack y conocimientos aplicados
+## 🔌 5. Endpoints de Integración Pública
 
-Este módulo está construido con herramientas de producción real, seleccionadas para máxima resiliencia, rendimiento y soberanía de datos:
-
-* **Backend:** Python 3.12+, FastAPI, Uvicorn, `asyncio`, `httpx`.
-* **Datos:** PostgreSQL, Supabase, `psycopg2`, migraciones versionadas.
-* **Eventos y tiempo real:** bus de eventos propio, SSE, WebSocket, colas asíncronas desacopladas.
-* **Frontend:** React + Vite + TypeScript, Tailwind CSS, Context API en tiempo real.
-* **Infraestructura:** Docker multi-stage, Render.com (Web Service + Workers + Cron Jobs), secret managers, health checks.
-* **Integraciones:** Blockfrost (Cardano Mainnet), APIs de mercado, feeds de noticias, motores de IA generativa.
-* **Seguridad:** tokens Bearer, circuit breaker, fail-safe, backoff exponencial, cache TTL, estanqueidad por módulos.
-* **Gobernanza:** Git, GitHub, despliegue continuo, auditorías locales de conexión.
-
-### 🧠 Destrezas y conocimientos que hacen posible este módulo
-
-* Desarrollo de backends asíncronos de alto rendimiento con FastAPI y Python.
-* Diseño de contratos de API claros, seguros y normalizados para consumo entre módulos.
-* Procesamiento de datos on-chain en producción: ingesta, clasificación, score y métricas.
-* Implementación de arquitecturas resilientes: circuit breaker, colas offline, degraded mode y recuperación automática.
-* Desarrollo frontend moderno orientado a dashboards operativos con actualización en vivo.
-* Operación de workers autónomos, cron jobs y orquestadores multi-proceso.
-* Criptografía aplicada al servicio de la soberanía de datos y la integridad operativa.
-* Documentación técnica orientada a integradores, clientes y equipos de desarrollo.
+| Método | Endpoint | Descripción | Lógica & Acceso |
+|---|---|---|---|
+| `GET` | `/api/v1/s2/bridge-data` | Bridge de consumo seguro entre sucursales | Requiere Bearer Token. Retorna balance, métricas y estado sin exponer base de datos |
+| `GET` | `/api/header_metrics` | Indicadores globales en vivo | Precios, volumen 24h, estado del circuit breaker y salud del sistema |
+| `GET` | `/api/volume_24h` | Volumen transaccional normalizado | Consolidado de transacciones procesadas en la red |
+| `GET` | `/api/raw_alerts` | Bus de alertas on-chain | Anomalías matemáticas y movimientos detectados en tiempo real |
+| `GET` | `/api/capitulation` | Muro de capitulación | Snapshots diarios de pánico y presión vendedora |
 
 ---
 
-## 💼 Para reclutadores, clientes y socios estratégicos
+## 🧠 6. Destrezas y Conocimientos Aplicados
 
-**Eva Blockseer** es un stack tecnológico de vanguardia, diseñado a la medida de necesidades complejas en el ámbito de datos soberanos, inteligencia on-chain y automatización financiera. Combinamos ingeniería de software de alto nivel, arquitectura distribuida y segura, integración con ecosistemas blockchain reales, y despliegue en producción con observabilidad y control de fallos.
+* **Ingeniería de backends de alta precisión** con FastAPI, Python 3.12+ y procesamiento asíncrono no bloqueante.
+* **Diseño de contratos de API rigurosos** para consumo seguro entre módulos con validación de tokens y cache.
+* **Procesamiento de datos on-chain en producción:** ingesta desde Cardano Mainnet, clasificación por fauna, scoring y métricas cuantitativas.
+* **Arquitectura de resiliencia avanzada:** Circuit Breaker, colas asíncronas offline, Fail-Safe en modo degradado y backoff exponencial.
+* **Desarrollo frontend en tiempo real** con React, TypeScript y Tailwind CSS orientado a dashboards de monitoreo en vivo (SSE/WebSocket).
+* **Operación de workers autónomos y cron jobs** en contenedores Docker multi-stage con auto-deploy continuo.
+* **Criptografía aplicada a la soberanía de datos:** estanqueidad por dominios, resguardo de propiedad intelectual y Zero-Knowledge de credenciales.
+* **Documentación técnica profunda** orientada a auditores, reclutadores y desarrolladores integradores.
+
+---
+
+## 💼 7. Para Reclutadores, Clientes y Socios Estratégicos
+
+**EVA Connect** demuestra dominio integral en la captura, normalización y publicación de grandes volúmenes de datos financieros en tiempo real. Combina ingeniería asíncrona de alto rendimiento en Python, resiliencia arquitectónica probada en producción y un frontend reactivo moderno.
 
 No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
 
 ---
 
-*Documento preparado para difusión pública. No contiene rutas internas detalladas, credenciales ni detalles de implementación sensibles.*
-
+*Documento técnico preparado para difusión pública. Cero datos sensibles, credenciales o llaves expuestas.*
