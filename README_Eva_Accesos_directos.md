@@ -29,7 +29,7 @@ EVA Accesos Directos es una extensión de navegador nativa (Manifest V3) diseña
 ├──────────────────────────────────────┤        │  Chrome Storage Local (operación)     │
 │  CRUD Perfiles (Nivel 1)             │  ↔     │  Export/Import JSON cifrado           │
 │  CRUD Accesos Hijos (Nivel 2)        │  Data  │  AES-GCM 256 + PBKDF2 200K           │
-│  Módulos: Notas · Ideas · Agenda     │        │  Validación Policy ID + Brand         │
+│  Módulos: Notas · Ideas · Agenda     │        │  Validación de marca + Policy ID      │
 │  Tabs, Drawer, Reveal, Copiar        │        │                                      │
 └──────────────────────────────────────┘        └──────────────────────────────────────┘
 
@@ -65,7 +65,7 @@ EVA Accesos Directos es una herramienta productiva real con arquitectura browser
 * 💡 **Panel de Ideas (brainstorming):** captura de conceptos con título, categoría (Estrategia, IA & Automatización, Seguridad & Cripto, UI/UX, Infraestructura), estado (concepto/progreso/completado), color de tarjeta y descripción.
 * 📅 **Agenda & Recordatorios:** eventos con fecha, hora, categoría (Reunión, Entregable, Mantenimiento, Pago/Facturación, Personal), prioridad (alta/media/baja), checkbox de completado y filtros por período.
 * 🔐 **Export/Import seguro:** backup completo en JSON cifrado con AES-GCM. Modo portable (contraseña de usuario → PBKDF2 → AES-GCM) o modo interno (clave generada en navegador, no portable entre equipos).
-* 🛡️ **Validación de autenticidad:** cada contenedor cifrado incluye metadatos inmutables de marca (Eva Blockseer) y Policy ID. Si el archivo es alterado, corrompido o proviene de otra fuente, se descarta automáticamente al intentar importar.
+* 🛡️ **Validación de autenticidad:** cada contenedor cifrado incluye metadatos inmutables de marca (Eva Blockseer) y un identificador único de política. Si el archivo es alterado, corrompido o proviene de otra fuente, se descarta automáticamente al intentar importar.
 * 👁️ **Reveal controlado:** credenciales enmascaradas en la interfaz (`••••••••`) con botón de revelación bajo demanda del usuario. Sin exposición accidental.
 
 ---
@@ -86,7 +86,7 @@ EVA Accesos Directos es una herramienta productiva real con arquitectura browser
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔑 AES-GCM 256 bits</div>
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🧂 PBKDF2 200K iteraciones</div>
   <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🔍 WebCrypto API nativa</div>
-  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🛡️ Validación Policy ID + Brand</div>
+  <div style="background:#053b05; border:1px solid #44ff44; color:#44ff44; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🛡️ Validación de marca + Policy ID</div>
 </div>
 
 **Cifrado & Seguridad:** AES-GCM 256 bits con nonce único por contenedor, derivación de claves PBKDF2 con salt aleatorio de 16 bytes, WebCrypto API nativa del navegador, validación de metadatos de marca y Policy ID en cada importación.
@@ -136,7 +136,7 @@ Exportación/importación de bóveda completa en JSON cifrado. Transportable por
 
 ### Validación de autenticidad
 
-Cada contenedor cifrado incluye metadatos inmutables de marca (Eva Blockseer) y Policy ID (`34ebd85a43ed19d0e99d61076b3e207f909f5a36b10542b230fd09ff`). Si el archivo es alterado, corrompido o proviene de otra fuente, se descarta automáticamente al intentar importar.
+Cada contenedor cifrado incluye metadatos inmutables de marca (Eva Blockseer) y un identificador único de política. Si el archivo es alterado, corrompido o proviene de otra fuente, se descarta automáticamente al intentar importar.
 
 ### Sin recuperación centralizada
 
@@ -148,21 +148,7 @@ El código JavaScript de producción se ofusca con `javascript-obfuscator` para 
 
 ---
 
-## 🔗 6. Integración con el Ecosistema EVA
-
-| Módulo / Proyecto | Rol | Stack |
-|---|---|---|
-| S1 Blockseer | Inteligencia on-chain (whales) | Python, FastAPI, MongoDB Atlas, Docker |
-| S2 Eva Connect | Datos macro/retail | Python, FastAPI, Supabase, SSE/WebSocket |
-| Green Battery | Notaría digital industrial | Python, FastAPI, Supabase, Blockchain (pycardano) |
-| EVA Web | Fachada corporativa | React, Vite, TypeScript |
-| GT_Trax_Power | Presencia digital cliente | React 19, Vite 6, Tailwind, Express 4, Gemini |
-| **EVA Accesos Directos** | **Bóveda soberana de credenciales** | **Manifest V3, HTML/CSS/JS, AES-GCM, PBKDF2** |
-| MCP Suprema | Orquestador / Director | FastAPI, Groq, Gemini, Supabase multi-instancia |
-
----
-
-## 💼 7. Para Reclutadores y Clientes
+## 💼 6. Para Reclutadores y Clientes
 
 **EVA Accesos Directos** es una extensión de navegador soberana que demuestra dominio avanzado de seguridad cliente, cifrado aplicado y arquitectura browser-side sin dependencias externas. Combina ingeniería de software de alto nivel, arquitectura distribuida y segura, integración con ecosistemas blockchain reales, y despliegue en producción con observabilidad y control de fallos.
 
@@ -171,9 +157,12 @@ El código JavaScript de producción se ofusca con `javascript-obfuscator` para 
 * Manifest V3 real con permisos mínimos (`storage + tabs`).
 * Cifrado Zero-Knowledge con AES-GCM 256 bits y PBKDF2 200K iteraciones.
 * Arquitectura modular browser-side: 4 módulos funcionales independientes (accesos, notas, ideas, agenda).
-* Backup portable cifrado con validación de Policy ID y metadatos de marca.
+* Backup portable cifrado con validación de marca e identificador de política.
 * Ofuscación de producción con control-flow flattening y string array encoding.
 * Cero servidores centrales, cero bases de datos externas, cero sincronización cloud.
 * Estanqueidad absoluta entre perfiles de navegador.
 
 No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
+
+---
+*Documento técnico preparado para difusión pública. Cero datos sensibles, credenciales o llaves expuestas.*
