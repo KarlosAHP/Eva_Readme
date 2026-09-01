@@ -223,4 +223,6 @@ Asesoría jurídica:
   </div>
 </div>
 
+No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
+
 *Trámites de tránsito sin filas — Medellín y área metropolitana.*

@@ -195,5 +195,6 @@ El motor de clasificación analiza patrones de volumen, concentración y frecuen
 No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
 
 ---
+No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
 
 *Documento técnico preparado para difusión pública. Cero datos sensibles, credenciales o llaves expuestas.*

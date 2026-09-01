@@ -202,4 +202,6 @@ Reglas estrictas que preservan la integridad del desarrollo:
 
 La pila tecnológica combina **React 19 + Vite 6 + Tailwind CSS 4** en el frontend con **Express 4 + Gemini 2.5 Flash** en el backend, despliegue en **Render.com** con **Docker multi-stage** y auto-deploy continuo. Todo ello con datos 100% verificados y cero mocks.
 
+No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
+
 *Presencia digital industrial — energía que impulsa tu operación.*

@@ -181,4 +181,6 @@ La agenda de Green Battery funciona como un CRM ligero con foco operativo:
 
 ---
 
+No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
+
 *Notaría Digital Industrial — trazabilidad soberana para activos críticos.*
