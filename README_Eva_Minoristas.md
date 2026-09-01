@@ -32,10 +32,10 @@ EVA Connect es el **recolector, validador y publicador de datos** del ecosistema
 
 ### Principios Rectores de Ingeniería
 
-* **Aislamiento y Estanqueidad Estricta:** La base de datos de EVA Connect es privada del módulo. Ninguna sucursal externa (como Blockseer S1) o cliente consulta PostgreSQL/Supabase directamente; consumen datos exclusivamente vía **API HTTP con Bearer Tokens**.
-* **Protocolo Zero-Mocks:** Cero datos simulados o placeholders. Todas las métricas de mercado y transacciones provienen de la red principal de Cardano Mainnet y oráculos oficiales verificados.
-* **Resiliencia & Supervivencia:** Implementación de **Circuit Breaker** para resguardo de la base de datos, sistema **Fail-Safe** en modo degradado seguro frente a caídas externas, y cola asíncrona (`async_queue`) para absorber picos de carga.
-* **Bus de Eventos Reactivo:** Transmisión unidireccional y bidireccional mediante **SSE (Server-Sent Events)** y **WebSockets**, permitiendo sincronización instantánea con el frontend (`StreamContext`).
+* 🔒 **Aislamiento y Estanqueidad Estricta:** La base de datos de EVA Connect es privada del módulo. Ninguna sucursal externa (como Blockseer S1) o cliente consulta PostgreSQL/Supabase directamente; consumen datos exclusivamente vía **API HTTP con Bearer Tokens**.
+* ✅ **Protocolo Zero-Mocks:** Cero datos simulados o placeholders. Todas las métricas de mercado y transacciones provienen de la red principal de Cardano Mainnet y oráculos oficiales verificados.
+* 🛡️ **Resiliencia & Supervivencia:** Implementación de **Circuit Breaker** para resguardo de la base de datos, sistema **Fail-Safe** en modo degradado seguro frente a caídas externas, y cola asíncrona (`async_queue`) para absorber picos de carga.
+* 📡 **Bus de Eventos Reactivo:** Transmisión unidireccional y bidireccional mediante **SSE (Server-Sent Events)** y **WebSockets**, permitiendo sincronización instantánea con el frontend (`StreamContext`).
 
 ---
 
@@ -52,6 +52,19 @@ EVA Connect es un sistema productivo real con orquestación multi-worker y monit
 | **Clasificación Retail** | Segmentación por comportamiento y volumen (Pez 🐟 / Delfín 🐬 / Tiburón 🦈) |
 | **Protocolo de Integración** | Bridge seguro `/api/v1/s2/bridge-data` con cache en memoria y Bearer Token |
 | **Observabilidad** | Auditoría local de conexión, health checks, colas en memoria y logs estructurados |
+
+### Capacidades funcionales verificables
+
+* ⛓️ **Recolección On-Chain 24/7:** Ingesta de transacciones y wallets de flujo minorista desde Cardano Mainnet vía API Blockfrost.
+* 🦈 **Clasificación de Fauna Retail:** Motor de scoring cuantitativo para categorización automática de wallets (Pez 🐟 / Delfín 🐬 / Tiburón 🦈).
+* 📈 **Oráculos de Mercado & Precios:** Ingesta y consolidación continua de precios ADA/USD con cache TTL y resiliencia ante caídas externas.
+* 🌍 **Inteligencia Macro & Noticias:** Agregador de calendario económico semanal, eventos globales y cables financieros (World Monitor + RSS).
+* 🧱 **Muro de Capitulación:** Snapshots diarios y métricas en tiempo real de pánico, liquidez y presión vendedora minorista.
+* 🚨 **Detector de Anomalías:** Algoritmo en vivo para identificación de picos inusuales de volumen o concentración en tiempo real.
+* 🔄 **Bus de Eventos Asíncrono:** Event Bus Pub/Sub sin bloqueo de hilos con soporte de SSE y WebSockets para dashboards reactivos.
+* 🎟️ **Bridge de Consumo Cifrado:** Pasarela pública `/api/v1/s2/bridge-data` protegida por Bearer Tokens y cache en memoria para consumo seguro entre capas.
+* 🧹 **Purga e Higiene de Datos:** Cron jobs de retención en dos capas (`db_retention_purger.py`) para optimizar espacio en base de datos.
+* 📊 **Censo Histórico Diario:** Programación de censos diarios de wallets para seguimiento de distribución de poder retail en Cardano.
 
 ---
 
@@ -141,20 +154,43 @@ El motor de clasificación analiza patrones de volumen, concentración y frecuen
 
 ## 🧠 6. Destrezas y Conocimientos Aplicados
 
-* **Ingeniería de backends de alta precisión** con FastAPI, Python 3.12+ y procesamiento asíncrono no bloqueante.
-* **Diseño de contratos de API rigurosos** para consumo seguro entre módulos con validación de tokens y cache.
-* **Procesamiento de datos on-chain en producción:** ingesta desde Cardano Mainnet, clasificación por fauna, scoring y métricas cuantitativas.
-* **Arquitectura de resiliencia avanzada:** Circuit Breaker, colas asíncronas offline, Fail-Safe en modo degradado y backoff exponencial.
-* **Desarrollo frontend en tiempo real** con React, TypeScript y Tailwind CSS orientado a dashboards de monitoreo en vivo (SSE/WebSocket).
-* **Operación de workers autónomos y cron jobs** en contenedores Docker multi-stage con auto-deploy continuo.
-* **Criptografía aplicada a la soberanía de datos:** estanqueidad por dominios, resguardo de propiedad intelectual y Zero-Knowledge de credenciales.
-* **Documentación técnica profunda** orientada a auditores, reclutadores y desarrolladores integradores.
+* ⚡ **Ingeniería de backends de alta precisión** con FastAPI, Python 3.12+ y procesamiento asíncrono no bloqueante.
+* 📑 **Diseño de contratos de API rigurosos** para consumo seguro entre módulos con validación de tokens y cache.
+* 🔬 **Procesamiento de datos on-chain en producción:** ingesta desde Cardano Mainnet, clasificación por fauna, scoring y métricas cuantitativas.
+* 🛡️ **Arquitectura de resiliencia avanzada:** Circuit Breaker, colas asíncronas offline, Fail-Safe en modo degradado y backoff exponencial.
+* ⚛️ **Desarrollo frontend en tiempo real** con React, TypeScript y Tailwind CSS orientado a dashboards de monitoreo en vivo (SSE/WebSocket).
+* ⚙️ **Operación de workers autónomos y cron jobs** en contenedores Docker multi-stage con auto-deploy continuo.
+* 🔐 **Criptografía aplicada a la soberanía de datos:** estanqueidad por dominios, resguardo de propiedad intelectual y Zero-Knowledge de credenciales.
+* 📄 **Documentación técnica profunda** orientada a auditores, reclutadores y desarrolladores integradores.
 
 ---
 
 ## 💼 7. Para Reclutadores, Clientes y Socios Estratégicos
 
 **EVA Connect** demuestra dominio integral en la captura, normalización y publicación de grandes volúmenes de datos financieros en tiempo real. Combina ingeniería asíncrona de alto rendimiento en Python, resiliencia arquitectónica probada en producción y un frontend reactivo moderno.
+
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin:20px 0;">
+  <div style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">🏗️</div>
+    <div style="color:#00eaec; font-weight:bold; font-size:0.9em; margin-top:5px;">Ingeniería Asíncrona</div>
+  </div>
+  <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">🐘</div>
+    <div style="color:#44ff44; font-weight:bold; font-size:0.9em; margin-top:5px;">PostgreSQL / Supabase</div>
+  </div>
+  <div style="background:rgba(0,234,236,0.1); border:1px solid rgba(0,234,236,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">📡</div>
+    <div style="color:#00eaec; font-weight:bold; font-size:0.9em; margin-top:5px;">SSE & WebSockets</div>
+  </div>
+  <div style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">⛓️</div>
+    <div style="color:#e94560; font-weight:bold; font-size:0.9em; margin-top:5px;">Cardano Mainnet</div>
+  </div>
+  <div style="background:rgba(180,68,255,0.1); border:1px solid rgba(180,68,255,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">🛡️</div>
+    <div style="color:#b444ff; font-weight:bold; font-size:0.9em; margin-top:5px;">Circuit Breakers</div>
+  </div>
+</div>
 
 No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
 

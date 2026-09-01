@@ -7,11 +7,11 @@
 
 ## 🏗️ 1. Arquitectura y Principios Operativos
 
-La Sucursal 1 opera como el **Cerebro de Inteligencia On-Chain** del ecosistema, estructurado bajo un diseño modular de doble vertiente:
+Eva Blockseer (Ballenas) opera como el **Cerebro de Inteligencia On-Chain** del ecosistema, estructurado bajo un diseño modular de doble vertiente:
 
-* **Cerebro 1 (Analítico e Integrador):** Responsable de la correlación de flujos de datos macro, gestión de interfaces de usuario estáticas, consumo seguro de capas externas mediante pasarelas HTTP cifradas y escritura de series históricas en MongoDB Atlas.
-* **Cerebro 2 (Operativo de Alta Precisión):** Motor de cálculo matemático especializado en la detección de anomalías, brechas de valor institucional (FVG) y emisión de alertas hacia canales privados de Telegram Bot para toma de decisiones en tiempo real.
-* **Estanqueidad Estricta:** Separación absoluta entre la capa de análisis de grandes volúmenes y los motores relacionales externos, garantizando la resiliencia operativa ante fallos de infraestructura.
+* 🧠 **Cerebro 1 (Analítico e Integrador):** Responsable de la correlación de flujos de datos macro, gestión de interfaces de usuario estáticas, consumo seguro de capas externas mediante pasarelas HTTP cifradas y escritura de series históricas en MongoDB Atlas.
+* ⚡ **Cerebro 2 (Operativo de Alta Precisión):** Motor de cálculo matemático especializado en la detección de anomalías, brechas de valor institucional (FVG) y emisión de alertas hacia canales privados de Telegram Bot para toma de decisiones en tiempo real.
+* 🛡️ **Estanqueidad Estricta:** Separación absoluta entre la capa de análisis de grandes volúmenes y los motores relacionales externos, garantizando la resiliencia operativa ante fallos de infraestructura.
 
 Ambos componentes comparten una base de datos común en MongoDB Atlas con series históricas on-chain, pero cada uno mantiene su propio ciclo de vida, despliegue independiente y dominio funcional exclusivo.
 
@@ -21,21 +21,21 @@ Ambos componentes comparten una base de datos común en MongoDB Atlas con series
 
 Eva Blockseer es un sistema de producción real con métricas verificables:
 
-| Indicador | Valor |
-|-----------|-------|
-| **Archivos de código fuente** | 122+ archivos (Python, TypeScript, HTML, JavaScript) |
-| **Líneas de código** | 58,000+ líneas de lógica productiva |
-| **Scripts activos** | 35+ workers, orquestadores, agentes y servicios |
-| **Despliegues en producción** | 2 servidores independientes en la nube |
-| **Bases de datos** | MongoDB Atlas (on-chain principal) + capas relacionales externas |
+| Indicador | Valor | Descripción |
+|---|---|---|
+| **Archivos de código fuente** | 122+ archivos | Python, TypeScript, HTML, JavaScript |
+| **Líneas de código** | 58,000+ líneas | Lógica productiva real |
+| **Scripts activos** | 35+ scripts | Workers, orquestadores, agentes y servicios |
+| **Despliegues en producción** | 2 servidores | Instancias cloud independientes |
+| **Bases de datos** | MongoDB Atlas | Base on-chain principal + capas relacionales externas |
 
 ### Volumen de datos procesados
 
-* **Transacciones indexadas:** decenas de miles de registros on-chain con precios de mercado reales.
-* **Reportes predictivos:** miles de modelos de comportamiento institucional generados y persistidos en MongoDB Atlas.
-* **Jerarquías de entidades:** miles de billeteras clasificadas por poder de concentración.
-* **Alertas de Telegram:** miles de señales enviadas en tiempo real al ecosistema visual y canales operativos.
-* **Historial matemático:** miles de brechas de valor (FVG) calculadas en tiempo real.
+* 🔷 **Transacciones indexadas:** decenas de miles de registros on-chain con precios de mercado reales.
+* 🔷 **Reportes predictivos:** miles de modelos de comportamiento institucional generados y persistidos en MongoDB Atlas.
+* 🔷 **Jerarquías de entidades:** miles de billeteras clasificadas por poder de concentración.
+* 🔷 **Alertas de Telegram:** miles de señales enviadas en tiempo real al ecosistema visual y canales operativos.
+* 🔷 **Historial matemático:** miles de brechas de valor (FVG) calculadas en tiempo real.
 
 ---
 
@@ -108,56 +108,72 @@ Eva Blockseer es un sistema de producción real con métricas verificables:
 
 **Eventos & tiempo real:** bus de eventos propio, SSE, WebSocket, colas asíncronas desacopladas.
 
-<div style="display:flex; flex-wrap:wrap; gap:8px; margin:15px 0;">
-  <div style="background:#0a1a2f; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">📊 TypeScript</div>
-  <div style="background:#0a1a2f; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">⚛️ React</div>
-  <div style="background:#0a1a2f; border:1px solid #44aaff; color:#44aaff; padding:6px 14px; border-radius:20px; font-size:0.85em; font-weight:bold;">🎨 CSS / Tailwind</div>
-</div>
-
-**Frontend (Cerebro 2):** TypeScript, React, HTML/CSS.
 ---
 
 ## ✈️ 3b. Telegram Bots — Integración en Tiempo Real
 
 ### 🤖 Bot Extractor de Datos
-* Consulta APIs externas de mercado en tiempo real.
-* Escribe datos crudos directamente en MongoDB Atlas de forma asíncrona.
-* Orquestado por workers con Cron programado.
-* Reintento automático ante fallas de fuente (backoff exponencial).
-* Credenciales gestionadas via Secret Manager.
+* 📡 Consulta APIs externas de mercado en tiempo real.
+* 🍃 Escribe datos crudos directamente en MongoDB Atlas de forma asíncrona.
+* ⏱️ Orquestado por workers con Cron programado.
+* 🔄 Reintento automático ante fallas de fuente (backoff exponencial).
+* 🔒 Credenciales gestionadas via Secret Manager (nunca hardcoded).
 
 ### 🚨 Bot de Alertas de Mercado
-* Detecta FVG, anomalías estadísticas y señales institucionales en tiempo real.
-* Envía alertas formateadas a canales privados de Telegram.
-* Disparo asíncrono con latencia mínima.
-* Permite tomar decisiones de operaciones en tiempo real.
-* Desacoplado: un fallo de Telegram no detiene el análisis.
+* 📉 Detecta FVG, anomalías estadísticas y señales institucionales en tiempo real.
+* 📲 Envía alertas formateadas a canales privados de Telegram.
+* ⚡ Disparo asíncrono con latencia mínima al detectar evento.
+* 🎯 Permite tomar decisiones de operaciones en tiempo real.
+* 🛡️ Desacoplado: un fallo de Telegram **nunca detiene** la ingesta analítica.
 
 ---
 
 ## 🧠 4. Destrezas y Conocimientos Aplicados
 
-* Ingeniería de backends de alta precisión con FastAPI y procesamiento asíncrono.
-* Diseño de arquitectura de doble cerebro con separación estricta de dominios.
-* Procesamiento de datos on-chain a gran escala y detección matemática de anomalías institucionales.
-* Implementación de sistemas resilientes, tolerantes a fallos y con recuperación automática.
-* Construcción de Telegram Bots para extracción de datos y alertas de mercado en tiempo real.
-* Gestión de MongoDB Atlas para persistencia de series históricas on-chain.
-* Desarrollo de interfaces seguras, PWA y despliegue modular en producción.
-* Criptografía aplicada, hashing y protección de propiedad intelectual.
+* ⚡ **Ingeniería de backends de alta precisión** con FastAPI, Python 3.12+, Uvicorn y procesamiento asíncrono no bloqueante.
+* 🧬 **Diseño de arquitectura de doble cerebro:** desacoplamiento estricto entre dominios analíticos (Cerebro 1) y analítica matemática reactiva (Cerebro 2).
+* 🔬 **Procesamiento forense on-chain:** ingesta a gran escala sobre Cardano Mainnet, modelado de acumulación/distribución y detección de FVG (Fair Value Gaps).
+* 🛡️ **Sistemas de alta resiliencia:** implementación de Circuit Breaker, colas asíncronas offline, modo degradado y recuperación automática (fail-safe).
+* ✈️ **Integración de Telegram Bots:** construcción de bots asíncronos para recolección de mercado y alertas operativas en tiempo real.
+* 🍃 **Persistencia distribuida en MongoDB Atlas:** gestión de colecciones NoSQL optimizadas para series históricas de alta frecuencia.
+* 🔐 **Criptografía y soberanía de datos:** cifrado AES-GCM, hashing criptográfico y resguardo estricto de propiedad intelectual.
+* 📄 **Documentación técnica profunda:** guías orientadas a auditores, reclutadores e integradores de software.
 
 ---
 
 ## 🗄️ 5. Bases de Datos y Persistencia
 
-* **MongoDB Atlas (base on-chain principal):** almacenamiento NoSQL distribuido con series históricas, reportes predictivos, jerarquías de entidades y estado operativo del sistema.
-* **Capas relacionales externas:** datos relacionales para métricas macroeconómicas y retail, consumidos por el Cerebro 1 via pasarelas HTTP seguras.
-* **Estrategia de datos:** ningún dato es inventado ni simulado. Toda la información proviene de APIs oficiales y bloques de cadena pública (Blockfrost). Si una fuente falla, el sistema entra en estado degradado seguro.
+* 🍃 **MongoDB Atlas (base on-chain principal):** almacenamiento NoSQL distribuido con series históricas, reportes predictivos, jerarquías de entidades y estado operativo del sistema.
+* 🔗 **Capas relacionales externas:** datos relacionales para métricas macroeconómicas y retail, consumidos por el Cerebro 1 via pasarelas HTTP seguras.
+* ✅ **Protocolo Zero-Mocks:** ningún dato es inventado ni simulado. Toda la información proviene de APIs oficiales y bloques de cadena pública (Blockfrost). Si una fuente falla, el sistema entra en **estado degradado seguro** sin romper la experiencia.
 
 ---
 
-## 💼 6. Para reclutadores, clientes y socios estratégicos
+## 💼 6. Para Reclutadores, Clientes y Socios Estratégicos
 
-**Eva Blockseer** es un stack tecnológico de vanguardia para datos soberanos, inteligencia on-chain y automatización financiera. Combinamos ingeniería de alto nivel, arquitectura distribuida y segura, integración con Cardano, bots de Telegram para operativas en tiempo real, persistencia soberana en MongoDB Atlas y despliegue en producción con observabilidad y control de fallos.
+**Eva Blockseer (Ballenas)** representa la cúspide en análisis e inteligencia forense de red sobre ecosistemas blockchain. Combina arquitectura distribuida, persistencia NoSQL distribuida con MongoDB Atlas y alertas reactivas por Telegram Bot.
+
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin:20px 0;">
+  <div style="background:rgba(68,170,255,0.1); border:1px solid rgba(68,170,255,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">🏗️</div>
+    <div style="color:#44aaff; font-weight:bold; font-size:0.9em; margin-top:5px;">Ingeniería Asíncrona</div>
+  </div>
+  <div style="background:rgba(68,255,68,0.1); border:1px solid rgba(68,255,68,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">🍃</div>
+    <div style="color:#44ff44; font-weight:bold; font-size:0.9em; margin-top:5px;">MongoDB Atlas</div>
+  </div>
+  <div style="background:rgba(39,167,231,0.1); border:1px solid rgba(39,167,231,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">✈️</div>
+    <div style="color:#27a7e7; font-weight:bold; font-size:0.9em; margin-top:5px;">Telegram Bots</div>
+  </div>
+  <div style="background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.3); border-radius:10px; padding:12px 20px; flex:1; min-width:160px; text-align:center;">
+    <div style="font-size:1.8em;">⛓️</div>
+    <div style="color:#e94560; font-weight:bold; font-size:0.9em; margin-top:5px;">Cardano Mainnet</div>
+  </div>
+</div>
 
 No importa la magnitud del proyecto: **Eva Blockseer, tu mundo digital en un solo ecosistema, en paralelo y continuo crecimiento.**
+
+---
+
+*Documento técnico preparado para difusión pública. Cero datos sensibles, credenciales o llaves expuestas.*
