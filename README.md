@@ -29,7 +29,7 @@
   Landing page institucional monolítica (HTML5 + CSS3 vanilla) para Alex Piedrahíta en Medellín. Resuelve comparendos, fotomultas, prendas, traspasos y trámites vehiculares con WhatsApp-first conversion. Cero frameworks, cero backend — landing page estática en Render.com.
 
 * 📁 **[Accesos Directos (Extensión)](./README_Eva_Accesos_directos.md)**  
-  Panel de control nativo con cifrado Zero-Knowledge (AES-GCM) para gestión segura de credenciales locales.
+  Extensión de navegador nativa (Manifest V3) con cifrado Zero-Knowledge (AES-GCM) para gestión segura de credenciales locales.
 ---
 
 ## 🛠️ Stack Tecnológico y Conocimientos Aplicados

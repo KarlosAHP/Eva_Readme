@@ -2190,6 +2190,227 @@
                 </div>
             </div>
 
+            <!-- ===== EVA ACCESOS DIRECTOS: MÓDULO INTERACTIVO ===== -->
+            <div class="section" id="section-s4" style="border: 2px solid #FF8C00;">
+                <div class="ballenas-hero"
+                    style="border-color: #FF8C00; background: linear-gradient(135deg, #1a0f00 0%, #2d1a00 50%, #1a1005 100%);">
+                    <h2 style="color: #FF8C00;">🔑 EVA Accesos Directos — Bóveda Soberana de Credenciales</h2>
+                    <p style="color: #FFB380;">Extensión de navegador nativa (Manifest V3) para gestión segura de accesos
+                        directos, credenciales locales y notas confidenciales. Cero almacenamiento externo, cifrado
+                        Zero-Knowledge y soberanía total del operador.</p>
+                </div>
+
+                <!-- TABS DE NAVEGACIÓN S4 -->
+                <div class="tabs" style="border-bottom-color: rgba(255,140,0,0.25);">
+                    <button class="tab-btn active" style="border-color: #FF8C00; background: #FF8C00; color: #1a0f00;"
+                        onclick="showTab('s4-arch', this)">🏗️ Arquitectura</button>
+                    <button class="tab-btn" onclick="showTab('s4-stack', this)">🛠️ Stack Tecnológico</button>
+                    <button class="tab-btn" onclick="showTab('s4-security', this)">🛡️ Seguridad & Cifrado</button>
+                    <button class="tab-btn" onclick="showTab('s4-features', this)">⚡ Capacidades</button>
+                    <button class="tab-btn" onclick="showTab('s4-recruiter', this)">💼 Reclutadores & Clientes</button>
+                </div>
+
+                <!-- TAB 1: ARQUITECTURA S4 -->
+                <div id="s4-arch" class="tab-panel active">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+                        <div class="brain-card" style="border-color: #FF8C00;">
+                            <h3 style="color:#FF8C00;">🧩 Núcleo de Extensión</h3>
+                            <ul>
+                                <li>📦 Manifest V3 (Chrome/Edge/Brave/Opera)</li>
+                                <li>🔒 Permisos mínimos: storage + tabs</li>
+                                <li>⚡ Popup action + consola completa en tab</li>
+                                <li>🧠 JavaScript vanilla sin dependencias</li>
+                            </ul>
+                        </div>
+                        <div class="brain-card" style="border-color: #FF8C00;">
+                            <h3 style="color:#FF8C00;">🗂️ Módulos Funcionales</h3>
+                            <ul>
+                                <li>🔑 Bóveda de Accesos (perfiles + hijos)</li>
+                                <li>📝 Bloc de Notas categorizado</li>
+                                <li>💡 Panel de Ideas (brainstorming)</li>
+                                <li>📅 Agenda & Recordatorios</li>
+                            </ul>
+                        </div>
+                        <div class="brain-card" style="border-color: #FF8C00;">
+                            <h3 style="color:#FF8C00;">🔐 Cifrado & Backup</h3>
+                            <ul>
+                                <li>🔑 AES-GCM 256 bits + PBKDF2</li>
+                                <li>📦 Export/Import JSON cifrado</li>
+                                <li>🛡️ Validación de Policy ID y Brand</li>
+                                <li>💾 Almacenamiento local exclusivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="stank-badge"
+                        style="margin-top: 20px; text-align: left; border-color: rgba(255,140,0,0.4); background: linear-gradient(90deg, rgba(255,140,0,0.15), rgba(255,140,0,0.05)); color: #FFB380;">
+                        <strong style="color:#FF8C00;">🛡️ Estanqueidad Absoluta:</strong> La extensión opera exclusivamente
+                        en el navegador del usuario. No existen servidores centrales, bases de datos externas ni llamadas
+                        API para persistir credenciales. Todo el poder y la custodia recaen 100% en el operador.
+                    </div>
+                </div>
+
+                <!-- TAB 2: STACK TECNOLÓGICO S4 -->
+                <div id="s4-stack" class="tab-panel">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px;">
+                        <div>
+                            <p style="color:#FF8C00; font-weight:bold; margin-bottom:12px;">🧩 Extensión & Frontend</p>
+                            <div class="pill-grid">
+                                <span class="pill pill-blue"
+                                    style="border-color:#FF8C00; color:#FF8C00; background:rgba(255,140,0,0.15);">📦
+                                    Manifest V3</span>
+                                <span class="pill pill-blue"
+                                    style="border-color:#FF8C00; color:#FF8C00; background:rgba(255,140,0,0.15);">🧩 Chrome
+                                    Extensions API</span>
+                                <span class="pill pill-blue"
+                                    style="border-color:#FF8C00; color:#FF8C00; background:rgba(255,140,0,0.15);">📄 HTML5
+                                    Semántico</span>
+                                <span class="pill pill-blue"
+                                    style="border-color:#FF8C00; color:#FF8C00; background:rgba(255,140,0,0.15);">🎨 CSS3
+                                    Variables + Grid</span>
+                                <span class="pill pill-blue"
+                                    style="border-color:#FF8C00; color:#FF8C00; background:rgba(255,140,0,0.15);">⚡ JS ES6+
+                                    Modular</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="color:#44ff44; font-weight:bold; margin-bottom:12px;">🔐 Cifrado & Seguridad</p>
+                            <div class="pill-grid">
+                                <span class="pill pill-green">🔑 AES-GCM 256 bits</span>
+                                <span class="pill pill-green">🧂 PBKDF2 200K iteraciones</span>
+                                <span class="pill pill-green">🔍 WebCrypto API nativa</span>
+                                <span class="pill pill-green">🛡️ Validación Policy ID</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="color:#ff4444; font-weight:bold; margin-bottom:12px;">📦 Producción</p>
+                            <div class="pill-grid">
+                                <span class="pill pill-red">🔒 javascript-obfuscator</span>
+                                <span class="pill pill-red">📦 Control-flow flattening</span>
+                                <span class="pill pill-red">🔤 String array encoding</span>
+                                <span class="pill pill-red">🗝️ Transform-object-keys</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: SEGURIDAD & CIFRADO S4 -->
+                <div id="s4-security" class="tab-panel">
+                    <div class="skills-grid">
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">🔑</span>
+                            <div class="skill-text"><strong>AES-GCM 256 bits:</strong> Cifrado auténtico de extremo a
+                                extremo para backups portables. Nonce único por contenedor, garantizando confidencialidad
+                                e integridad.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">🧂</span>
+                            <div class="skill-text"><strong>PBKDF2 200.000 iteraciones:</strong> Derivación de clave
+                                resistente a fuerza bruta desde contraseña de usuario. Salt aleatorio de 16 bytes por
+                                backup.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">🛡️</span>
+                            <div class="skill-text"><strong>Policy ID embebido:</strong> Cada contenedor cifrado incluye
+                                metadatos inmutables de marca y política. Si el archivo es alterado o proviene de otra
+                                fuente, se descarta automáticamente.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">💾</span>
+                            <div class="skill-text"><strong>Chrome Storage Local:</strong> Operación diaria en texto plano
+                                dentro del navegador. Sin servidores, sin sincronización cloud, sin exposición a
+                                terceros.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">📦</span>
+                            <div class="skill-text"><strong>Backup Portable:</strong> Exportación/importación de bóveda
+                                completa en JSON cifrado. Transportable por USB, email o WhatsApp. Sin dependencia de
+                                servicios externos.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: CAPACIDADES S4 -->
+                <div id="s4-features" class="tab-panel">
+                    <div class="metrics-grid">
+                        <div class="metric-card" style="border-color: rgba(255,140,0,0.3);">
+                            <span class="metric-number" style="color: #FF8C00;" data-target="4">0</span>
+                            <span class="metric-label">Módulos Integrados</span>
+                            <span class="metric-sub">Accesos · Notas · Ideas · Agenda</span>
+                        </div>
+                        <div class="metric-card" style="border-color: rgba(255,140,0,0.3);">
+                            <span class="metric-number" style="color: #FF8C00;" data-target="5">0</span>
+                            <span class="metric-label">Perfiles de Navegador</span>
+                            <span class="metric-sub">Gmail · Opera · Safari · Firefox · Explorer</span>
+                        </div>
+                        <div class="metric-card" style="border-color: rgba(255,140,0,0.3);">
+                            <span class="metric-number" style="color: #FF8C00;" data-target="23">0</span>
+                            <span class="metric-label">Iconos de Acceso</span>
+                            <span class="metric-sub">Redes · Desarrollo · Correo · Utilidades</span>
+                        </div>
+                        <div class="metric-card" style="border-color: rgba(255,140,0,0.3);">
+                            <span class="metric-number" style="color: #FF8C00;" data-target="0">0</span>
+                            <span class="metric-label">Servidores Externos</span>
+                            <span class="metric-sub">Cero dependencias cloud</span>
+                        </div>
+                    </div>
+                    <div class="skills-grid" style="margin-top: 20px;">
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">⚡</span>
+                            <div class="skill-text"><strong>Multi-cuenta nativa:</strong> Perfiles independientes por
+                                navegador y correo base. Cada perfil aísla sus accesos hijos, notas y configuración.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">🛡️</span>
+                            <div class="skill-text"><strong>Estanqueidad absoluta:</strong> Sin cruce de datos entre
+                                perfiles. Sin sincronización. Sin exposición accidental de credenciales.</div>
+                        </div>
+                        <div class="skill-item" style="border-left-color: #FF8C00;">
+                            <span class="skill-icon">📂</span>
+                            <div class="skill-text"><strong>Estructura modular:</strong> Assets organizados con iconos
+                                oficiales, consolas de control integradas y despliegue inmediato en un solo clic.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: RECLUTADORES S4 -->
+                <div id="s4-recruiter" class="tab-panel">
+                    <div class="recruiter-box" style="border-color: #FF8C00; background: linear-gradient(135deg, rgba(255,140,0,0.05), rgba(255,140,0,0.02));">
+                        <p>🔑 <strong style="color:#FF8C00;">EVA Accesos Directos</strong> es una extensión de navegador
+                            soberana que demuestra dominio avanzado de seguridad cliente, cifrado aplicado y arquitectura
+                            browser-side sin dependencias externas.</p>
+                        <div style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin: 20px 0;">
+                            <div
+                                style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                                <div style="font-size:2em;">🔐</div>
+                                <div style="color:#FF8C00; font-weight:bold;">Cifrado Zero-Knowledge</div>
+                            </div>
+                            <div
+                                style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                                <div style="font-size:2em;">🧩</div>
+                                <div style="color:#FF8C00; font-weight:bold;">Manifest V3</div>
+                            </div>
+                            <div
+                                style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                                <div style="font-size:2em;">⚡</div>
+                                <div style="color:#FF8C00; font-weight:bold;">JS Vanilla Modular</div>
+                            </div>
+                            <div
+                                style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                                <div style="font-size:2em;">📦</div>
+                                <div style="color:#FF8C00; font-weight:bold;">Backup Portable</div>
+                            </div>
+                            <div
+                                style="background:rgba(255,140,0,0.1); border:1px solid rgba(255,140,0,0.3); border-radius:10px; padding:15px 25px; min-width:180px;">
+                                <div style="font-size:2em;">🛡️</div>
+                                <div style="color:#FF8C00; font-weight:bold;">Estanqueidad Total</div>
+                            </div>
+                        </div>
+                        <p style="font-style:italic; color:#FF8C00;">"Soberanía del operador: tus accesos, tus reglas, tu
+                            bóveda. Cero servidores, cero exposiciones."</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- FLUJO DE DATOS -->
             <div class="section">
                 <h2>🔄 Flujo Operativo y Soberanía</h2>
@@ -2371,7 +2592,7 @@
         </footer>
         <script>
             function showTab(tabId, btn) {
-                const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : (tabId.startsWith('s3') ? 'section-s3' : (tabId.startsWith('s5') ? 'section-s5' : (tabId.startsWith('s6') ? 'section-s6' : 'section-s1'))));
+                const container = btn ? btn.closest('.section') : document.getElementById(tabId.startsWith('s2') ? 'section-s2' : (tabId.startsWith('s3') ? 'section-s3' : (tabId.startsWith('s4') ? 'section-s4' : (tabId.startsWith('s5') ? 'section-s5' : (tabId.startsWith('s6') ? 'section-s6' : 'section-s1')))));
                 if (!container) return;
 
                 // Hide only panels inside this specific section
@@ -2387,6 +2608,11 @@
                         b.style.background = 'rgba(68,255,68,0.1)';
                         b.style.color = '#aaff44';
                         b.style.borderColor = 'rgba(68,255,68,0.3)';
+                    }
+                    if (container.id === 'section-s4') {
+                        b.style.background = 'rgba(255,140,0,0.1)';
+                        b.style.color = '#FFB380';
+                        b.style.borderColor = 'rgba(255,140,0,0.3)';
                     }
                     if (container.id === 'section-s5') {
                         b.style.background = 'rgba(255,215,0,0.1)';
@@ -2415,6 +2641,11 @@
                         btn.style.background = '#44ff44';
                         btn.style.color = '#0f1a3d';
                         btn.style.borderColor = '#44ff44';
+                    }
+                    if (container.id === 'section-s4') {
+                        btn.style.background = '#FF8C00';
+                        btn.style.color = '#1a0f00';
+                        btn.style.borderColor = '#FF8C00';
                     }
                     if (container.id === 'section-s5') {
                         btn.style.background = '#FFD700';
